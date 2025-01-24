@@ -5,3 +5,4 @@ dist/
 nbproject/Makefile-*
 nbproject/Package-*
 nbproject/private
+dist/default/debug/spi_host_ble.X.*
