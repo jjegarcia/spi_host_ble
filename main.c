@@ -56,10 +56,10 @@ void main(void)
     // Use the following macros to:
 
     // Enable the Global Interrupts
-    //INTERRUPT_GlobalInterruptEnable();
+    INTERRUPT_GlobalInterruptEnable();
 
     // Enable the Peripheral Interrupts
-    //INTERRUPT_PeripheralInterruptEnable();
+    INTERRUPT_PeripheralInterruptEnable();
 
     // Disable the Global Interrupts
     //INTERRUPT_GlobalInterruptDisable();
@@ -70,6 +70,10 @@ void main(void)
     while (1)
     {
         // Add your application code
+        if (pushed){
+            int a=0;
+            pushed=false;
+        }
     }
 }
 /**
