@@ -21010,18 +21010,59 @@ void OSCILLATOR_Initialize(void);
 void PMD_Initialize(void);
 # 45 "main.c" 2
 # 1 "./main.h" 1
+
+
+
+
+
+_Bool pushed = 0;
+_Bool sendSpiReadRequest = 0;
+
+void send_spi_read(void);
 # 46 "main.c" 2
 
 
 
 
-void main(void)
-{
+void main(void) {
 
     SYSTEM_Initialize();
-# 70 "main.c"
-    while (1)
-    {
+
+
+
+
+
+    (INTCONbits.GIE = 1);
+
+
+    (INTCONbits.PEIE = 1);
+
+
+
+
+
+
+
+    while (1) {
+
+        if (pushed) {
+            pushed = 0;
+            sendSpiReadRequest = 1;
+        }
+        if (sendSpiReadRequest) {
+            send_spi_read();
+        }
+    }
+}
+
+void send_spi_read(void) {
+    static uint8_t data[4];
+    do { LATCbits.LATC0 = 0; } while(0);
+    if (SPI2_Open(0)) {
+        SPI2_ReadBlock(data, 4);
+        do { LATCbits.LATC0 = 1; } while(0);
+        SPI2_Close();
+        sendSpiReadRequest = 0;
 
     }
 }

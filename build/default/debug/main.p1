@@ -3,6 +3,44 @@ Version 4.0 HI-TECH Software Intermediate Code
 "76 ./mcc_generated_files/mcc.h
 [; ;./mcc_generated_files/mcc.h: 76: void SYSTEM_Initialize(void);
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
+"419 C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc/pic16lf18456.h
+[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc/pic16lf18456.h: 419:     struct {
+[s S31 :1 `uc 1 :5 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S31 . INTEDG . PEIE GIE ]
+"418
+[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc/pic16lf18456.h: 418: typedef union {
+[u S30 `S31 1 ]
+[n S30 . . ]
+"426
+[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc/pic16lf18456.h: 426: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
+[v _INTCONbits `VS30 ~T0 @X0 0 e@11 ]
+"9 ./main.h
+[; ;./main.h: 9: void send_spi_read(void);
+[v _send_spi_read `(v ~T0 @X0 0 ef ]
+"990 C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc/pic16lf18456.h
+[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc/pic16lf18456.h: 990:     struct {
+[s S53 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S53 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 LATC6 LATC7 ]
+"989
+[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc/pic16lf18456.h: 989: typedef union {
+[u S52 `S53 1 ]
+[n S52 . . ]
+"1001
+[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc/pic16lf18456.h: 1001: extern volatile LATCbits_t LATCbits __attribute__((address(0x01A)));
+[v _LATCbits `VS52 ~T0 @X0 0 e@26 ]
+"84 main.c
+[; ;main.c: 84:     if (SPI2_Open(0)) {
+[c E12741 0 .. ]
+[n E12741 . SPI2_DEFAULT  ]
+"64 ./mcc_generated_files/spi2.h
+[; ;./mcc_generated_files/spi2.h: 64: _Bool SPI2_Open(spi2_modes_t spi2UniqueConfiguration);
+[v _SPI2_Open `(a ~T0 @X0 0 ef1`E12741 ]
+"69
+[; ;./mcc_generated_files/spi2.h: 69: void SPI2_ReadBlock(void *block, size_t blockSize);
+[v _SPI2_ReadBlock `(v ~T0 @X0 0 ef2`*v`ui ]
+"65
+[; ;./mcc_generated_files/spi2.h: 65: void SPI2_Close(void);
+[v _SPI2_Close `(v ~T0 @X0 0 ef ]
 "110 C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc/pic16lf18456.h
 [; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc/pic16lf18456.h: 110: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1596,31 +1634,114 @@ Version 4.0 HI-TECH Software Intermediate Code
 "37278
 [; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc/pic16lf18456.h: 37278: __asm("TOSH equ 01FEFh");
 [; <" TOSH equ 01FEFh ;# ">
+"6 ./main.h
+[; ;./main.h: 6: _Bool pushed = 0;
+[v _pushed `a ~T0 @X0 1 e ]
+[i _pushed
+-> -> 0 `i `a
+]
+"7
+[; ;./main.h: 7: _Bool sendSpiReadRequest = 0;
+[v _sendSpiReadRequest `a ~T0 @X0 1 e ]
+[i _sendSpiReadRequest
+-> -> 0 `i `a
+]
 [v $root$_main `(v ~T0 @X0 0 e ]
 "50 main.c
-[; ;main.c: 50: void main(void)
+[; ;main.c: 50: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
-"51
-[; ;main.c: 51: {
 {
 [e :U _main ]
 [f ]
-"53
-[; ;main.c: 53:     SYSTEM_Initialize();
+"52
+[; ;main.c: 52:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"70
-[; ;main.c: 70:     while (1)
+"58
+[; ;main.c: 58:     (INTCONbits.GIE = 1);
+[e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
+"61
+[; ;main.c: 61:     (INTCONbits.PEIE = 1);
+[e = . . _INTCONbits 0 2 -> -> 1 `i `uc ]
+"69
+[; ;main.c: 69:     while (1) {
 [e :U 1726 ]
-"71
-[; ;main.c: 71:     {
 {
+"71
+[; ;main.c: 71:         if (pushed) {
+[e $ ! != -> _pushed `i -> 0 `i 1728  ]
+{
+"72
+[; ;main.c: 72:             pushed = 0;
+[e = _pushed -> -> 0 `i `a ]
 "73
-[; ;main.c: 73:     }
+[; ;main.c: 73:             sendSpiReadRequest = 1;
+[e = _sendSpiReadRequest -> -> 1 `i `a ]
+"74
+[; ;main.c: 74:         }
+}
+[e :U 1728 ]
+"75
+[; ;main.c: 75:         if (sendSpiReadRequest) {
+[e $ ! != -> _sendSpiReadRequest `i -> 0 `i 1729  ]
+{
+"76
+[; ;main.c: 76:             send_spi_read();
+[e ( _send_spi_read ..  ]
+"77
+[; ;main.c: 77:         }
+}
+[e :U 1729 ]
+"78
+[; ;main.c: 78:     }
 }
 [e :U 1725 ]
 [e $U 1726  ]
 [e :U 1727 ]
-"74
-[; ;main.c: 74: }
+"79
+[; ;main.c: 79: }
 [e :UE 1724 ]
+}
+"81
+[; ;main.c: 81: void send_spi_read(void) {
+[v _send_spi_read `(v ~T0 @X0 1 ef ]
+{
+[e :U _send_spi_read ]
+[f ]
+"82
+[; ;main.c: 82:     static uint8_t data[4];
+[v F12954 `uc ~T0 @X0 -> 4 `i s data ]
+"83
+[; ;main.c: 83:     do { LATCbits.LATC0 = 0; } while(0);
+[e :U 1733 ]
+{
+[e = . . _LATCbits 0 0 -> -> 0 `i `uc ]
+}
+[e :U 1732 ]
+"84
+[; ;main.c: 84:     if (SPI2_Open(0)) {
+[e $ ! != -> ( _SPI2_Open (1 -> -> 0 `i `E12741 `i -> 0 `i 1734  ]
+{
+"85
+[; ;main.c: 85:         SPI2_ReadBlock(data, 4);
+[e ( _SPI2_ReadBlock (2 , -> &U F12954 `*v -> -> 4 `i `ui ]
+"86
+[; ;main.c: 86:         do { LATCbits.LATC0 = 1; } while(0);
+[e :U 1737 ]
+{
+[e = . . _LATCbits 0 0 -> -> 1 `i `uc ]
+}
+[e :U 1736 ]
+"87
+[; ;main.c: 87:         SPI2_Close();
+[e ( _SPI2_Close ..  ]
+"88
+[; ;main.c: 88:         sendSpiReadRequest = 0;
+[e = _sendSpiReadRequest -> -> 0 `i `a ]
+"90
+[; ;main.c: 90:     }
+}
+[e :U 1734 ]
+"91
+[; ;main.c: 91: }
+[e :UE 1730 ]
 }

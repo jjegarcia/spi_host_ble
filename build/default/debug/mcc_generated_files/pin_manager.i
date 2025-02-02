@@ -20617,6 +20617,18 @@ extern void (*IOCAF7_InterruptHandler)(void);
 # 486 "mcc_generated_files/pin_manager.h"
 void IOCAF7_DefaultInterruptHandler(void);
 # 50 "mcc_generated_files/pin_manager.c" 2
+# 1 "mcc_generated_files/../main.h" 1
+# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdbool.h" 1 3
+# 2 "mcc_generated_files/../main.h" 2
+
+
+
+
+_Bool pushed = 0;
+_Bool sendSpiReadRequest = 0;
+
+void send_spi_read(void);
+# 51 "mcc_generated_files/pin_manager.c" 2
 
 
 
@@ -20646,8 +20658,8 @@ void PIN_MANAGER_Initialize(void)
 
 
 
-    ANSELC = 0x95;
-    ANSELB = 0xF1;
+    ANSELC = 0x80;
+    ANSELB = 0xE1;
     ANSELA = 0x1E;
 
 
@@ -20656,7 +20668,7 @@ void PIN_MANAGER_Initialize(void)
     WPUE = 0x00;
     WPUB = 0x00;
     WPUA = 0x00;
-    WPUC = 0x00;
+    WPUC = 0x01;
 
 
 
@@ -20793,4 +20805,5 @@ void IOCAF7_SetInterruptHandler(void (* InterruptHandler)(void)){
 void IOCAF7_DefaultInterruptHandler(void){
 
 
+    pushed = 1;
 }

@@ -16,7 +16,7 @@
         Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.8
         Device            :  PIC16LF18456
         Driver Version    :  2.00
-*/
+ */
 
 /*
     (c) 2018 Microchip Technology Inc. and its subsidiaries. 
@@ -39,7 +39,7 @@
     CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT 
     OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS 
     SOFTWARE.
-*/
+ */
 
 #include "mcc_generated_files/mcc.h"
 #include "main.h"
@@ -47,8 +47,7 @@
 /*
                          Main application
  */
-void main(void)
-{
+void main(void) {
     // initialize the device
     SYSTEM_Initialize();
 
@@ -67,15 +66,29 @@ void main(void)
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
 
-    while (1)
-    {
+    while (1) {
         // Add your application code
-        if (pushed){
-            int a=0;
-            pushed=false;
+        if (pushed) {
+            pushed = false;
+            sendSpiReadRequest = true;
         }
+        if (sendSpiReadRequest) {
+            send_spi_read();
+        }
+    }
+}
+
+void send_spi_read(void) {
+    static uint8_t data[4];
+    SPI_SS_EXT_DEVICE_SetLow();
+    if (SPI2_Open(0)) {
+        SPI2_ReadBlock(data, 4);
+        SPI_SS_EXT_DEVICE_SetHigh();
+        SPI2_Close();
+        sendSpiReadRequest = false;
+        
     }
 }
 /**
  End of File
-*/
+ */

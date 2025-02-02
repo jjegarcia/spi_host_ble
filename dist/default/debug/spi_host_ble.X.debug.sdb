@@ -93,6 +93,10 @@ I2C1_NULL 5
 [e E358 . `uc
 SPI2_DEFAULT 0
 ]
+"84 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\main.c
+[e E12741 . `uc
+SPI2_DEFAULT 0
+]
 "10 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "3 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\strchr.c
@@ -113,6 +117,8 @@ SPI2_DEFAULT 0
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
 "50 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\main.c
 [v _main main `(v  1 e 1 0 ]
+"81
+[v _send_spi_read send_spi_read `(v  1 e 1 0 ]
 "38 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/delay.c
 [v _DELAY_milliseconds DELAY_milliseconds `(v  1 e 1 0 ]
 "88 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/eusart1.c
@@ -291,21 +297,21 @@ SPI2_DEFAULT 0
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 "78
 [v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
-"58 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/pin_manager.c
+"59 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
-"154
+"155
 [v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
-"171
+"172
 [v _IOCAF6_ISR IOCAF6_ISR `(v  1 e 1 0 ]
-"186
+"187
 [v _IOCAF6_SetInterruptHandler IOCAF6_SetInterruptHandler `(v  1 e 1 0 ]
-"193
+"194
 [v _IOCAF6_DefaultInterruptHandler IOCAF6_DefaultInterruptHandler `(v  1 e 1 0 ]
-"201
+"202
 [v _IOCAF7_ISR IOCAF7_ISR `(v  1 e 1 0 ]
-"216
+"217
 [v _IOCAF7_SetInterruptHandler IOCAF7_SetInterruptHandler `(v  1 e 1 0 ]
-"223
+"224
 [v _IOCAF7_DefaultInterruptHandler IOCAF7_DefaultInterruptHandler `(v  1 e 1 0 ]
 "79 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/rn487x/rn487x.c
 [v _RN487X_SendCmd RN487X_SendCmd `(v  1 e 1 0 ]
@@ -347,8 +353,14 @@ SPI2_DEFAULT 0
 [v _RN487X_MessageHandler RN487X_MessageHandler `(v  1 s 1 RN487X_MessageHandler ]
 "62 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/spi2.c
 [v _SPI2_Initialize SPI2_Initialize `(v  1 e 1 0 ]
+"77
+[v _SPI2_Open SPI2_Open `(a  1 e 1 0 ]
+"92
+[v _SPI2_Close SPI2_Close `(v  1 e 1 0 ]
 "97
 [v _SPI2_ExchangeByte SPI2_ExchangeByte `(uc  1 e 1 0 ]
+"127
+[v _SPI2_ReadBlock SPI2_ReadBlock `(v  1 e 1 0 ]
 "61 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/tmr0.c
 [v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
 "121
@@ -357,6 +369,10 @@ SPI2_DEFAULT 0
 [v _TMR0_SetInterruptHandler TMR0_SetInterruptHandler `(v  1 e 1 0 ]
 "138
 [v _TMR0_DefaultInterruptHandler TMR0_DefaultInterruptHandler `(v  1 e 1 0 ]
+"6 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X/main.h
+[v _pushed pushed `a  1 e 1 0 ]
+"7
+[v _sendSpiReadRequest sendSpiReadRequest `a  1 e 1 0 ]
 [s S250 . 1 `uc 1 INTEDG 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 PEIE 1 0 :1:6 
@@ -383,7 +399,7 @@ SPI2_DEFAULT 0
 [v _TRISB TRISB `VEuc  1 e 1 @19 ]
 "777
 [v _TRISC TRISC `VEuc  1 e 1 @20 ]
-[s S1890 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S1892 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -393,8 +409,8 @@ SPI2_DEFAULT 0
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "794
-[u S1899 . 1 `S1890 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES1899  1 e 1 @20 ]
+[u S1901 . 1 `S1892 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES1901  1 e 1 @20 ]
 "839
 [v _TRISE TRISE `VEuc  1 e 1 @22 ]
 "860
@@ -437,7 +453,7 @@ SPI2_DEFAULT 0
 [v _SP1BRGH SP1BRGH `VEuc  1 e 1 @284 ]
 "5245
 [v _RC1STA RC1STA `VEuc  1 e 1 @285 ]
-[s S2216 . 1 `uc 1 RX9D 1 0 :1:0 
+[s S2218 . 1 `uc 1 RX9D 1 0 :1:0 
 `uc 1 OERR 1 0 :1:1 
 `uc 1 FERR 1 0 :1:2 
 `uc 1 ADDEN 1 0 :1:3 
@@ -447,11 +463,11 @@ SPI2_DEFAULT 0
 `uc 1 SPEN 1 0 :1:7 
 ]
 "5271
-[u S2225 . 1 `S2216 1 . 1 0 ]
-[v _RC1STAbits RC1STAbits `VES2225  1 e 1 @285 ]
+[u S2227 . 1 `S2218 1 . 1 0 ]
+[v _RC1STAbits RC1STAbits `VES2227  1 e 1 @285 ]
 "5425
 [v _TX1STA TX1STA `VEuc  1 e 1 @286 ]
-[s S2194 . 1 `uc 1 TX9D 1 0 :1:0 
+[s S2196 . 1 `uc 1 TX9D 1 0 :1:0 
 `uc 1 TRMT 1 0 :1:1 
 `uc 1 BRGH 1 0 :1:2 
 `uc 1 SENDB 1 0 :1:3 
@@ -461,8 +477,8 @@ SPI2_DEFAULT 0
 `uc 1 CSRC 1 0 :1:7 
 ]
 "5451
-[u S2203 . 1 `S2194 1 . 1 0 ]
-[v _TX1STAbits TX1STAbits `VES2203  1 e 1 @286 ]
+[u S2205 . 1 `S2196 1 . 1 0 ]
+[v _TX1STAbits TX1STAbits `VES2205  1 e 1 @286 ]
 "5605
 [v _BAUD1CON BAUD1CON `VEuc  1 e 1 @287 ]
 "5851
@@ -471,7 +487,7 @@ SPI2_DEFAULT 0
 [v _SSP1ADD SSP1ADD `VEuc  1 e 1 @397 ]
 "6061
 [v _SSP1STAT SSP1STAT `VEuc  1 e 1 @399 ]
-[s S1465 . 1 `uc 1 BF 1 0 :1:0 
+[s S1467 . 1 `uc 1 BF 1 0 :1:0 
 `uc 1 UA 1 0 :1:1 
 `uc 1 R_nW 1 0 :1:2 
 `uc 1 S 1 0 :1:3 
@@ -481,33 +497,33 @@ SPI2_DEFAULT 0
 `uc 1 SMP 1 0 :1:7 
 ]
 "6170
-[s S1474 . 1 `uc 1 . 1 0 :2:0 
+[s S1476 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_W 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_A 1 0 :1:5 
 ]
-[s S1479 . 1 `uc 1 . 1 0 :2:0 
+[s S1481 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nW 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nA 1 0 :1:5 
 ]
-[s S1484 . 1 `uc 1 . 1 0 :2:0 
+[s S1486 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nWRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nADDRESS 1 0 :1:5 
 ]
-[s S1489 . 1 `uc 1 . 1 0 :2:0 
+[s S1491 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 READ_WRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 DATA_ADDRESS 1 0 :1:5 
 ]
-[s S1494 . 1 `uc 1 . 1 0 :2:0 
+[s S1496 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 I2C_READ 1 0 :1:2 
 `uc 1 I2C_START 1 0 :1:3 
 `uc 1 I2C_STOP 1 0 :1:4 
 `uc 1 I2C_DAT 1 0 :1:5 
 ]
-[s S1500 . 1 `uc 1 BF1 1 0 :1:0 
+[s S1502 . 1 `uc 1 BF1 1 0 :1:0 
 `uc 1 UA1 1 0 :1:1 
 `uc 1 R 1 0 :1:2 
 `uc 1 START 1 0 :1:3 
@@ -516,66 +532,66 @@ SPI2_DEFAULT 0
 `uc 1 CKE1 1 0 :1:6 
 `uc 1 SMP1 1 0 :1:7 
 ]
-[s S1509 . 1 `uc 1 . 1 0 :2:0 
+[s S1511 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 RW 1 0 :1:2 
 `uc 1 START1 1 0 :1:3 
 `uc 1 STOP1 1 0 :1:4 
 `uc 1 DA 1 0 :1:5 
 ]
-[s S1515 . 1 `uc 1 . 1 0 :2:0 
+[s S1517 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 RW1 1 0 :1:2 
 `uc 1 I2C_START1 1 0 :1:3 
 `uc 1 I2C_STOP2 1 0 :1:4 
 `uc 1 DA1 1 0 :1:5 
 ]
-[s S1521 . 1 `uc 1 . 1 0 :2:0 
+[s S1523 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 I2C_READ1 1 0 :1:2 
 `uc 1 S2 1 0 :1:3 
 `uc 1 P2 1 0 :1:4 
 `uc 1 DATA_ADDRESS1 1 0 :1:5 
 ]
-[s S1527 . 1 `uc 1 . 1 0 :2:0 
+[s S1529 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 READ_WRITE1 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_A1 1 0 :1:5 
 ]
-[s S1532 . 1 `uc 1 . 1 0 :2:0 
+[s S1534 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_W1 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_nA1 1 0 :1:5 
 ]
-[s S1537 . 1 `uc 1 . 1 0 :2:0 
+[s S1539 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_nW1 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 I2C_DAT1 1 0 :1:5 
 ]
-[s S1542 . 1 `uc 1 . 1 0 :2:0 
+[s S1544 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nW2 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nA2 1 0 :1:5 
 ]
-[s S1547 . 1 `uc 1 . 1 0 :2:0 
+[s S1549 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nWRITE1 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nADDRESS1 1 0 :1:5 
 ]
-[u S1552 . 1 `S1465 1 . 1 0 `S1474 1 . 1 0 `S1479 1 . 1 0 `S1484 1 . 1 0 `S1489 1 . 1 0 `S1494 1 . 1 0 `S1500 1 . 1 0 `S1509 1 . 1 0 `S1515 1 . 1 0 `S1521 1 . 1 0 `S1527 1 . 1 0 `S1532 1 . 1 0 `S1537 1 . 1 0 `S1542 1 . 1 0 `S1547 1 . 1 0 ]
-[v _SSP1STATbits SSP1STATbits `VES1552  1 e 1 @399 ]
+[u S1554 . 1 `S1467 1 . 1 0 `S1476 1 . 1 0 `S1481 1 . 1 0 `S1486 1 . 1 0 `S1491 1 . 1 0 `S1496 1 . 1 0 `S1502 1 . 1 0 `S1511 1 . 1 0 `S1517 1 . 1 0 `S1523 1 . 1 0 `S1529 1 . 1 0 `S1534 1 . 1 0 `S1539 1 . 1 0 `S1544 1 . 1 0 `S1549 1 . 1 0 ]
+[v _SSP1STATbits SSP1STATbits `VES1554  1 e 1 @399 ]
 "6425
 [v _SSP1CON1 SSP1CON1 `VEuc  1 e 1 @400 ]
-[s S1192 . 1 `uc 1 SSPM 1 0 :4:0 
+[s S1194 . 1 `uc 1 SSPM 1 0 :4:0 
 `uc 1 CKP 1 0 :1:4 
 `uc 1 SSPEN 1 0 :1:5 
 `uc 1 SSPOV 1 0 :1:6 
 `uc 1 WCOL 1 0 :1:7 
 ]
 "6455
-[s S1198 . 1 `uc 1 SSPM0 1 0 :1:0 
+[s S1200 . 1 `uc 1 SSPM0 1 0 :1:0 
 `uc 1 SSPM1 1 0 :1:1 
 `uc 1 SSPM2 1 0 :1:2 
 `uc 1 SSPM3 1 0 :1:3 
 ]
-[s S1203 . 1 `uc 1 SSPM01 1 0 :1:0 
+[s S1205 . 1 `uc 1 SSPM01 1 0 :1:0 
 `uc 1 SSPM11 1 0 :1:1 
 `uc 1 SSPM21 1 0 :1:2 
 `uc 1 SSPM31 1 0 :1:3 
@@ -584,11 +600,11 @@ SPI2_DEFAULT 0
 `uc 1 SSPOV1 1 0 :1:6 
 `uc 1 WCOL1 1 0 :1:7 
 ]
-[u S1212 . 1 `S1192 1 . 1 0 `S1198 1 . 1 0 `S1203 1 . 1 0 ]
-[v _SSP1CON1bits SSP1CON1bits `VES1212  1 e 1 @400 ]
+[u S1214 . 1 `S1194 1 . 1 0 `S1200 1 . 1 0 `S1205 1 . 1 0 ]
+[v _SSP1CON1bits SSP1CON1bits `VES1214  1 e 1 @400 ]
 "6545
 [v _SSP1CON2 SSP1CON2 `VEuc  1 e 1 @401 ]
-[s S1376 . 1 `uc 1 SEN 1 0 :1:0 
+[s S1378 . 1 `uc 1 SEN 1 0 :1:0 
 `uc 1 RSEN 1 0 :1:1 
 `uc 1 PEN 1 0 :1:2 
 `uc 1 RCEN 1 0 :1:3 
@@ -598,17 +614,17 @@ SPI2_DEFAULT 0
 `uc 1 GCEN 1 0 :1:7 
 ]
 "6592
-[s S1385 . 1 `uc 1 . 1 0 :1:0 
+[s S1387 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 ADMSK 1 0 :5:1 
 ]
-[s S1388 . 1 `uc 1 . 1 0 :1:0 
+[s S1390 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 ADMSK1 1 0 :1:1 
 `uc 1 ADMSK2 1 0 :1:2 
 `uc 1 ADMSK3 1 0 :1:3 
 `uc 1 ADMSK4 1 0 :1:4 
 `uc 1 ADMSK5 1 0 :1:5 
 ]
-[s S1395 . 1 `uc 1 SEN1 1 0 :1:0 
+[s S1397 . 1 `uc 1 SEN1 1 0 :1:0 
 `uc 1 ADMSK11 1 0 :1:1 
 `uc 1 ADMSK21 1 0 :1:2 
 `uc 1 ADMSK31 1 0 :1:3 
@@ -617,15 +633,15 @@ SPI2_DEFAULT 0
 `uc 1 ACKSTAT1 1 0 :1:6 
 `uc 1 GCEN1 1 0 :1:7 
 ]
-[s S1404 . 1 `uc 1 . 1 0 :1:0 
+[s S1406 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 RSEN1 1 0 :1:1 
 `uc 1 PEN1 1 0 :1:2 
 `uc 1 RCEN1 1 0 :1:3 
 `uc 1 ADMSK41 1 0 :1:4 
 `uc 1 ADMSK51 1 0 :1:5 
 ]
-[u S1411 . 1 `S1376 1 . 1 0 `S1385 1 . 1 0 `S1388 1 . 1 0 `S1395 1 . 1 0 `S1404 1 . 1 0 ]
-[v _SSP1CON2bits SSP1CON2bits `VES1411  1 e 1 @401 ]
+[u S1413 . 1 `S1378 1 . 1 0 `S1387 1 . 1 0 `S1390 1 . 1 0 `S1397 1 . 1 0 `S1406 1 . 1 0 ]
+[v _SSP1CON2bits SSP1CON2bits `VES1413  1 e 1 @401 ]
 "6794
 [v _SSP2BUF SSP2BUF `VEuc  1 e 1 @406 ]
 "6814
@@ -635,7 +651,7 @@ SPI2_DEFAULT 0
 "7368
 [v _SSP2CON1 SSP2CON1 `VEuc  1 e 1 @410 ]
 "7398
-[s S1922 . 1 `uc 1 SSPM02 1 0 :1:0 
+[s S1924 . 1 `uc 1 SSPM02 1 0 :1:0 
 `uc 1 SSPM12 1 0 :1:1 
 `uc 1 SSPM22 1 0 :1:2 
 `uc 1 SSPM32 1 0 :1:3 
@@ -644,8 +660,8 @@ SPI2_DEFAULT 0
 `uc 1 SSPOV2 1 0 :1:6 
 `uc 1 WCOL2 1 0 :1:7 
 ]
-[u S1931 . 1 `S1192 1 . 1 0 `S1198 1 . 1 0 `S1922 1 . 1 0 ]
-[v _SSP2CON1bits SSP2CON1bits `VES1931  1 e 1 @410 ]
+[u S1933 . 1 `S1194 1 . 1 0 `S1200 1 . 1 0 `S1924 1 . 1 0 ]
+[v _SSP2CON1bits SSP2CON1bits `VES1933  1 e 1 @410 ]
 "7488
 [v _SSP2CON2 SSP2CON2 `VEuc  1 e 1 @411 ]
 "19994
@@ -654,32 +670,32 @@ SPI2_DEFAULT 0
 [v _TMR0H TMR0H `VEuc  1 e 1 @1437 ]
 "20386
 [v _T0CON0 T0CON0 `VEuc  1 e 1 @1438 ]
-[s S2043 . 1 `uc 1 OUTPS 1 0 :4:0 
+[s S2045 . 1 `uc 1 OUTPS 1 0 :4:0 
 `uc 1 MD16 1 0 :1:4 
 `uc 1 OUT 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 EN 1 0 :1:7 
 ]
 "20420
-[s S2049 . 1 `uc 1 T0OUTPS 1 0 :4:0 
+[s S2051 . 1 `uc 1 T0OUTPS 1 0 :4:0 
 `uc 1 T0MD16 1 0 :1:4 
 `uc 1 T0OUT 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 T0EN 1 0 :1:7 
 ]
-[s S2055 . 1 `uc 1 OUTPS0 1 0 :1:0 
+[s S2057 . 1 `uc 1 OUTPS0 1 0 :1:0 
 `uc 1 OUTPS1 1 0 :1:1 
 `uc 1 OUTPS2 1 0 :1:2 
 `uc 1 OUTPS3 1 0 :1:3 
 `uc 1 T016BIT 1 0 :1:4 
 ]
-[s S2061 . 1 `uc 1 T0OUTPS0 1 0 :1:0 
+[s S2063 . 1 `uc 1 T0OUTPS0 1 0 :1:0 
 `uc 1 T0OUTPS1 1 0 :1:1 
 `uc 1 T0OUTPS2 1 0 :1:2 
 `uc 1 T0OUTPS3 1 0 :1:3 
 ]
-[u S2066 . 1 `S2043 1 . 1 0 `S2049 1 . 1 0 `S2055 1 . 1 0 `S2061 1 . 1 0 ]
-[v _T0CON0bits T0CON0bits `VES2066  1 e 1 @1438 ]
+[u S2068 . 1 `S2045 1 . 1 0 `S2051 1 . 1 0 `S2057 1 . 1 0 `S2063 1 . 1 0 ]
+[v _T0CON0bits T0CON0bits `VES2068  1 e 1 @1438 ]
 "20510
 [v _T0CON1 T0CON1 `VEuc  1 e 1 @1439 ]
 [s S778 . 1 `uc 1 INTF 1 0 :1:0 
@@ -761,11 +777,11 @@ SPI2_DEFAULT 0
 "27172
 [v _RC2STA RC2STA `VEuc  1 e 1 @2589 ]
 "27194
-[v _RC2STAbits RC2STAbits `VES2225  1 e 1 @2589 ]
+[v _RC2STAbits RC2STAbits `VES2227  1 e 1 @2589 ]
 "27294
 [v _TX2STA TX2STA `VEuc  1 e 1 @2590 ]
 "27316
-[v _TX2STAbits TX2STAbits `VES2203  1 e 1 @2590 ]
+[v _TX2STAbits TX2STAbits `VES2205  1 e 1 @2590 ]
 "27416
 [v _BAUD2CON BAUD2CON `VEuc  1 e 1 @2591 ]
 "33476
@@ -881,18 +897,18 @@ SPI2_DEFAULT 0
 [v _eusart1RxTail eusart1RxTail `VEuc  1 e 1 0 ]
 "69
 [v _eusart1RxBuffer eusart1RxBuffer `VE[8]uc  1 e 8 0 ]
-[s S2128 . 1 `uc 1 perr 1 0 :1:0 
+[s S2130 . 1 `uc 1 perr 1 0 :1:0 
 `uc 1 ferr 1 0 :1:1 
 `uc 1 oerr 1 0 :1:2 
 `uc 1 reserved 1 0 :5:3 
 ]
 "70
-[u S2133 . 1 `S2128 1 . 1 0 `uc 1 status 1 0 ]
-[v _eusart1RxStatusBuffer eusart1RxStatusBuffer `VE[8]S2133  1 e 8 0 ]
+[u S2135 . 1 `S2130 1 . 1 0 `uc 1 status 1 0 ]
+[v _eusart1RxStatusBuffer eusart1RxStatusBuffer `VE[8]S2135  1 e 8 0 ]
 "71
 [v _eusart1RxCount eusart1RxCount `VEuc  1 e 1 0 ]
 "72
-[v _eusart1RxLastError eusart1RxLastError `VES2133  1 e 1 0 ]
+[v _eusart1RxLastError eusart1RxLastError `VES2135  1 e 1 0 ]
 "77
 [v _EUSART1_TxDefaultInterruptHandler EUSART1_TxDefaultInterruptHandler `*.37(v  1 e 2 0 ]
 "78
@@ -918,11 +934,11 @@ SPI2_DEFAULT 0
 "69
 [v _eusart2RxBuffer eusart2RxBuffer `VE[8]uc  1 e 8 0 ]
 "70
-[v _eusart2RxStatusBuffer eusart2RxStatusBuffer `VE[8]S2133  1 e 8 0 ]
+[v _eusart2RxStatusBuffer eusart2RxStatusBuffer `VE[8]S2135  1 e 8 0 ]
 "71
 [v _eusart2RxCount eusart2RxCount `VEuc  1 e 1 0 ]
 "72
-[v _eusart2RxLastError eusart2RxLastError `VES2133  1 e 1 0 ]
+[v _eusart2RxLastError eusart2RxLastError `VES2135  1 e 1 0 ]
 "77
 [v _EUSART2_TxDefaultInterruptHandler EUSART2_TxDefaultInterruptHandler `*.37(v  1 e 2 0 ]
 "78
@@ -937,16 +953,16 @@ SPI2_DEFAULT 0
 [v _statusBuffer statusBuffer `[80]uc  1 s 80 statusBuffer ]
 "146 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/i2c1_master.c
 [v _i2c1_fsmStateTable i2c1_fsmStateTable `DC[16]*.37(E12795  1 e 32 0 ]
-[s S1166 . 29 `[6]*.37(E363 1 callbackTable 12 0 `[6]*.30v 1 callbackPayload 6 12 `us 1 time_out 2 18 `us 1 time_out_value 2 20 `uc 1 address 1 22 `*.30uc 1 data_ptr 1 23 `ui 1 data_length 2 24 `E12795 1 state 1 26 `E358 1 error 1 27 `uc 1 addressNackCheck 1 28 :1:0 
+[s S1168 . 29 `[6]*.37(E363 1 callbackTable 12 0 `[6]*.30v 1 callbackPayload 6 12 `us 1 time_out 2 18 `us 1 time_out_value 2 20 `uc 1 address 1 22 `*.30uc 1 data_ptr 1 23 `ui 1 data_length 2 24 `E12795 1 state 1 26 `E358 1 error 1 27 `uc 1 addressNackCheck 1 28 :1:0 
 `uc 1 busy 1 28 :1:1 
 `uc 1 inUse 1 28 :1:2 
 `uc 1 bufferFree 1 28 :1:3 
 ]
 "165
-[v _I2C1_Status I2C1_Status `S1166  1 e 29 0 ]
-"54 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/pin_manager.c
+[v _I2C1_Status I2C1_Status `S1168  1 e 29 0 ]
+"55 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/pin_manager.c
 [v _IOCAF6_InterruptHandler IOCAF6_InterruptHandler `*.37(v  1 e 2 0 ]
-"55
+"56
 [v _IOCAF7_InterruptHandler IOCAF7_InterruptHandler `*.37(v  1 e 2 0 ]
 "40 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/rn487x/rn487x.c
 [v _asyncBuffer asyncBuffer `*.5uc  1 s 1 asyncBuffer ]
@@ -963,15 +979,55 @@ SPI2_DEFAULT 0
 [s S334 . 18 `*.37(v 1 Write 2 0 `*.37(uc 1 Read 2 2 `*.37(a 1 TransmitDone 2 4 `*.37(a 1 DataReady 2 6 `*.37(v 1 IndicateRx 2 8 `*.37(v 1 ResetModule 2 10 `*.37(v 1 SetSystemMode 2 12 `*.37(v 1 DelayMs 2 14 `*.37(v 1 AsyncHandler 2 16 ]
 "227
 [v _RN487X RN487X `DCS334  1 e 18 0 ]
-[s S1878 . 4 `uc 1 con1 1 0 `uc 1 stat 1 1 `uc 1 add 1 2 `uc 1 operation 1 3 ]
+[s S1880 . 4 `uc 1 con1 1 0 `uc 1 stat 1 1 `uc 1 add 1 2 `uc 1 operation 1 3 ]
 "58 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/spi2.c
-[v _spi2_configuration spi2_configuration `DC[1]S1878  1 s 4 spi2_configuration ]
+[v _spi2_configuration spi2_configuration `DC[1]S1880  1 s 4 spi2_configuration ]
 "59 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/tmr0.c
 [v _TMR0_InterruptHandler TMR0_InterruptHandler `*.37(v  1 e 2 0 ]
 "50 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"74
+"79
+} 0
+"81
+[v _send_spi_read send_spi_read `(v  1 e 1 0 ]
+{
+"82
+[v send_spi_read@data data `[4]uc  1 s 4 data ]
+"91
+} 0
+"127 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/spi2.c
+[v _SPI2_ReadBlock SPI2_ReadBlock `(v  1 e 1 0 ]
+{
+"129
+[v SPI2_ReadBlock@data data `*.4uc  1 a 1 4 ]
+"127
+[v SPI2_ReadBlock@block block `*.4v  1 p 1 1 ]
+[v SPI2_ReadBlock@blockSize blockSize `ui  1 p 2 2 ]
+"134
+} 0
+"97
+[v _SPI2_ExchangeByte SPI2_ExchangeByte `(uc  1 e 1 0 ]
+{
+[v SPI2_ExchangeByte@data data `uc  1 p 1 wreg ]
+[v SPI2_ExchangeByte@data data `uc  1 p 1 wreg ]
+"99
+[v SPI2_ExchangeByte@data data `uc  1 p 1 0 ]
+"103
+} 0
+"77
+[v _SPI2_Open SPI2_Open `(a  1 e 1 0 ]
+{
+[v SPI2_Open@spi2UniqueConfiguration spi2UniqueConfiguration `E358  1 p 1 wreg ]
+[v SPI2_Open@spi2UniqueConfiguration spi2UniqueConfiguration `E358  1 p 1 wreg ]
+"79
+[v SPI2_Open@spi2UniqueConfiguration spi2UniqueConfiguration `E358  1 p 1 3 ]
+"90
+} 0
+"92
+[v _SPI2_Close SPI2_Close `(v  1 e 1 0 ]
+{
+"95
 } 0
 "50 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
@@ -999,22 +1055,22 @@ SPI2_DEFAULT 0
 {
 "96
 } 0
-"58 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/pin_manager.c
+"59 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 {
-"152
+"153
 } 0
-"216
+"217
 [v _IOCAF7_SetInterruptHandler IOCAF7_SetInterruptHandler `(v  1 e 1 0 ]
 {
 [v IOCAF7_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
-"218
+"219
 } 0
-"186
+"187
 [v _IOCAF6_SetInterruptHandler IOCAF6_SetInterruptHandler `(v  1 e 1 0 ]
 {
 [v IOCAF6_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
-"188
+"189
 } 0
 "62 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/mcc.c
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
@@ -1111,30 +1167,30 @@ SPI2_DEFAULT 0
 {
 "141
 } 0
-"154 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/pin_manager.c
+"155 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
 {
-"166
+"167
 } 0
-"201
+"202
 [v _IOCAF7_ISR IOCAF7_ISR `(v  1 e 1 0 ]
 {
-"211
+"212
 } 0
-"223
+"224
 [v _IOCAF7_DefaultInterruptHandler IOCAF7_DefaultInterruptHandler `(v  1 e 1 0 ]
 {
-"226
+"228
 } 0
-"171
+"172
 [v _IOCAF6_ISR IOCAF6_ISR `(v  1 e 1 0 ]
 {
-"181
+"182
 } 0
-"193
+"194
 [v _IOCAF6_DefaultInterruptHandler IOCAF6_DefaultInterruptHandler `(v  1 e 1 0 ]
 {
-"196
+"197
 } 0
 "197 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/eusart2.c
 [v _EUSART2_Transmit_ISR EUSART2_Transmit_ISR `(v  1 e 1 0 ]
