@@ -2,7 +2,7 @@
 
 manifest_file_version: 1.0.0
 project: spi_host_ble
-creation_date: 2025-01-22T20:21:23.789Z[Europe/London]
+creation_date: 2025-01-26T11:28:13.505Z[Europe/London]
 operating_system: Windows 10
 mcc_mode: IDE
 mcc_mode_version: v6.20
@@ -16,7 +16,7 @@ is_using_prerelease_versions: false
 mcc_content_registries: https://registry.npmjs.org/
 device_library: {library_class: com.microchip.mcc.mcu8.Mcu8PeripheralLibrary, name: PIC10
     / PIC12 / PIC16 / PIC18 MCUs, version: 1.82.1}
-packs: {name: PIC16F1xxxx_DFP, version: 1.25.389}
+packs: {name: PIC16F1xxxx_DFP, version: 1.26.410}
 modules:
 - {name: com.microchip.mcc.mcu8.Mcu8PeripheralLibrary, type: CLASSIC, version: 1.82.1}
 - {name: com.microchip.mcc.foundationservices.library.FoundationServicesLibrary, type: CLASSIC,
