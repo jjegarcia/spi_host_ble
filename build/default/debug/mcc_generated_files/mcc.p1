@@ -1,4 +1,12 @@
 Version 4.0 HI-TECH Software Intermediate Code
+"488 mcc_generated_files/pin_manager.h
+[; ;mcc_generated_files/pin_manager.h: 488:     struct {
+[s S1719 :1 `uc 1 :7 `uc 1 ]
+[n S1719 . ACC UNDEFINED ]
+"487
+[; ;mcc_generated_files/pin_manager.h: 487: typedef union {
+[u S1718 `S1719 1 `uc 1 ]
+[n S1718 . . INTERRUPTbits ]
 "102 mcc_generated_files/mcc.h
 [; ;mcc_generated_files/mcc.h: 102: void PMD_Initialize(void);
 [v _PMD_Initialize `(v ~T0 @X0 0 ef ]
@@ -1658,6 +1666,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "37278
 [; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc/pic16lf18456.h: 37278: __asm("TOSH equ 01FEFh");
 [; <" TOSH equ 01FEFh ;# ">
+"495 mcc_generated_files/pin_manager.h
+[; ;mcc_generated_files/pin_manager.h: 495: volatile INTERRUPTbits_t INTERRUPTbits;
+[v _INTERRUPTbits `VS1718 ~T0 @X0 1 e ]
 "50 mcc_generated_files/mcc.c
 [; ;mcc_generated_files/mcc.c: 50: void SYSTEM_Initialize(void)
 [v _SYSTEM_Initialize `(v ~T0 @X0 1 ef ]
@@ -1692,7 +1703,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _EUSART2_Initialize ..  ]
 "60
 [; ;mcc_generated_files/mcc.c: 60: }
-[e :UE 1724 ]
+[e :UE 1726 ]
 }
 "62
 [; ;mcc_generated_files/mcc.c: 62: void OSCILLATOR_Initialize(void)
@@ -1722,7 +1733,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _OSCTUNE -> -> 0 `i `uc ]
 "76
 [; ;mcc_generated_files/mcc.c: 76: }
-[e :UE 1725 ]
+[e :UE 1727 ]
 }
 "78
 [; ;mcc_generated_files/mcc.c: 78: void PMD_Initialize(void)
@@ -1758,5 +1769,5 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _PMD7 -> -> 0 `i `uc ]
 "96
 [; ;mcc_generated_files/mcc.c: 96: }
-[e :UE 1726 ]
+[e :UE 1728 ]
 }

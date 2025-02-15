@@ -10,4 +10,10 @@ mcc_generated_files/tmr0.h  \
 mcc_generated_files/eusart2.h  \
 mcc_generated_files/eusart1.h  \
 mcc_generated_files/delay.h  \
-main.h 
+main.h  \
+mcc_generated_files/application/LIGHTBLUE_service.h  \
+mcc_generated_files/rn487x/rn487x_interface.h  \
+mcc_generated_files/rn487x/rn487x.h  \
+mcc_generated_files/drivers/uart.h  \
+mcc_generated_files/drivers/../eusart1.h  \
+mcc_generated_files/application/BMA253_accel.h 

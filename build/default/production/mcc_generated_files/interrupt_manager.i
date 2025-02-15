@@ -20621,6 +20621,15 @@ void IOCAF7_SetInterruptHandler(void (* InterruptHandler)(void));
 extern void (*IOCAF7_InterruptHandler)(void);
 # 486 "mcc_generated_files/pin_manager.h"
 void IOCAF7_DefaultInterruptHandler(void);
+typedef union {
+    struct {
+        unsigned ACC : 1;
+        unsigned UNDEFINED : 7;
+    };
+    uint8_t INTERRUPTbits;
+}INTERRUPTbits_t;
+
+volatile INTERRUPTbits_t INTERRUPTbits;
 # 52 "mcc_generated_files/mcc.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdbool.h" 1 3

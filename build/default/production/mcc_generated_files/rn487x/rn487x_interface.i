@@ -20720,6 +20720,15 @@ void IOCAF7_SetInterruptHandler(void (* InterruptHandler)(void));
 extern void (*IOCAF7_InterruptHandler)(void);
 # 486 "mcc_generated_files/rn487x/../pin_manager.h"
 void IOCAF7_DefaultInterruptHandler(void);
+typedef union {
+    struct {
+        unsigned ACC : 1;
+        unsigned UNDEFINED : 7;
+    };
+    uint8_t INTERRUPTbits;
+}INTERRUPTbits_t;
+
+volatile INTERRUPTbits_t INTERRUPTbits;
 # 52 "mcc_generated_files/rn487x/../mcc.h" 2
 
 

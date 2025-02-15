@@ -28,7 +28,7 @@ TEST_MODE 0
 APPLICATION_MODE 1
 ]
 "57 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/rn487x/rn487x.c
-[e E50 . `uc
+[e E93 . `uc
 TEST_MODE 0
 APPLICATION_MODE 1
 ]
@@ -38,12 +38,12 @@ TEST_MODE 0
 APPLICATION_MODE 1
 ]
 "254
-[e E13149 . `uc
+[e E13157 . `uc
 UART_CDC 0
 UART_BLE 1
 ]
 "342
-[e E13202 . `uc
+[e E13210 . `uc
 DISCONNECT_MSG 0
 STREAM_OPEN_MSG 1
 GENERAL_MSG 2
@@ -93,14 +93,118 @@ I2C1_NULL 5
 [e E358 . `uc
 SPI2_DEFAULT 0
 ]
-"84 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\main.c
-[e E12741 . `uc
+"99 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\main.c
+[e E13058 . `uc
+UART_CDC 0
+UART_BLE 1
+]
+"117
+[e E12968 . `uc
+TEST_MODE 0
+APPLICATION_MODE 1
+]
+"140
+[e E12749 . `uc
 SPI2_DEFAULT 0
+]
+"326 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/application/LIGHTBLUE_service.c
+[e E12801 . `uc
+PROTOCOL_VERSION_ID 86
+LED_STATE_ID 76
+BUTTON_STATE_ID 80
+TEMPERATURE_DATA_ID 84
+ACCEL_DATA_ID 88
+SERIAL_DATA_ID 83
+ERROR_ID 82
+UI_CONFIG_DATA_ID 85
+ACC_STATE 65
+]
+"408
+[e E272 . `uc
+TEST_MODE 0
+APPLICATION_MODE 1
+]
+"423
+[e E12812 . `uc
+IDLE 0
+SEQUENCE_NUMBER 1
+PACKET_ID 2
+PAYLOAD_SIZE_0 3
+PAYLOAD_SIZE_1 4
+PAYLOAD_0 5
+PAYLOAD_1 6
+]
+"568
+[e E12769 . `uc
+UART_CDC 0
+UART_BLE 1
+]
+"80 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/drivers/i2c_master.c
+[e E12882 . `uc
+I2C_IDLE 0
+I2C_SEND_ADR_READ 1
+I2C_SEND_ADR_WRITE 2
+I2C_TX 3
+I2C_RX 4
+I2C_RCEN 5
+I2C_TX_EMPTY 6
+I2C_SEND_RESTART_READ 7
+I2C_SEND_RESTART_WRITE 8
+I2C_SEND_RESTART 9
+I2C_SEND_STOP 10
+I2C_RX_DO_ACK 11
+I2C_RX_DO_NACK_STOP 12
+I2C_RX_DO_NACK_RESTART 13
+I2C_RESET 14
+I2C_ADDRESS_NACK 15
+]
+[e E12723 . `uc
+I2C_NOERR 0
+I2C_BUSY 1
+I2C_FAIL 2
+]
+[e E12728 . `uc
+i2c_stop 1
+i2c_restart_read 2
+i2c_restart_write 3
+i2c_continue 4
+i2c_reset_link 5
+]
+"91
+[e E12900 . `uc
+i2c_dataComplete 0
+i2c_writeCollision 1
+i2c_addressNACK 2
+i2c_dataNACK 3
+i2c_timeOut 4
+i2c_NULL 5
+]
+"34 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/drivers/i2c_simple_master.c
+[e E363 . `uc
+I2C1_STOP 1
+I2C1_RESTART_READ 2
+I2C1_RESTART_WRITE 3
+I2C1_CONTINUE 4
+I2C1_RESET_LINK 5
+]
+"53
+[e E358 . `uc
+I2C1_NOERR 0
+I2C1_BUSY 1
+I2C1_FAIL 2
+]
+"25 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/drivers/i2c_types.c
+[e E363 . `uc
+i2c_stop 1
+i2c_restart_read 2
+i2c_restart_write 3
+i2c_continue 4
+i2c_reset_link 5
 ]
 "10 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "3 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\strchr.c
-[v _strchr strchr `(*.5uc  1 e 2 0 ]
+[v _strchr strchr `(*.7uc  1 e 2 0 ]
 "3 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\strcpy.c
 [v _strcpy strcpy `(*.4uc  1 e 2 0 ]
 "5 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\strlen.c
@@ -108,19 +212,137 @@ SPI2_DEFAULT 0
 "3 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\strncmp.c
 [v _strncmp strncmp `(i  1 e 2 0 ]
 "4 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\strstr.c
-[v _strstr strstr `(*.5uc  1 e 2 0 ]
+[v _strstr strstr `(*.7uc  1 e 2 0 ]
 "4 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
 "6 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\pic\__eeprom.c
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"50 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\main.c
+"52 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"81
-[v _send_spi_read send_spi_read `(v  1 e 1 0 ]
+"124
+[v _service_acceleremoterInterrupt service_acceleremoterInterrupt `(v  1 e 1 0 ]
+"83 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/application/BMA253_accel.c
+[v _BMA253_GetAccelDataX BMA253_GetAccelDataX `(v  1 e 1 0 ]
+"95
+[v _BMA253_GetAccelDataY BMA253_GetAccelDataY `(v  1 e 1 0 ]
+"107
+[v _BMA253_GetAccelDataZ BMA253_GetAccelDataZ `(v  1 e 1 0 ]
+"119
+[v _BMA253_GetAccelDataXYZ BMA253_GetAccelDataXYZ `(v  1 e 1 0 ]
+"147
+[v _BMA253_NewAccelDataRdyX BMA253_NewAccelDataRdyX `(a  1 s 1 BMA253_NewAccelDataRdyX ]
+"155
+[v _BMA253_NewAccelDataRdyY BMA253_NewAccelDataRdyY `(a  1 s 1 BMA253_NewAccelDataRdyY ]
+"163
+[v _BMA253_NewAccelDataRdyZ BMA253_NewAccelDataRdyZ `(a  1 s 1 BMA253_NewAccelDataRdyZ ]
+"310 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/application/LIGHTBLUE_service.c
+[v _LIGHTBLUE_Initialize LIGHTBLUE_Initialize `(v  1 e 1 0 ]
+"316
+[v _LIGHTBLUE_TemperatureSensor LIGHTBLUE_TemperatureSensor `(v  1 e 1 0 ]
+"329
+[v _LIGHTBLUE_AccelSensor LIGHTBLUE_AccelSensor `(v  1 e 1 0 ]
+"345
+[v _LIGHTBLUE_PushButton LIGHTBLUE_PushButton `(v  1 e 1 0 ]
+"356
+[v _LIGHTBLUE_AccState LIGHTBLUE_AccState `(v  1 e 1 0 ]
+"368
+[v _LIGHTBLUE_LedState LIGHTBLUE_LedState `(v  1 e 1 0 ]
+"387
+[v _LIGHTBLUE_SendProtocolVersion LIGHTBLUE_SendProtocolVersion `(v  1 e 1 0 ]
+"404
+[v _LIGHTBLUE_SendSerialData LIGHTBLUE_SendSerialData `(v  1 e 1 0 ]
+"421
+[v _LIGHTBLUE_ParseIncomingPacket LIGHTBLUE_ParseIncomingPacket `(v  1 e 1 0 ]
+"481
+[v _LIGHTBLUE_SendPacket LIGHTBLUE_SendPacket `(v  1 s 1 LIGHTBLUE_SendPacket ]
+"495
+[v _LIGHTBLUE_SplitWord LIGHTBLUE_SplitWord `(v  1 s 1 LIGHTBLUE_SplitWord ]
+"501
+[v _LIGHTBLUE_SplitByte LIGHTBLUE_SplitByte `(v  1 s 1 LIGHTBLUE_SplitByte ]
+"509
+[v _LIGHTBLUE_GetButtonValue LIGHTBLUE_GetButtonValue `(uc  1 s 1 LIGHTBLUE_GetButtonValue ]
+"514
+[v _LIGHTBLUE_GetAccState LIGHTBLUE_GetAccState `(uc  1 s 1 LIGHTBLUE_GetAccState ]
+"519
+[v _LIGHTBLUE_GetDataLedValue LIGHTBLUE_GetDataLedValue `(uc  1 s 1 LIGHTBLUE_GetDataLedValue ]
+"524
+[v _LIGHTBLUE_GetErrorLedValue LIGHTBLUE_GetErrorLedValue `(uc  1 s 1 LIGHTBLUE_GetErrorLedValue ]
+"529
+[v _LIGHTBLUE_SetErrorLedValue LIGHTBLUE_SetErrorLedValue `(v  1 s 1 LIGHTBLUE_SetErrorLedValue ]
+"535
+[v _LIGHTBLUE_UpdateErrorLed LIGHTBLUE_UpdateErrorLed `(v  1 s 1 LIGHTBLUE_UpdateErrorLed ]
+"543
+[v _LIGHTBLUE_PerformAction LIGHTBLUE_PerformAction `(v  1 s 1 LIGHTBLUE_PerformAction ]
+"70 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/application/MCP9844_temp_sensor.c
+[v _MCP9844_GetTemperatureValue MCP9844_GetTemperatureValue `(v  1 e 1 0 ]
+"75
+[v _MCP9844_CalcTemperature MCP9844_CalcTemperature `(s  1 s 2 MCP9844_CalcTemperature ]
 "38 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/delay.c
 [v _DELAY_milliseconds DELAY_milliseconds `(v  1 e 1 0 ]
+"193 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/drivers/i2c_master.c
+[v _i2c_masterOperation i2c_masterOperation `(E12723  1 e 1 0 ]
+"230
+[v _i2c_poller i2c_poller `T(v  1 e 1 0 ]
+"239
+[v _do_I2C_RESET do_I2C_RESET `(E12882  1 s 1 do_I2C_RESET ]
+"247
+[v _do_I2C_IDLE do_I2C_IDLE `(E12882  1 s 1 do_I2C_IDLE ]
+"254
+[v _do_I2C_SEND_RESTART_READ do_I2C_SEND_RESTART_READ `(E12882  1 s 1 do_I2C_SEND_RESTART_READ ]
+"260
+[v _do_I2C_SEND_RESTART_WRITE do_I2C_SEND_RESTART_WRITE `(E12882  1 s 1 do_I2C_SEND_RESTART_WRITE ]
+"266
+[v _do_I2C_SEND_RESTART do_I2C_SEND_RESTART `(E12882  1 s 1 do_I2C_SEND_RESTART ]
+"272
+[v _do_I2C_SEND_STOP do_I2C_SEND_STOP `(E12882  1 s 1 do_I2C_SEND_STOP ]
+"278
+[v _do_I2C_SEND_ADR_READ do_I2C_SEND_ADR_READ `(E12882  1 s 1 do_I2C_SEND_ADR_READ ]
+"285
+[v _do_I2C_SEND_ADR_WRITE do_I2C_SEND_ADR_WRITE `(E12882  1 s 1 do_I2C_SEND_ADR_WRITE ]
+"292
+[v _do_I2C_RCEN do_I2C_RCEN `(E12882  1 s 1 do_I2C_RCEN ]
+"299
+[v _do_I2C_DO_ACK do_I2C_DO_ACK `(E12882  1 s 1 do_I2C_DO_ACK ]
+"305
+[v _do_I2C_DO_NACK_STOP do_I2C_DO_NACK_STOP `(E12882  1 s 1 do_I2C_DO_NACK_STOP ]
+"311
+[v _do_I2C_DO_NACK_RESTART do_I2C_DO_NACK_RESTART `(E12882  1 s 1 do_I2C_DO_NACK_RESTART ]
+"319
+[v _do_I2C_DO_ADDRESS_NACK do_I2C_DO_ADDRESS_NACK `(E12882  1 s 1 do_I2C_DO_ADDRESS_NACK ]
+"333
+[v _do_I2C_TX do_I2C_TX `(E12882  1 s 1 do_I2C_TX ]
+"357
+[v _do_I2C_RX do_I2C_RX `(E12882  1 s 1 do_I2C_RX ]
+"382
+[v _do_I2C_TX_EMPTY do_I2C_TX_EMPTY `(E12882  1 s 1 do_I2C_TX_EMPTY ]
+"419
+[v _i2c_ISR i2c_ISR `(v  1 e 1 0 ]
+"435
+[v _i2c_busCollisionISR i2c_busCollisionISR `(v  1 e 1 0 ]
+"443
+[v _returnStop returnStop `(E12728  1 s 1 returnStop ]
+"448
+[v _returnReset returnReset `(E12728  1 s 1 returnReset ]
+"453
+[v _setCallBack setCallBack `(v  1 s 1 setCallBack ]
+"34 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/drivers/i2c_simple_master.c
+[v _wr1RegCompleteHandler@i2c_simple_master$F3572 wr1RegCompleteHandler `(E363  1 s 1 wr1RegCompleteHandler ]
+"51
+[v _i2c_write1ByteRegister i2c_write1ByteRegister `(v  1 e 1 0 ]
+"81
+[v _rd1RegCompleteHandler@i2c_simple_master$F3582 rd1RegCompleteHandler `(E363  1 s 1 rd1RegCompleteHandler ]
+"97
+[v _i2c_read1ByteRegister i2c_read1ByteRegister `(uc  1 e 1 0 ]
+"119
+[v _rd2RegCompleteHandler@i2c_simple_master$F3590 rd2RegCompleteHandler `(E363  1 s 1 rd2RegCompleteHandler ]
+"135
+[v _i2c_read2ByteRegister i2c_read2ByteRegister `(us  1 e 2 0 ]
+"151
+[v _wr2RegCompleteHandler@i2c_simple_master$F3596 wr2RegCompleteHandler `(E363  1 s 1 wr2RegCompleteHandler ]
+"185
+[v _rdBlkRegCompleteHandler@i2c_simple_master$F3602 rdBlkRegCompleteHandler `(E363  1 s 1 rdBlkRegCompleteHandler ]
 "88 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/eusart1.c
 [v _EUSART1_Initialize EUSART1_Initialize `(v  1 e 1 0 ]
 "132
@@ -193,6 +415,46 @@ SPI2_DEFAULT 0
 [v _RN487X_Example_Run RN487X_Example_Run `(v  1 s 1 RN487X_Example_Run ]
 "99
 [v _RN487X_Example_TransparentUart RN487X_Example_TransparentUart `(a  1 s 1 RN487X_Example_TransparentUart ]
+"39 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/i2c1_driver.c
+[v _mssp1_enableIRQ mssp1_enableIRQ `T(v  1 e 1 0 ]
+"44
+[v _mssp1_IRQisEnabled mssp1_IRQisEnabled `T(b  1 e 0 0 ]
+"49
+[v _mssp1_disableIRQ mssp1_disableIRQ `T(v  1 e 1 0 ]
+"54
+[v _mssp1_clearIRQ mssp1_clearIRQ `T(v  1 e 1 0 ]
+"59
+[v _mssp1_setIRQ mssp1_setIRQ `T(v  1 e 1 0 ]
+"69
+[v _mssp1_waitForEvent mssp1_waitForEvent `T(v  1 e 1 0 ]
+"84
+[v _i2c1_driver_open i2c1_driver_open `(b  1 e 0 0 ]
+"142
+[v _i2c1_driver_resetBus i2c1_driver_resetBus `T(v  1 e 1 0 ]
+"147
+[v _i2c1_driver_start i2c1_driver_start `T(v  1 e 1 0 ]
+"152
+[v _i2c1_driver_restart i2c1_driver_restart `T(v  1 e 1 0 ]
+"157
+[v _i2c1_driver_stop i2c1_driver_stop `T(v  1 e 1 0 ]
+"162
+[v _i2c1_driver_isNACK i2c1_driver_isNACK `T(b  1 e 0 0 ]
+"167
+[v _i2c1_driver_startRX i2c1_driver_startRX `T(v  1 e 1 0 ]
+"172
+[v _i2c1_driver_getRXData i2c1_driver_getRXData `T(uc  1 e 1 0 ]
+"187
+[v _i2c1_driver_TXData i2c1_driver_TXData `T(v  1 e 1 0 ]
+"197
+[v _i2c1_driver_sendACK i2c1_driver_sendACK `T(v  1 e 1 0 ]
+"203
+[v _i2c1_driver_sendNACK i2c1_driver_sendNACK `T(v  1 e 1 0 ]
+"254
+[v _i2c1_driver_clearBusCollision i2c1_driver_clearBusCollision `T(v  1 e 1 0 ]
+"259
+[v _i2c1_driver_setBusCollisionISR i2c1_driver_setBusCollisionISR `T(v  1 e 1 0 ]
+"263
+[v _i2c1_driver_setI2cISR i2c1_driver_setI2cISR `T(v  1 e 1 0 ]
 "167 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/i2c1_master.c
 [v _I2C1_Initialize I2C1_Initialize `(v  1 e 1 0 ]
 "176
@@ -313,7 +575,9 @@ SPI2_DEFAULT 0
 [v _IOCAF7_SetInterruptHandler IOCAF7_SetInterruptHandler `(v  1 e 1 0 ]
 "224
 [v _IOCAF7_DefaultInterruptHandler IOCAF7_DefaultInterruptHandler `(v  1 e 1 0 ]
-"79 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/rn487x/rn487x.c
+"54 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/rn487x/rn487x.c
+[v _RN487X_Init RN487X_Init `(a  1 e 1 0 ]
+"79
 [v _RN487X_SendCmd RN487X_SendCmd `(v  1 e 1 0 ]
 "153
 [v _RN487X_SetAsyncMessageHandler RN487X_SetAsyncMessageHandler `(a  1 e 1 0 ]
@@ -328,7 +592,7 @@ SPI2_DEFAULT 0
 "252
 [v _RN487X_Write RN487X_Write `T(v  1 s 1 RN487X_Write ]
 "257
-[v _RN487X_Read@rn487x_interface$F528 RN487X_Read `T(uc  1 s 1 RN487X_Read ]
+[v _RN487X_Read@rn487x_interface$F545 RN487X_Read `T(uc  1 s 1 RN487X_Read ]
 "262
 [v _RN487X_is_tx_done RN487X_is_tx_done `T(a  1 s 1 RN487X_is_tx_done ]
 "267
@@ -369,10 +633,16 @@ SPI2_DEFAULT 0
 [v _TMR0_SetInterruptHandler TMR0_SetInterruptHandler `(v  1 e 1 0 ]
 "138
 [v _TMR0_DefaultInterruptHandler TMR0_DefaultInterruptHandler `(v  1 e 1 0 ]
-"6 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X/main.h
+"13 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X/main.h
 [v _pushed pushed `a  1 e 1 0 ]
-"7
+"14
 [v _sendSpiReadRequest sendSpiReadRequest `a  1 e 1 0 ]
+"37
+[v _lightBlueSerial@main$F2767 lightBlueSerial `[80]uc  1 s 80 lightBlueSerial ]
+"38
+[v _serialIndex@main$F2768 serialIndex `uc  1 s 1 serialIndex ]
+"41
+[v _flats flats `uc  1 e 1 0 ]
 [s S250 . 1 `uc 1 INTEDG 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 PEIE 1 0 :1:6 
@@ -381,9 +651,21 @@ SPI2_DEFAULT 0
 "426 C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc/pic16lf18456.h
 [u S255 . 1 `S250 1 . 1 0 ]
 [v _INTCONbits INTCONbits `VES255  1 e 1 @11 ]
+[s S2945 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 RA2 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 RA4 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+`uc 1 RA6 1 0 :1:6 
+`uc 1 RA7 1 0 :1:7 
+]
+"463
+[u S2954 . 1 `S2945 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES2954  1 e 1 @12 ]
 "653
 [v _TRISA TRISA `VEuc  1 e 1 @18 ]
-[s S654 . 1 `uc 1 TRISA0 1 0 :1:0 
+[s S671 . 1 `uc 1 TRISA0 1 0 :1:0 
 `uc 1 TRISA1 1 0 :1:1 
 `uc 1 TRISA2 1 0 :1:2 
 `uc 1 TRISA3 1 0 :1:3 
@@ -393,13 +675,13 @@ SPI2_DEFAULT 0
 `uc 1 TRISA7 1 0 :1:7 
 ]
 "670
-[u S663 . 1 `S654 1 . 1 0 ]
-[v _TRISAbits TRISAbits `VES663  1 e 1 @18 ]
+[u S680 . 1 `S671 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES680  1 e 1 @18 ]
 "715
 [v _TRISB TRISB `VEuc  1 e 1 @19 ]
 "777
 [v _TRISC TRISC `VEuc  1 e 1 @20 ]
-[s S1892 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S1946 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -409,13 +691,13 @@ SPI2_DEFAULT 0
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "794
-[u S1901 . 1 `S1892 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES1901  1 e 1 @20 ]
+[u S1955 . 1 `S1946 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES1955  1 e 1 @20 ]
 "839
 [v _TRISE TRISE `VEuc  1 e 1 @22 ]
 "860
 [v _LATA LATA `VEuc  1 e 1 @24 ]
-[s S612 . 1 `uc 1 LATA0 1 0 :1:0 
+[s S629 . 1 `uc 1 LATA0 1 0 :1:0 
 `uc 1 LATA1 1 0 :1:1 
 `uc 1 LATA2 1 0 :1:2 
 `uc 1 LATA3 1 0 :1:3 
@@ -425,13 +707,13 @@ SPI2_DEFAULT 0
 `uc 1 LATA7 1 0 :1:7 
 ]
 "877
-[u S621 . 1 `S612 1 . 1 0 ]
-[v _LATAbits LATAbits `VES621  1 e 1 @24 ]
+[u S638 . 1 `S629 1 . 1 0 ]
+[v _LATAbits LATAbits `VES638  1 e 1 @24 ]
 "922
 [v _LATB LATB `VEuc  1 e 1 @25 ]
 "984
 [v _LATC LATC `VEuc  1 e 1 @26 ]
-[s S633 . 1 `uc 1 LATC0 1 0 :1:0 
+[s S650 . 1 `uc 1 LATC0 1 0 :1:0 
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
 `uc 1 LATC3 1 0 :1:3 
@@ -441,8 +723,8 @@ SPI2_DEFAULT 0
 `uc 1 LATC7 1 0 :1:7 
 ]
 "1001
-[u S642 . 1 `S633 1 . 1 0 ]
-[v _LATCbits LATCbits `VES642  1 e 1 @26 ]
+[u S659 . 1 `S650 1 . 1 0 ]
+[v _LATCbits LATCbits `VES659  1 e 1 @26 ]
 "5017
 [v _RC1REG RC1REG `VEuc  1 e 1 @281 ]
 "5071
@@ -453,7 +735,7 @@ SPI2_DEFAULT 0
 [v _SP1BRGH SP1BRGH `VEuc  1 e 1 @284 ]
 "5245
 [v _RC1STA RC1STA `VEuc  1 e 1 @285 ]
-[s S2218 . 1 `uc 1 RX9D 1 0 :1:0 
+[s S2272 . 1 `uc 1 RX9D 1 0 :1:0 
 `uc 1 OERR 1 0 :1:1 
 `uc 1 FERR 1 0 :1:2 
 `uc 1 ADDEN 1 0 :1:3 
@@ -463,11 +745,11 @@ SPI2_DEFAULT 0
 `uc 1 SPEN 1 0 :1:7 
 ]
 "5271
-[u S2227 . 1 `S2218 1 . 1 0 ]
-[v _RC1STAbits RC1STAbits `VES2227  1 e 1 @285 ]
+[u S2281 . 1 `S2272 1 . 1 0 ]
+[v _RC1STAbits RC1STAbits `VES2281  1 e 1 @285 ]
 "5425
 [v _TX1STA TX1STA `VEuc  1 e 1 @286 ]
-[s S2196 . 1 `uc 1 TX9D 1 0 :1:0 
+[s S2250 . 1 `uc 1 TX9D 1 0 :1:0 
 `uc 1 TRMT 1 0 :1:1 
 `uc 1 BRGH 1 0 :1:2 
 `uc 1 SENDB 1 0 :1:3 
@@ -477,17 +759,19 @@ SPI2_DEFAULT 0
 `uc 1 CSRC 1 0 :1:7 
 ]
 "5451
-[u S2205 . 1 `S2196 1 . 1 0 ]
-[v _TX1STAbits TX1STAbits `VES2205  1 e 1 @286 ]
+[u S2259 . 1 `S2250 1 . 1 0 ]
+[v _TX1STAbits TX1STAbits `VES2259  1 e 1 @286 ]
 "5605
 [v _BAUD1CON BAUD1CON `VEuc  1 e 1 @287 ]
 "5851
 [v _SSP1BUF SSP1BUF `VEuc  1 e 1 @396 ]
 "5871
 [v _SSP1ADD SSP1ADD `VEuc  1 e 1 @397 ]
+"5991
+[v _SSP1MSK SSP1MSK `VEuc  1 e 1 @398 ]
 "6061
 [v _SSP1STAT SSP1STAT `VEuc  1 e 1 @399 ]
-[s S1467 . 1 `uc 1 BF 1 0 :1:0 
+[s S1514 . 1 `uc 1 BF 1 0 :1:0 
 `uc 1 UA 1 0 :1:1 
 `uc 1 R_nW 1 0 :1:2 
 `uc 1 S 1 0 :1:3 
@@ -497,33 +781,33 @@ SPI2_DEFAULT 0
 `uc 1 SMP 1 0 :1:7 
 ]
 "6170
-[s S1476 . 1 `uc 1 . 1 0 :2:0 
+[s S1523 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_W 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_A 1 0 :1:5 
 ]
-[s S1481 . 1 `uc 1 . 1 0 :2:0 
+[s S1528 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nW 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nA 1 0 :1:5 
 ]
-[s S1486 . 1 `uc 1 . 1 0 :2:0 
+[s S1533 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nWRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nADDRESS 1 0 :1:5 
 ]
-[s S1491 . 1 `uc 1 . 1 0 :2:0 
+[s S1538 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 READ_WRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 DATA_ADDRESS 1 0 :1:5 
 ]
-[s S1496 . 1 `uc 1 . 1 0 :2:0 
+[s S1543 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 I2C_READ 1 0 :1:2 
 `uc 1 I2C_START 1 0 :1:3 
 `uc 1 I2C_STOP 1 0 :1:4 
 `uc 1 I2C_DAT 1 0 :1:5 
 ]
-[s S1502 . 1 `uc 1 BF1 1 0 :1:0 
+[s S1549 . 1 `uc 1 BF1 1 0 :1:0 
 `uc 1 UA1 1 0 :1:1 
 `uc 1 R 1 0 :1:2 
 `uc 1 START 1 0 :1:3 
@@ -532,66 +816,66 @@ SPI2_DEFAULT 0
 `uc 1 CKE1 1 0 :1:6 
 `uc 1 SMP1 1 0 :1:7 
 ]
-[s S1511 . 1 `uc 1 . 1 0 :2:0 
+[s S1558 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 RW 1 0 :1:2 
 `uc 1 START1 1 0 :1:3 
 `uc 1 STOP1 1 0 :1:4 
 `uc 1 DA 1 0 :1:5 
 ]
-[s S1517 . 1 `uc 1 . 1 0 :2:0 
+[s S1564 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 RW1 1 0 :1:2 
 `uc 1 I2C_START1 1 0 :1:3 
 `uc 1 I2C_STOP2 1 0 :1:4 
 `uc 1 DA1 1 0 :1:5 
 ]
-[s S1523 . 1 `uc 1 . 1 0 :2:0 
+[s S1570 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 I2C_READ1 1 0 :1:2 
 `uc 1 S2 1 0 :1:3 
 `uc 1 P2 1 0 :1:4 
 `uc 1 DATA_ADDRESS1 1 0 :1:5 
 ]
-[s S1529 . 1 `uc 1 . 1 0 :2:0 
+[s S1576 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 READ_WRITE1 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_A1 1 0 :1:5 
 ]
-[s S1534 . 1 `uc 1 . 1 0 :2:0 
+[s S1581 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_W1 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_nA1 1 0 :1:5 
 ]
-[s S1539 . 1 `uc 1 . 1 0 :2:0 
+[s S1586 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_nW1 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 I2C_DAT1 1 0 :1:5 
 ]
-[s S1544 . 1 `uc 1 . 1 0 :2:0 
+[s S1591 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nW2 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nA2 1 0 :1:5 
 ]
-[s S1549 . 1 `uc 1 . 1 0 :2:0 
+[s S1596 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nWRITE1 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nADDRESS1 1 0 :1:5 
 ]
-[u S1554 . 1 `S1467 1 . 1 0 `S1476 1 . 1 0 `S1481 1 . 1 0 `S1486 1 . 1 0 `S1491 1 . 1 0 `S1496 1 . 1 0 `S1502 1 . 1 0 `S1511 1 . 1 0 `S1517 1 . 1 0 `S1523 1 . 1 0 `S1529 1 . 1 0 `S1534 1 . 1 0 `S1539 1 . 1 0 `S1544 1 . 1 0 `S1549 1 . 1 0 ]
-[v _SSP1STATbits SSP1STATbits `VES1554  1 e 1 @399 ]
+[u S1601 . 1 `S1514 1 . 1 0 `S1523 1 . 1 0 `S1528 1 . 1 0 `S1533 1 . 1 0 `S1538 1 . 1 0 `S1543 1 . 1 0 `S1549 1 . 1 0 `S1558 1 . 1 0 `S1564 1 . 1 0 `S1570 1 . 1 0 `S1576 1 . 1 0 `S1581 1 . 1 0 `S1586 1 . 1 0 `S1591 1 . 1 0 `S1596 1 . 1 0 ]
+[v _SSP1STATbits SSP1STATbits `VES1601  1 e 1 @399 ]
 "6425
 [v _SSP1CON1 SSP1CON1 `VEuc  1 e 1 @400 ]
-[s S1194 . 1 `uc 1 SSPM 1 0 :4:0 
+[s S1241 . 1 `uc 1 SSPM 1 0 :4:0 
 `uc 1 CKP 1 0 :1:4 
 `uc 1 SSPEN 1 0 :1:5 
 `uc 1 SSPOV 1 0 :1:6 
 `uc 1 WCOL 1 0 :1:7 
 ]
 "6455
-[s S1200 . 1 `uc 1 SSPM0 1 0 :1:0 
+[s S1247 . 1 `uc 1 SSPM0 1 0 :1:0 
 `uc 1 SSPM1 1 0 :1:1 
 `uc 1 SSPM2 1 0 :1:2 
 `uc 1 SSPM3 1 0 :1:3 
 ]
-[s S1205 . 1 `uc 1 SSPM01 1 0 :1:0 
+[s S1252 . 1 `uc 1 SSPM01 1 0 :1:0 
 `uc 1 SSPM11 1 0 :1:1 
 `uc 1 SSPM21 1 0 :1:2 
 `uc 1 SSPM31 1 0 :1:3 
@@ -600,11 +884,11 @@ SPI2_DEFAULT 0
 `uc 1 SSPOV1 1 0 :1:6 
 `uc 1 WCOL1 1 0 :1:7 
 ]
-[u S1214 . 1 `S1194 1 . 1 0 `S1200 1 . 1 0 `S1205 1 . 1 0 ]
-[v _SSP1CON1bits SSP1CON1bits `VES1214  1 e 1 @400 ]
+[u S1261 . 1 `S1241 1 . 1 0 `S1247 1 . 1 0 `S1252 1 . 1 0 ]
+[v _SSP1CON1bits SSP1CON1bits `VES1261  1 e 1 @400 ]
 "6545
 [v _SSP1CON2 SSP1CON2 `VEuc  1 e 1 @401 ]
-[s S1378 . 1 `uc 1 SEN 1 0 :1:0 
+[s S1425 . 1 `uc 1 SEN 1 0 :1:0 
 `uc 1 RSEN 1 0 :1:1 
 `uc 1 PEN 1 0 :1:2 
 `uc 1 RCEN 1 0 :1:3 
@@ -614,17 +898,17 @@ SPI2_DEFAULT 0
 `uc 1 GCEN 1 0 :1:7 
 ]
 "6592
-[s S1387 . 1 `uc 1 . 1 0 :1:0 
+[s S1434 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 ADMSK 1 0 :5:1 
 ]
-[s S1390 . 1 `uc 1 . 1 0 :1:0 
+[s S1437 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 ADMSK1 1 0 :1:1 
 `uc 1 ADMSK2 1 0 :1:2 
 `uc 1 ADMSK3 1 0 :1:3 
 `uc 1 ADMSK4 1 0 :1:4 
 `uc 1 ADMSK5 1 0 :1:5 
 ]
-[s S1397 . 1 `uc 1 SEN1 1 0 :1:0 
+[s S1444 . 1 `uc 1 SEN1 1 0 :1:0 
 `uc 1 ADMSK11 1 0 :1:1 
 `uc 1 ADMSK21 1 0 :1:2 
 `uc 1 ADMSK31 1 0 :1:3 
@@ -633,15 +917,15 @@ SPI2_DEFAULT 0
 `uc 1 ACKSTAT1 1 0 :1:6 
 `uc 1 GCEN1 1 0 :1:7 
 ]
-[s S1406 . 1 `uc 1 . 1 0 :1:0 
+[s S1453 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 RSEN1 1 0 :1:1 
 `uc 1 PEN1 1 0 :1:2 
 `uc 1 RCEN1 1 0 :1:3 
 `uc 1 ADMSK41 1 0 :1:4 
 `uc 1 ADMSK51 1 0 :1:5 
 ]
-[u S1413 . 1 `S1378 1 . 1 0 `S1387 1 . 1 0 `S1390 1 . 1 0 `S1397 1 . 1 0 `S1406 1 . 1 0 ]
-[v _SSP1CON2bits SSP1CON2bits `VES1413  1 e 1 @401 ]
+[u S1460 . 1 `S1425 1 . 1 0 `S1434 1 . 1 0 `S1437 1 . 1 0 `S1444 1 . 1 0 `S1453 1 . 1 0 ]
+[v _SSP1CON2bits SSP1CON2bits `VES1460  1 e 1 @401 ]
 "6794
 [v _SSP2BUF SSP2BUF `VEuc  1 e 1 @406 ]
 "6814
@@ -651,7 +935,7 @@ SPI2_DEFAULT 0
 "7368
 [v _SSP2CON1 SSP2CON1 `VEuc  1 e 1 @410 ]
 "7398
-[s S1924 . 1 `uc 1 SSPM02 1 0 :1:0 
+[s S1978 . 1 `uc 1 SSPM02 1 0 :1:0 
 `uc 1 SSPM12 1 0 :1:1 
 `uc 1 SSPM22 1 0 :1:2 
 `uc 1 SSPM32 1 0 :1:3 
@@ -660,8 +944,8 @@ SPI2_DEFAULT 0
 `uc 1 SSPOV2 1 0 :1:6 
 `uc 1 WCOL2 1 0 :1:7 
 ]
-[u S1933 . 1 `S1194 1 . 1 0 `S1200 1 . 1 0 `S1924 1 . 1 0 ]
-[v _SSP2CON1bits SSP2CON1bits `VES1933  1 e 1 @410 ]
+[u S1987 . 1 `S1241 1 . 1 0 `S1247 1 . 1 0 `S1978 1 . 1 0 ]
+[v _SSP2CON1bits SSP2CON1bits `VES1987  1 e 1 @410 ]
 "7488
 [v _SSP2CON2 SSP2CON2 `VEuc  1 e 1 @411 ]
 "19994
@@ -670,43 +954,43 @@ SPI2_DEFAULT 0
 [v _TMR0H TMR0H `VEuc  1 e 1 @1437 ]
 "20386
 [v _T0CON0 T0CON0 `VEuc  1 e 1 @1438 ]
-[s S2045 . 1 `uc 1 OUTPS 1 0 :4:0 
+[s S2099 . 1 `uc 1 OUTPS 1 0 :4:0 
 `uc 1 MD16 1 0 :1:4 
 `uc 1 OUT 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 EN 1 0 :1:7 
 ]
 "20420
-[s S2051 . 1 `uc 1 T0OUTPS 1 0 :4:0 
+[s S2105 . 1 `uc 1 T0OUTPS 1 0 :4:0 
 `uc 1 T0MD16 1 0 :1:4 
 `uc 1 T0OUT 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 T0EN 1 0 :1:7 
 ]
-[s S2057 . 1 `uc 1 OUTPS0 1 0 :1:0 
+[s S2111 . 1 `uc 1 OUTPS0 1 0 :1:0 
 `uc 1 OUTPS1 1 0 :1:1 
 `uc 1 OUTPS2 1 0 :1:2 
 `uc 1 OUTPS3 1 0 :1:3 
 `uc 1 T016BIT 1 0 :1:4 
 ]
-[s S2063 . 1 `uc 1 T0OUTPS0 1 0 :1:0 
+[s S2117 . 1 `uc 1 T0OUTPS0 1 0 :1:0 
 `uc 1 T0OUTPS1 1 0 :1:1 
 `uc 1 T0OUTPS2 1 0 :1:2 
 `uc 1 T0OUTPS3 1 0 :1:3 
 ]
-[u S2068 . 1 `S2045 1 . 1 0 `S2051 1 . 1 0 `S2057 1 . 1 0 `S2063 1 . 1 0 ]
-[v _T0CON0bits T0CON0bits `VES2068  1 e 1 @1438 ]
+[u S2122 . 1 `S2099 1 . 1 0 `S2105 1 . 1 0 `S2111 1 . 1 0 `S2117 1 . 1 0 ]
+[v _T0CON0bits T0CON0bits `VES2122  1 e 1 @1438 ]
 "20510
 [v _T0CON1 T0CON1 `VEuc  1 e 1 @1439 ]
-[s S778 . 1 `uc 1 INTF 1 0 :1:0 
+[s S802 . 1 `uc 1 INTF 1 0 :1:0 
 `uc 1 . 1 0 :3:1 
 `uc 1 IOCIF 1 0 :1:4 
 `uc 1 TMR0IF 1 0 :1:5 
 ]
 "23122
-[u S783 . 1 `S778 1 . 1 0 ]
-[v _PIR0bits PIR0bits `VES783  1 e 1 @1804 ]
-[s S828 . 1 `uc 1 SSP1IF 1 0 :1:0 
+[u S807 . 1 `S802 1 . 1 0 ]
+[v _PIR0bits PIR0bits `VES807  1 e 1 @1804 ]
+[s S852 . 1 `uc 1 SSP1IF 1 0 :1:0 
 `uc 1 BCL1IF 1 0 :1:1 
 `uc 1 SSP2IF 1 0 :1:2 
 `uc 1 BCL2IF 1 0 :1:3 
@@ -716,17 +1000,17 @@ SPI2_DEFAULT 0
 `uc 1 RC2IF 1 0 :1:7 
 ]
 "23231
-[u S837 . 1 `S828 1 . 1 0 ]
-[v _PIR3bits PIR3bits `VES837  1 e 1 @1807 ]
-[s S765 . 1 `uc 1 INTE 1 0 :1:0 
+[u S861 . 1 `S852 1 . 1 0 ]
+[v _PIR3bits PIR3bits `VES861  1 e 1 @1807 ]
+[s S789 . 1 `uc 1 INTE 1 0 :1:0 
 `uc 1 . 1 0 :3:1 
 `uc 1 IOCIE 1 0 :1:4 
 `uc 1 TMR0IE 1 0 :1:5 
 ]
 "23535
-[u S770 . 1 `S765 1 . 1 0 ]
-[v _PIE0bits PIE0bits `VES770  1 e 1 @1814 ]
-[s S807 . 1 `uc 1 SSP1IE 1 0 :1:0 
+[u S794 . 1 `S789 1 . 1 0 ]
+[v _PIE0bits PIE0bits `VES794  1 e 1 @1814 ]
+[s S831 . 1 `uc 1 SSP1IE 1 0 :1:0 
 `uc 1 BCL1IE 1 0 :1:1 
 `uc 1 SSP2IE 1 0 :1:2 
 `uc 1 BCL2IE 1 0 :1:3 
@@ -736,8 +1020,8 @@ SPI2_DEFAULT 0
 `uc 1 RC2IE 1 0 :1:7 
 ]
 "23644
-[u S816 . 1 `S807 1 . 1 0 ]
-[v _PIE3bits PIE3bits `VES816  1 e 1 @1817 ]
+[u S840 . 1 `S831 1 . 1 0 ]
+[v _PIE3bits PIE3bits `VES840  1 e 1 @1817 ]
 "23944
 [v _PMD0 PMD0 `VEuc  1 e 1 @1942 ]
 "23989
@@ -777,11 +1061,11 @@ SPI2_DEFAULT 0
 "27172
 [v _RC2STA RC2STA `VEuc  1 e 1 @2589 ]
 "27194
-[v _RC2STAbits RC2STAbits `VES2227  1 e 1 @2589 ]
+[v _RC2STAbits RC2STAbits `VES2281  1 e 1 @2589 ]
 "27294
 [v _TX2STA TX2STA `VEuc  1 e 1 @2590 ]
 "27316
-[v _TX2STAbits TX2STAbits `VES2205  1 e 1 @2590 ]
+[v _TX2STAbits TX2STAbits `VES2259  1 e 1 @2590 ]
 "27416
 [v _BAUD2CON BAUD2CON `VEuc  1 e 1 @2591 ]
 "33476
@@ -814,7 +1098,7 @@ SPI2_DEFAULT 0
 [v _SLRCONA SLRCONA `VEuc  1 e 1 @7995 ]
 "35636
 [v _INLVLA INLVLA `VEuc  1 e 1 @7996 ]
-[s S958 . 1 `uc 1 IOCAP0 1 0 :1:0 
+[s S995 . 1 `uc 1 IOCAP0 1 0 :1:0 
 `uc 1 IOCAP1 1 0 :1:1 
 `uc 1 IOCAP2 1 0 :1:2 
 `uc 1 IOCAP3 1 0 :1:3 
@@ -824,11 +1108,11 @@ SPI2_DEFAULT 0
 `uc 1 IOCAP7 1 0 :1:7 
 ]
 "35715
-[u S967 . 1 `S958 1 . 1 0 ]
+[u S1004 . 1 `S995 1 . 1 0 ]
 "35715
 "35715
-[v _IOCAPbits IOCAPbits `VES967  1 e 1 @7997 ]
-[s S937 . 1 `uc 1 IOCAN0 1 0 :1:0 
+[v _IOCAPbits IOCAPbits `VES1004  1 e 1 @7997 ]
+[s S974 . 1 `uc 1 IOCAN0 1 0 :1:0 
 `uc 1 IOCAN1 1 0 :1:1 
 `uc 1 IOCAN2 1 0 :1:2 
 `uc 1 IOCAN3 1 0 :1:3 
@@ -838,11 +1122,11 @@ SPI2_DEFAULT 0
 `uc 1 IOCAN7 1 0 :1:7 
 ]
 "35777
-[u S946 . 1 `S937 1 . 1 0 ]
+[u S983 . 1 `S974 1 . 1 0 ]
 "35777
 "35777
-[v _IOCANbits IOCANbits `VES946  1 e 1 @7998 ]
-[s S916 . 1 `uc 1 IOCAF0 1 0 :1:0 
+[v _IOCANbits IOCANbits `VES983  1 e 1 @7998 ]
+[s S953 . 1 `uc 1 IOCAF0 1 0 :1:0 
 `uc 1 IOCAF1 1 0 :1:1 
 `uc 1 IOCAF2 1 0 :1:2 
 `uc 1 IOCAF3 1 0 :1:3 
@@ -852,10 +1136,10 @@ SPI2_DEFAULT 0
 `uc 1 IOCAF7 1 0 :1:7 
 ]
 "35839
-[u S925 . 1 `S916 1 . 1 0 ]
+[u S962 . 1 `S953 1 . 1 0 ]
 "35839
 "35839
-[v _IOCAFbits IOCAFbits `VES925  1 e 1 @7999 ]
+[v _IOCAFbits IOCAFbits `VES962  1 e 1 @7999 ]
 "35884
 [v _ANSELB ANSELB `VEuc  1 e 1 @8003 ]
 "35946
@@ -880,6 +1164,53 @@ SPI2_DEFAULT 0
 [v _WPUE WPUE `VEuc  1 e 1 @8037 ]
 "36897
 [v _ODCONE ODCONE `VEuc  1 e 1 @8038 ]
+[s S390 . 1 `uc 1 ACC 1 0 :1:0 
+`uc 1 UNDEFINED 1 0 :7:1 
+]
+"495 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/pin_manager.h
+[u S393 . 1 `S390 1 . 1 0 `uc 1 INTERRUPTbits 1 0 ]
+[v _INTERRUPTbits INTERRUPTbits `VES393  1 e 1 0 ]
+"68 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/application/BMA253_accel.c
+[v _rad rad `uc  1 e 1 0 ]
+[s S921 . 1 `uc 1 UNDEFINED 1 0 :7:0 
+`uc 1 FLAT 1 0 :1:7 
+]
+"291 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/application/BMA253_accel.h
+[u S924 . 1 `S921 1 . 1 0 `uc 1 AccelerometerInterruptBits 1 0 ]
+[v _accelerometerInterruptBits accelerometerInterruptBits `VES924  1 e 1 0 ]
+"209 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/application/LIGHTBLUE_service.c
+[v __hex _hex `[17]uc  1 s 17 _hex ]
+"210
+[v _sequenceNumber sequenceNumber `uc  1 s 1 sequenceNumber ]
+[s S2799 . 1 `uc 1 p2_2 1 0 :1:0 
+`uc 1 p2_4 1 0 :1:1 
+`uc 1 p3_5 1 0 :1:2 
+`uc 1 p1_2 1 0 :1:3 
+`uc 1 p1_3 1 0 :1:4 
+`uc 1 reserved 1 0 :3:5 
+]
+"211
+[u S2806 . 1 `uc 1 gpioBitMap 1 0 `S2799 1 . 1 0 ]
+[s S2809 . 1 `uc 1 p2_2_state 1 0 :1:0 
+`uc 1 p2_4_state 1 0 :1:1 
+`uc 1 p3_5_state 1 0 :1:2 
+`uc 1 p1_2_state 1 0 :1:3 
+`uc 1 p1_3_state 1 0 :1:4 
+`uc 1 reserved 1 0 :3:5 
+]
+[u S2816 . 1 `uc 1 gpioStateBitMap 1 0 `S2809 1 . 1 0 ]
+[s S2819 . 2 `S2806 1 ioBitMap 1 0 `S2816 1 ioStateBitMap 1 1 ]
+[u S2822 . 2 `us 1 gpioMap 2 0 `S2819 1 . 2 0 ]
+[v _bitMap bitMap `VES2822  1 s 2 bitMap ]
+[s S3251 . 36 `uc 1 busy 1 0 :1:0 
+`uc 1 inUse 1 0 :1:1 
+`uc 1 bufferFree 1 0 :1:2 
+`uc 1 addressNACKCheck 1 0 :1:3 
+`uc 1 address 1 1 `*.2uc 1 data_ptr 2 2 `ui 1 data_length 2 4 `us 1 time_out 2 6 `us 1 time_out_value 2 8 `E12882 1 state 1 10 `E12723 1 error 1 11 `[6]*.37(E12728 1 callbackTable 12 12 `[6]*.2v 1 callbackPayload 12 24 ]
+"80 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/drivers/i2c_master.c
+[v _i2c_status i2c_status `S3251  1 e 36 0 ]
+"400
+[v _fsmStateTable fsmStateTable `DC[16]*.37(E12882  1 e 32 0 ]
 [s S34 . 20 `*.37(uc 1 Read 2 0 `*.37(v 1 Write 2 2 `*.37(a 1 TransmitReady 2 4 `*.37(a 1 DataReady 2 6 `*.37(v 1 SetTxISR 2 8 `*.37(v 1 RxDefaultISR 2 10 `*.37(v 1 SetRxISR 2 12 `*.37(a 1 TransmitDone 2 14 `*.37(v 1 TxDefaultISR 2 16 `*.37(v 1 Initialize 2 18 ]
 "35 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/drivers/uart.c
 [v _uart uart `DC[2]S34  1 e 40 0 ]
@@ -897,18 +1228,18 @@ SPI2_DEFAULT 0
 [v _eusart1RxTail eusart1RxTail `VEuc  1 e 1 0 ]
 "69
 [v _eusart1RxBuffer eusart1RxBuffer `VE[8]uc  1 e 8 0 ]
-[s S2130 . 1 `uc 1 perr 1 0 :1:0 
+[s S2184 . 1 `uc 1 perr 1 0 :1:0 
 `uc 1 ferr 1 0 :1:1 
 `uc 1 oerr 1 0 :1:2 
 `uc 1 reserved 1 0 :5:3 
 ]
 "70
-[u S2135 . 1 `S2130 1 . 1 0 `uc 1 status 1 0 ]
-[v _eusart1RxStatusBuffer eusart1RxStatusBuffer `VE[8]S2135  1 e 8 0 ]
+[u S2189 . 1 `S2184 1 . 1 0 `uc 1 status 1 0 ]
+[v _eusart1RxStatusBuffer eusart1RxStatusBuffer `VE[8]S2189  1 e 8 0 ]
 "71
 [v _eusart1RxCount eusart1RxCount `VEuc  1 e 1 0 ]
 "72
-[v _eusart1RxLastError eusart1RxLastError `VES2135  1 e 1 0 ]
+[v _eusart1RxLastError eusart1RxLastError `VES2189  1 e 1 0 ]
 "77
 [v _EUSART1_TxDefaultInterruptHandler EUSART1_TxDefaultInterruptHandler `*.37(v  1 e 2 0 ]
 "78
@@ -934,11 +1265,11 @@ SPI2_DEFAULT 0
 "69
 [v _eusart2RxBuffer eusart2RxBuffer `VE[8]uc  1 e 8 0 ]
 "70
-[v _eusart2RxStatusBuffer eusart2RxStatusBuffer `VE[8]S2135  1 e 8 0 ]
+[v _eusart2RxStatusBuffer eusart2RxStatusBuffer `VE[8]S2189  1 e 8 0 ]
 "71
 [v _eusart2RxCount eusart2RxCount `VEuc  1 e 1 0 ]
 "72
-[v _eusart2RxLastError eusart2RxLastError `VES2135  1 e 1 0 ]
+[v _eusart2RxLastError eusart2RxLastError `VES2189  1 e 1 0 ]
 "77
 [v _EUSART2_TxDefaultInterruptHandler EUSART2_TxDefaultInterruptHandler `*.37(v  1 e 2 0 ]
 "78
@@ -951,25 +1282,29 @@ SPI2_DEFAULT 0
 [v _EUSART2_ErrorHandler EUSART2_ErrorHandler `*.37(v  1 e 2 0 ]
 "42 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/examples/rn487x_example.c
 [v _statusBuffer statusBuffer `[80]uc  1 s 80 statusBuffer ]
+"78 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/i2c1_driver.h
+[v _i2c1_driver_busCollisionISR i2c1_driver_busCollisionISR `*.37(v  1 e 2 0 ]
+"79
+[v _i2c1_driver_i2cISR i2c1_driver_i2cISR `*.37(v  1 e 2 0 ]
 "146 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/i2c1_master.c
 [v _i2c1_fsmStateTable i2c1_fsmStateTable `DC[16]*.37(E12795  1 e 32 0 ]
-[s S1168 . 29 `[6]*.37(E363 1 callbackTable 12 0 `[6]*.30v 1 callbackPayload 6 12 `us 1 time_out 2 18 `us 1 time_out_value 2 20 `uc 1 address 1 22 `*.30uc 1 data_ptr 1 23 `ui 1 data_length 2 24 `E12795 1 state 1 26 `E358 1 error 1 27 `uc 1 addressNackCheck 1 28 :1:0 
-`uc 1 busy 1 28 :1:1 
-`uc 1 inUse 1 28 :1:2 
-`uc 1 bufferFree 1 28 :1:3 
+[s S1215 . 36 `[6]*.37(E363 1 callbackTable 12 0 `[6]*.39v 1 callbackPayload 12 12 `us 1 time_out 2 24 `us 1 time_out_value 2 26 `uc 1 address 1 28 `*.39uc 1 data_ptr 2 29 `ui 1 data_length 2 31 `E12795 1 state 1 33 `E358 1 error 1 34 `uc 1 addressNackCheck 1 35 :1:0 
+`uc 1 busy 1 35 :1:1 
+`uc 1 inUse 1 35 :1:2 
+`uc 1 bufferFree 1 35 :1:3 
 ]
 "165
-[v _I2C1_Status I2C1_Status `S1168  1 e 29 0 ]
+[v _I2C1_Status I2C1_Status `S1215  1 e 36 0 ]
 "55 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/pin_manager.c
 [v _IOCAF6_InterruptHandler IOCAF6_InterruptHandler `*.37(v  1 e 2 0 ]
 "56
 [v _IOCAF7_InterruptHandler IOCAF7_InterruptHandler `*.37(v  1 e 2 0 ]
 "40 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/rn487x/rn487x.c
-[v _asyncBuffer asyncBuffer `*.5uc  1 s 1 asyncBuffer ]
+[v _asyncBuffer asyncBuffer `*.7uc  1 s 1 asyncBuffer ]
 "41
 [v _asyncBufferSize asyncBufferSize `uc  1 s 1 asyncBufferSize ]
 "42
-[v _pHead pHead `*.5uc  1 s 1 pHead ]
+[v _pHead pHead `*.7uc  1 s 1 pHead ]
 "43
 [v _peek peek `uc  1 s 1 peek ]
 "44
@@ -979,55 +1314,34 @@ SPI2_DEFAULT 0
 [s S334 . 18 `*.37(v 1 Write 2 0 `*.37(uc 1 Read 2 2 `*.37(a 1 TransmitDone 2 4 `*.37(a 1 DataReady 2 6 `*.37(v 1 IndicateRx 2 8 `*.37(v 1 ResetModule 2 10 `*.37(v 1 SetSystemMode 2 12 `*.37(v 1 DelayMs 2 14 `*.37(v 1 AsyncHandler 2 16 ]
 "227
 [v _RN487X RN487X `DCS334  1 e 18 0 ]
-[s S1880 . 4 `uc 1 con1 1 0 `uc 1 stat 1 1 `uc 1 add 1 2 `uc 1 operation 1 3 ]
+[s S1934 . 4 `uc 1 con1 1 0 `uc 1 stat 1 1 `uc 1 add 1 2 `uc 1 operation 1 3 ]
 "58 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/spi2.c
-[v _spi2_configuration spi2_configuration `DC[1]S1880  1 s 4 spi2_configuration ]
+[v _spi2_configuration spi2_configuration `DC[1]S1934  1 s 4 spi2_configuration ]
 "59 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/tmr0.c
 [v _TMR0_InterruptHandler TMR0_InterruptHandler `*.37(v  1 e 2 0 ]
-"50 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\main.c
+"52 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"79
+"122
 } 0
-"81
-[v _send_spi_read send_spi_read `(v  1 e 1 0 ]
+"124
+[v _service_acceleremoterInterrupt service_acceleremoterInterrupt `(v  1 e 1 0 ]
 {
-"82
-[v send_spi_read@data data `[4]uc  1 s 4 data ]
-"91
+"135
 } 0
-"127 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/spi2.c
-[v _SPI2_ReadBlock SPI2_ReadBlock `(v  1 e 1 0 ]
+"356 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/application/LIGHTBLUE_service.c
+[v _LIGHTBLUE_AccState LIGHTBLUE_AccState `(v  1 e 1 0 ]
 {
-"129
-[v SPI2_ReadBlock@data data `*.4uc  1 a 1 4 ]
-"127
-[v SPI2_ReadBlock@block block `*.4v  1 p 1 1 ]
-[v SPI2_ReadBlock@blockSize blockSize `ui  1 p 2 2 ]
-"134
+"358
+[v LIGHTBLUE_AccState@payload payload `[3]uc  1 a 3 10 ]
+"359
+[v LIGHTBLUE_AccState@acc acc `uc  1 a 1 13 ]
+"365
 } 0
-"97
-[v _SPI2_ExchangeByte SPI2_ExchangeByte `(uc  1 e 1 0 ]
+"514
+[v _LIGHTBLUE_GetAccState LIGHTBLUE_GetAccState `(uc  1 s 1 LIGHTBLUE_GetAccState ]
 {
-[v SPI2_ExchangeByte@data data `uc  1 p 1 wreg ]
-[v SPI2_ExchangeByte@data data `uc  1 p 1 wreg ]
-"99
-[v SPI2_ExchangeByte@data data `uc  1 p 1 0 ]
-"103
-} 0
-"77
-[v _SPI2_Open SPI2_Open `(a  1 e 1 0 ]
-{
-[v SPI2_Open@spi2UniqueConfiguration spi2UniqueConfiguration `E358  1 p 1 wreg ]
-[v SPI2_Open@spi2UniqueConfiguration spi2UniqueConfiguration `E358  1 p 1 wreg ]
-"79
-[v SPI2_Open@spi2UniqueConfiguration spi2UniqueConfiguration `E358  1 p 1 3 ]
-"90
-} 0
-"92
-[v _SPI2_Close SPI2_Close `(v  1 e 1 0 ]
-{
-"95
+"517
 } 0
 "50 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
@@ -1151,6 +1465,743 @@ SPI2_DEFAULT 0
 {
 [v EUSART1_SetErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 0 ]
 "274
+} 0
+"181 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/rn487x/rn487x.c
+[v _RN487X_Read RN487X_Read `(uc  1 e 1 0 ]
+{
+"186
+} 0
+"167
+[v _RN487X_DataReady RN487X_DataReady `(a  1 e 1 0 ]
+{
+"179
+} 0
+"188
+[v _RN487X_FilterData RN487X_FilterData `(a  1 s 1 RN487X_FilterData ]
+{
+"192
+[v RN487X_FilterData@readChar readChar `uc  1 a 1 34 ]
+"190
+[v RN487X_FilterData@asyncBuffering asyncBuffering `a  1 s 1 asyncBuffering ]
+"221
+} 0
+"368 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/rn487x/rn487x_interface.c
+[v _RN487X_MessageHandler RN487X_MessageHandler `(v  1 s 1 RN487X_MessageHandler ]
+{
+"370
+[v RN487X_MessageHandler@messageType messageType `E13210  1 a 1 33 ]
+"368
+[v RN487X_MessageHandler@message message `*.7uc  1 p 1 13 ]
+"389
+} 0
+"4 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\strstr.c
+[v _strstr strstr `(*.7uc  1 e 2 0 ]
+{
+"7
+[v strstr@nl nl `ui  1 a 2 11 ]
+"4
+[v strstr@h h `*.7DCuc  1 p 1 6 ]
+[v strstr@n n `*.25DCuc  1 p 2 7 ]
+"15
+} 0
+"3 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\strncmp.c
+[v _strncmp strncmp `(i  1 e 2 0 ]
+{
+[v strncmp@l l `*.7DCuc  1 p 1 0 ]
+[v strncmp@r r `*.25DCuc  1 p 2 1 ]
+[v strncmp@n n `ui  1 p 2 3 ]
+"8
+} 0
+"3 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\strchr.c
+[v _strchr strchr `(*.7uc  1 e 2 0 ]
+{
+[v strchr@s s `*.7DCuc  1 p 1 0 ]
+[v strchr@c c `i  1 p 2 1 ]
+"11
+} 0
+"323 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/rn487x/rn487x_interface.c
+[v _rn487x_PrintMessageStart rn487x_PrintMessageStart `T(v  1 s 1 rn487x_PrintMessageStart ]
+{
+"329
+} 0
+"331
+[v _rn487x_PrintMessageEnd rn487x_PrintMessageEnd `T(v  1 s 1 rn487x_PrintMessageEnd ]
+{
+"340
+} 0
+"358
+[v _rn487x_PrintMessage rn487x_PrintMessage `T(v  1 s 1 rn487x_PrintMessage ]
+{
+"362
+[v rn487x_PrintMessage@messageIndex messageIndex `uc  1 a 1 32 ]
+"360
+[v rn487x_PrintMessage@printCharacter printCharacter `[32]uc  1 a 32 0 ]
+"358
+[v rn487x_PrintMessage@passedMessage passedMessage `*.7uc  1 p 1 5 ]
+"366
+} 0
+"3 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\strcpy.c
+[v _strcpy strcpy `(*.4uc  1 e 2 0 ]
+{
+"5
+[v strcpy@d d `*.4uc  1 a 1 2 ]
+"3
+[v strcpy@dest dest `*.4uc  1 p 1 0 ]
+[v strcpy@src src `*.7DCuc  1 p 1 1 ]
+"8
+} 0
+"342 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/rn487x/rn487x_interface.c
+[v _rn487x_PrintIndicatorCharacters rn487x_PrintIndicatorCharacters `T(v  1 s 1 rn487x_PrintIndicatorCharacters ]
+{
+[v rn487x_PrintIndicatorCharacters@messageType messageType `E13210  1 p 1 wreg ]
+[v rn487x_PrintIndicatorCharacters@messageType messageType `E13210  1 p 1 wreg ]
+"344
+[v rn487x_PrintIndicatorCharacters@messageType messageType `E13210  1 p 1 1 ]
+"356
+} 0
+"243
+[v _RN487X_IsConnected RN487X_IsConnected `(a  1 e 1 0 ]
+{
+"246
+} 0
+"54 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/rn487x/rn487x.c
+[v _RN487X_Init RN487X_Init `(a  1 e 1 0 ]
+{
+"77
+} 0
+"267 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/rn487x/rn487x_interface.c
+[v _RN487X_is_rx_ready RN487X_is_rx_ready `T(a  1 s 1 RN487X_is_rx_ready ]
+{
+"270
+} 0
+"137 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/eusart1.c
+[v _EUSART1_is_rx_ready EUSART1_is_rx_ready `(a  1 e 1 0 ]
+{
+"140
+} 0
+"301 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/rn487x/rn487x_interface.c
+[v _RN487X_SetSystemMode RN487X_SetSystemMode `(v  1 s 1 RN487X_SetSystemMode ]
+{
+[v RN487X_SetSystemMode@mode mode `E204  1 p 1 0 ]
+"317
+} 0
+"277
+[v _RN487X_Reset RN487X_Reset `(v  1 s 1 RN487X_Reset ]
+{
+[v RN487X_Reset@value value `a  1 p 1 0 ]
+"287
+} 0
+"257
+[v _RN487X_Read@rn487x_interface$F545 RN487X_Read `T(uc  1 s 1 RN487X_Read ]
+{
+"260
+} 0
+"151 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/eusart1.c
+[v _EUSART1_Read EUSART1_Read `(uc  1 e 1 0 ]
+{
+"153
+[v EUSART1_Read@readValue readValue `uc  1 a 1 0 ]
+"171
+} 0
+"289 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/rn487x/rn487x_interface.c
+[v _RN487X_IndicateRx RN487X_IndicateRx `(v  1 s 1 RN487X_IndicateRx ]
+{
+[v RN487X_IndicateRx@value value `a  1 p 1 0 ]
+"299
+} 0
+"272
+[v _RN487X_Delay RN487X_Delay `T(v  1 s 1 RN487X_Delay ]
+{
+[v RN487X_Delay@delayCount delayCount `us  1 p 2 2 ]
+"275
+} 0
+"38 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/delay.c
+[v _DELAY_milliseconds DELAY_milliseconds `(v  1 e 1 0 ]
+{
+[v DELAY_milliseconds@milliseconds milliseconds `us  1 p 2 0 ]
+"42
+} 0
+"316 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/application/LIGHTBLUE_service.c
+[v _LIGHTBLUE_TemperatureSensor LIGHTBLUE_TemperatureSensor `(v  1 e 1 0 ]
+{
+"318
+[v LIGHTBLUE_TemperatureSensor@payload payload `[5]uc  1 a 5 25 ]
+"319
+[v LIGHTBLUE_TemperatureSensor@temperature temperature `s  1 a 2 30 ]
+"327
+} 0
+"70 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/application/MCP9844_temp_sensor.c
+[v _MCP9844_GetTemperatureValue MCP9844_GetTemperatureValue `(v  1 e 1 0 ]
+{
+[v MCP9844_GetTemperatureValue@temperature temperature `*.4s  1 p 1 24 ]
+"73
+} 0
+"75
+[v _MCP9844_CalcTemperature MCP9844_CalcTemperature `(s  1 s 2 MCP9844_CalcTemperature ]
+{
+"77
+[v MCP9844_CalcTemperature@temperatureData temperatureData `s  1 a 2 22 ]
+"79
+[v MCP9844_CalcTemperature@lowerByte lowerByte `uc  1 a 1 21 ]
+"78
+[v MCP9844_CalcTemperature@upperByte upperByte `uc  1 a 1 20 ]
+"88
+} 0
+"135 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/drivers/i2c_simple_master.c
+[v _i2c_read2ByteRegister i2c_read2ByteRegister `(us  1 e 2 0 ]
+{
+[v i2c_read2ByteRegister@address address `uc  1 p 1 wreg ]
+"138
+[v i2c_read2ByteRegister@result result `us  1 a 2 11 ]
+"135
+[v i2c_read2ByteRegister@address address `uc  1 p 1 wreg ]
+[v i2c_read2ByteRegister@reg reg `uc  1 p 1 4 ]
+[v i2c_read2ByteRegister@address address `uc  1 p 1 10 ]
+"148
+} 0
+"404 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/application/LIGHTBLUE_service.c
+[v _LIGHTBLUE_SendSerialData LIGHTBLUE_SendSerialData `(v  1 e 1 0 ]
+{
+"406
+[v LIGHTBLUE_SendSerialData@length length `uc  1 a 1 8 ]
+"404
+[v LIGHTBLUE_SendSerialData@serialData serialData `*.6uc  1 p 1 6 ]
+"419
+} 0
+"387
+[v _LIGHTBLUE_SendProtocolVersion LIGHTBLUE_SendProtocolVersion `(v  1 e 1 0 ]
+{
+"389
+[v LIGHTBLUE_SendProtocolVersion@payload payload `[19]uc  1 a 19 0 ]
+"391
+[v LIGHTBLUE_SendProtocolVersion@dataIndex dataIndex `uc  1 a 1 20 ]
+"390
+[v LIGHTBLUE_SendProtocolVersion@value value `uc  1 a 1 19 ]
+"402
+} 0
+"345
+[v _LIGHTBLUE_PushButton LIGHTBLUE_PushButton `(v  1 e 1 0 ]
+{
+"347
+[v LIGHTBLUE_PushButton@payload payload `[3]uc  1 a 3 10 ]
+"348
+[v LIGHTBLUE_PushButton@button button `uc  1 a 1 13 ]
+"354
+} 0
+"509
+[v _LIGHTBLUE_GetButtonValue LIGHTBLUE_GetButtonValue `(uc  1 s 1 LIGHTBLUE_GetButtonValue ]
+{
+"512
+} 0
+"421
+[v _LIGHTBLUE_ParseIncomingPacket LIGHTBLUE_ParseIncomingPacket `(v  1 e 1 0 ]
+{
+[v LIGHTBLUE_ParseIncomingPacket@receivedByte receivedByte `uc  1 p 1 wreg ]
+[v LIGHTBLUE_ParseIncomingPacket@receivedByte receivedByte `uc  1 p 1 wreg ]
+"423
+[v LIGHTBLUE_ParseIncomingPacket@parserState parserState `E12812  1 s 1 parserState ]
+"424
+[v LIGHTBLUE_ParseIncomingPacket@length length `uc  1 s 1 length ]
+"425
+[v LIGHTBLUE_ParseIncomingPacket@data data `us  1 s 2 data ]
+"426
+[v LIGHTBLUE_ParseIncomingPacket@packetID packetID `uc  1 s 1 packetID ]
+"421
+[v LIGHTBLUE_ParseIncomingPacket@receivedByte receivedByte `uc  1 p 1 6 ]
+"479
+} 0
+"543
+[v _LIGHTBLUE_PerformAction LIGHTBLUE_PerformAction `(v  1 s 1 LIGHTBLUE_PerformAction ]
+{
+[v LIGHTBLUE_PerformAction@id id `uc  1 p 1 wreg ]
+"545
+[v LIGHTBLUE_PerformAction@led led `uc  1 a 1 5 ]
+"543
+[v LIGHTBLUE_PerformAction@id id `uc  1 p 1 wreg ]
+[v LIGHTBLUE_PerformAction@data data `uc  1 p 1 2 ]
+[v LIGHTBLUE_PerformAction@id id `uc  1 p 1 4 ]
+"573
+} 0
+"529
+[v _LIGHTBLUE_SetErrorLedValue LIGHTBLUE_SetErrorLedValue `(v  1 s 1 LIGHTBLUE_SetErrorLedValue ]
+{
+[v LIGHTBLUE_SetErrorLedValue@value value `a  1 p 1 wreg ]
+[v LIGHTBLUE_SetErrorLedValue@value value `a  1 p 1 wreg ]
+"531
+[v LIGHTBLUE_SetErrorLedValue@value value `a  1 p 1 1 ]
+"533
+} 0
+"535
+[v _LIGHTBLUE_UpdateErrorLed LIGHTBLUE_UpdateErrorLed `(v  1 s 1 LIGHTBLUE_UpdateErrorLed ]
+{
+"541
+} 0
+"368
+[v _LIGHTBLUE_LedState LIGHTBLUE_LedState `(v  1 e 1 0 ]
+{
+"370
+[v LIGHTBLUE_LedState@payload payload `[3]uc  1 a 3 10 ]
+"371
+[v LIGHTBLUE_LedState@led led `uc  1 a 1 13 ]
+"385
+} 0
+"524
+[v _LIGHTBLUE_GetErrorLedValue LIGHTBLUE_GetErrorLedValue `(uc  1 s 1 LIGHTBLUE_GetErrorLedValue ]
+{
+"527
+} 0
+"519
+[v _LIGHTBLUE_GetDataLedValue LIGHTBLUE_GetDataLedValue `(uc  1 s 1 LIGHTBLUE_GetDataLedValue ]
+{
+"522
+} 0
+"310
+[v _LIGHTBLUE_Initialize LIGHTBLUE_Initialize `(v  1 e 1 0 ]
+{
+"314
+} 0
+"329
+[v _LIGHTBLUE_AccelSensor LIGHTBLUE_AccelSensor `(v  1 e 1 0 ]
+{
+"331
+[v LIGHTBLUE_AccelSensor@payload payload `[13]uc  1 a 13 19 ]
+[s S2852 . 6 `s 1 x 2 0 `s 1 y 2 2 `s 1 z 2 4 ]
+"332
+[v LIGHTBLUE_AccelSensor@accelData accelData `S2852  1 a 6 32 ]
+"343
+} 0
+"495
+[v _LIGHTBLUE_SplitWord LIGHTBLUE_SplitWord `(v  1 s 1 LIGHTBLUE_SplitWord ]
+{
+[v LIGHTBLUE_SplitWord@payload payload `*.4uc  1 p 1 8 ]
+[v LIGHTBLUE_SplitWord@value value `s  1 p 2 9 ]
+"499
+} 0
+"501
+[v _LIGHTBLUE_SplitByte LIGHTBLUE_SplitByte `(v  1 s 1 LIGHTBLUE_SplitByte ]
+{
+[v LIGHTBLUE_SplitByte@payload payload `*.4uc  1 p 1 5 ]
+[v LIGHTBLUE_SplitByte@value value `c  1 p 1 6 ]
+"507
+} 0
+"481
+[v _LIGHTBLUE_SendPacket LIGHTBLUE_SendPacket `(v  1 s 1 LIGHTBLUE_SendPacket ]
+{
+[v LIGHTBLUE_SendPacket@packetID packetID `uc  1 p 1 wreg ]
+[v LIGHTBLUE_SendPacket@packetID packetID `uc  1 p 1 wreg ]
+[v LIGHTBLUE_SendPacket@payload payload `*.4uc  1 p 1 6 ]
+"483
+[v LIGHTBLUE_SendPacket@packetID packetID `uc  1 p 1 9 ]
+"493
+} 0
+"5 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\strlen.c
+[v _strlen strlen `(ui  1 e 2 0 ]
+{
+"7
+[v strlen@a a `*.26DCuc  1 a 2 3 ]
+"5
+[v strlen@s s `*.26DCuc  1 p 2 0 ]
+"12
+} 0
+"252 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/rn487x/rn487x_interface.c
+[v _RN487X_Write RN487X_Write `T(v  1 s 1 RN487X_Write ]
+{
+[v RN487X_Write@txData txData `uc  1 p 1 5 ]
+"255
+} 0
+"173 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/eusart1.c
+[v _EUSART1_Write EUSART1_Write `(v  1 e 1 0 ]
+{
+[v EUSART1_Write@txData txData `uc  1 p 1 0 ]
+"194
+} 0
+"119 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/application/BMA253_accel.c
+[v _BMA253_GetAccelDataXYZ BMA253_GetAccelDataXYZ `(v  1 e 1 0 ]
+{
+"120
+[v BMA253_GetAccelDataXYZ@sensorValue sensorValue `s  1 a 2 17 ]
+[s S2852 . 6 `s 1 x 2 0 `s 1 y 2 2 `s 1 z 2 4 ]
+"119
+[v BMA253_GetAccelDataXYZ@accelData accelData `*.39S2852  1 p 2 15 ]
+"141
+} 0
+"107
+[v _BMA253_GetAccelDataZ BMA253_GetAccelDataZ `(v  1 e 1 0 ]
+{
+"109
+[v BMA253_GetAccelDataZ@msbData msbData `uc  1 a 1 14 ]
+"108
+[v BMA253_GetAccelDataZ@lsbData lsbData `uc  1 a 1 13 ]
+"107
+[v BMA253_GetAccelDataZ@zAccelData zAccelData `*.4s  1 p 1 10 ]
+"117
+} 0
+"163
+[v _BMA253_NewAccelDataRdyZ BMA253_NewAccelDataRdyZ `(a  1 s 1 BMA253_NewAccelDataRdyZ ]
+{
+"164
+[v BMA253_NewAccelDataRdyZ@zNewData zNewData `a  1 a 1 9 ]
+"169
+} 0
+"95
+[v _BMA253_GetAccelDataY BMA253_GetAccelDataY `(v  1 e 1 0 ]
+{
+"97
+[v BMA253_GetAccelDataY@msbData msbData `uc  1 a 1 14 ]
+"96
+[v BMA253_GetAccelDataY@lsbData lsbData `uc  1 a 1 13 ]
+"95
+[v BMA253_GetAccelDataY@yAccelData yAccelData `*.4s  1 p 1 10 ]
+"105
+} 0
+"155
+[v _BMA253_NewAccelDataRdyY BMA253_NewAccelDataRdyY `(a  1 s 1 BMA253_NewAccelDataRdyY ]
+{
+"156
+[v BMA253_NewAccelDataRdyY@yNewData yNewData `a  1 a 1 9 ]
+"161
+} 0
+"83
+[v _BMA253_GetAccelDataX BMA253_GetAccelDataX `(v  1 e 1 0 ]
+{
+"85
+[v BMA253_GetAccelDataX@msbData msbData `uc  1 a 1 14 ]
+"84
+[v BMA253_GetAccelDataX@lsbData lsbData `uc  1 a 1 13 ]
+"83
+[v BMA253_GetAccelDataX@xAccelData xAccelData `*.4s  1 p 1 10 ]
+"93
+} 0
+"147
+[v _BMA253_NewAccelDataRdyX BMA253_NewAccelDataRdyX `(a  1 s 1 BMA253_NewAccelDataRdyX ]
+{
+"148
+[v BMA253_NewAccelDataRdyX@xNewData xNewData `a  1 a 1 9 ]
+"153
+} 0
+"97 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/drivers/i2c_simple_master.c
+[v _i2c_read1ByteRegister i2c_read1ByteRegister `(uc  1 e 1 0 ]
+{
+[v i2c_read1ByteRegister@address address `uc  1 p 1 wreg ]
+"101
+[v i2c_read1ByteRegister@x x `i  1 a 2 6 ]
+"99
+[v i2c_read1ByteRegister@d2 d2 `uc  1 a 1 8 ]
+"100
+[v i2c_read1ByteRegister@e e `E358  1 a 1 5 ]
+"97
+[v i2c_read1ByteRegister@address address `uc  1 p 1 wreg ]
+[v i2c_read1ByteRegister@reg reg `uc  1 p 1 13 ]
+"99
+[v i2c_read1ByteRegister@address address `uc  1 p 1 4 ]
+"116
+} 0
+"283 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/i2c1_master.c
+[v _I2C1_SetAddressNackCallback I2C1_SetAddressNackCallback `(v  1 e 1 0 ]
+{
+[v I2C1_SetAddressNackCallback@cb cb `*.37(E363  1 p 2 5 ]
+[v I2C1_SetAddressNackCallback@ptr ptr `*.2v  1 p 2 7 ]
+"286
+} 0
+"176
+[v _I2C1_Open I2C1_Open `(E358  1 e 1 0 ]
+{
+[v I2C1_Open@address address `uc  1 p 1 wreg ]
+"178
+[v I2C1_Open@returnValue returnValue `E358  1 a 1 1 ]
+"176
+[v I2C1_Open@address address `uc  1 p 1 wreg ]
+"178
+[v I2C1_Open@address address `uc  1 p 1 0 ]
+"207
+} 0
+"543
+[v _I2C1_MasterOpen I2C1_MasterOpen `T(a  1 s 1 I2C1_MasterOpen ]
+{
+"555
+} 0
+"251
+[v _I2C1_MasterWrite I2C1_MasterWrite `(E358  1 e 1 0 ]
+{
+"254
+} 0
+"224
+[v _I2C1_MasterOperation I2C1_MasterOperation `(E358  1 e 1 0 ]
+{
+[v I2C1_MasterOperation@read read `a  1 p 1 wreg ]
+"226
+[v I2C1_MasterOperation@returnValue returnValue `E358  1 a 1 3 ]
+"224
+[v I2C1_MasterOperation@read read `a  1 p 1 wreg ]
+"226
+[v I2C1_MasterOperation@read read `a  1 p 1 2 ]
+"244
+} 0
+"312
+[v _I2C1_Poller I2C1_Poller `(v  1 s 1 I2C1_Poller ]
+{
+"319
+} 0
+"650
+[v _I2C1_MasterWaitForEvent I2C1_MasterWaitForEvent `T(v  1 s 1 I2C1_MasterWaitForEvent ]
+{
+"659
+} 0
+"321
+[v _I2C1_MasterFsm I2C1_MasterFsm `T(v  1 s 1 I2C1_MasterFsm ]
+{
+"330
+} 0
+"500
+[v _I2C1_DO_ADDRESS_NACK I2C1_DO_ADDRESS_NACK `(E12795  1 s 1 I2C1_DO_ADDRESS_NACK ]
+{
+"512
+} 0
+"494
+[v _I2C1_DO_RESET I2C1_DO_RESET `(E12795  1 s 1 I2C1_DO_RESET ]
+{
+"499
+} 0
+"488
+[v _I2C1_DO_RX_NACK_RESTART I2C1_DO_RX_NACK_RESTART `(E12795  1 s 1 I2C1_DO_RX_NACK_RESTART ]
+{
+"492
+} 0
+"482
+[v _I2C1_DO_RX_NACK_STOP I2C1_DO_RX_NACK_STOP `(E12795  1 s 1 I2C1_DO_RX_NACK_STOP ]
+{
+"486
+} 0
+"475
+[v _I2C1_DO_RX_ACK I2C1_DO_RX_ACK `(E12795  1 s 1 I2C1_DO_RX_ACK ]
+{
+"479
+} 0
+"469
+[v _I2C1_DO_SEND_STOP I2C1_DO_SEND_STOP `(E12795  1 s 1 I2C1_DO_SEND_STOP ]
+{
+"473
+} 0
+"463
+[v _I2C1_DO_SEND_RESTART I2C1_DO_SEND_RESTART `(E12795  1 s 1 I2C1_DO_SEND_RESTART ]
+{
+"467
+} 0
+"456
+[v _I2C1_DO_SEND_RESTART_WRITE I2C1_DO_SEND_RESTART_WRITE `(E12795  1 s 1 I2C1_DO_SEND_RESTART_WRITE ]
+{
+"460
+} 0
+"450
+[v _I2C1_DO_SEND_RESTART_READ I2C1_DO_SEND_RESTART_READ `(E12795  1 s 1 I2C1_DO_SEND_RESTART_READ ]
+{
+"454
+} 0
+"402
+[v _I2C1_DO_RCEN I2C1_DO_RCEN `(E12795  1 s 1 I2C1_DO_RCEN ]
+{
+"407
+} 0
+"378
+[v _I2C1_DO_RX I2C1_DO_RX `(E12795  1 s 1 I2C1_DO_RX ]
+{
+"400
+} 0
+"354
+[v _I2C1_DO_TX I2C1_DO_TX `(E12795  1 s 1 I2C1_DO_TX ]
+{
+"376
+} 0
+"347
+[v _I2C1_DO_SEND_ADR_WRITE I2C1_DO_SEND_ADR_WRITE `(E12795  1 s 1 I2C1_DO_SEND_ADR_WRITE ]
+{
+"352
+} 0
+"340
+[v _I2C1_DO_SEND_ADR_READ I2C1_DO_SEND_ADR_READ `(E12795  1 s 1 I2C1_DO_SEND_ADR_READ ]
+{
+"345
+} 0
+"333
+[v _I2C1_DO_IDLE I2C1_DO_IDLE `(E12795  1 s 1 I2C1_DO_IDLE ]
+{
+"338
+} 0
+"409
+[v _I2C1_DO_TX_EMPTY I2C1_DO_TX_EMPTY `(E12795  1 s 1 I2C1_DO_TX_EMPTY ]
+{
+"424
+} 0
+"645
+[v _I2C1_MasterSetIrq I2C1_MasterSetIrq `T(v  1 s 1 I2C1_MasterSetIrq ]
+{
+"648
+} 0
+"598
+[v _I2C1_MasterIsNack I2C1_MasterIsNack `T(a  1 s 1 I2C1_MasterIsNack ]
+{
+"601
+} 0
+"568
+[v _I2C1_MasterSendTxData I2C1_MasterSendTxData `T(v  1 s 1 I2C1_MasterSendTxData ]
+{
+[v I2C1_MasterSendTxData@data data `uc  1 p 1 wreg ]
+[v I2C1_MasterSendTxData@data data `uc  1 p 1 wreg ]
+"570
+[v I2C1_MasterSendTxData@data data `uc  1 p 1 0 ]
+"571
+} 0
+"603
+[v _I2C1_MasterSendAck I2C1_MasterSendAck `T(v  1 s 1 I2C1_MasterSendAck ]
+{
+"607
+} 0
+"563
+[v _I2C1_MasterGetRxData I2C1_MasterGetRxData `T(uc  1 s 1 I2C1_MasterGetRxData ]
+{
+"566
+} 0
+"609
+[v _I2C1_MasterSendNack I2C1_MasterSendNack `T(v  1 s 1 I2C1_MasterSendNack ]
+{
+"613
+} 0
+"583
+[v _I2C1_MasterStartRx I2C1_MasterStartRx `T(v  1 s 1 I2C1_MasterStartRx ]
+{
+"586
+} 0
+"185 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/drivers/i2c_simple_master.c
+[v _rdBlkRegCompleteHandler@i2c_simple_master$F3602 rdBlkRegCompleteHandler `(E363  1 s 1 rdBlkRegCompleteHandler ]
+{
+[v rdBlkRegCompleteHandler@i2c_simple_master$F3602@p p `*.39v  1 p 2 9 ]
+"190
+} 0
+"119
+[v _rd2RegCompleteHandler@i2c_simple_master$F3590 rd2RegCompleteHandler `(E363  1 s 1 rd2RegCompleteHandler ]
+{
+[v rd2RegCompleteHandler@i2c_simple_master$F3590@p p `*.39v  1 p 2 9 ]
+"124
+} 0
+"81
+[v _rd1RegCompleteHandler@i2c_simple_master$F3582 rd1RegCompleteHandler `(E363  1 s 1 rd1RegCompleteHandler ]
+{
+[v rd1RegCompleteHandler@i2c_simple_master$F3582@p p `*.39v  1 p 2 9 ]
+"86
+} 0
+"34
+[v _wr1RegCompleteHandler@i2c_simple_master$F3572 wr1RegCompleteHandler `(E363  1 s 1 wr1RegCompleteHandler ]
+{
+[v wr1RegCompleteHandler@i2c_simple_master$F3572@p p `*.39v  1 p 2 9 ]
+"39
+} 0
+"525 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/i2c1_master.c
+[v _I2C1_CallbackReturnReset I2C1_CallbackReturnReset `(E363  1 e 1 0 ]
+{
+"528
+} 0
+"520
+[v _I2C1_CallbackReturnStop I2C1_CallbackReturnStop `(E363  1 e 1 0 ]
+{
+"523
+} 0
+"170 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/examples/i2c1_master_example.c
+[v _rdBlkRegCompleteHandler rdBlkRegCompleteHandler `(E363  1 s 1 rdBlkRegCompleteHandler ]
+{
+[v rdBlkRegCompleteHandler@ptr ptr `*.39v  1 p 2 9 ]
+"175
+} 0
+"163
+[v _wr2RegCompleteHandler wr2RegCompleteHandler `(E363  1 s 1 wr2RegCompleteHandler ]
+{
+[v wr2RegCompleteHandler@ptr ptr `*.39v  1 p 2 9 ]
+"168
+} 0
+"156
+[v _wr1RegCompleteHandler wr1RegCompleteHandler `(E363  1 s 1 wr1RegCompleteHandler ]
+{
+[v wr1RegCompleteHandler@ptr ptr `*.39v  1 p 2 9 ]
+"161
+} 0
+"149
+[v _rd2RegCompleteHandler rd2RegCompleteHandler `(E363  1 s 1 rd2RegCompleteHandler ]
+{
+[v rd2RegCompleteHandler@ptr ptr `*.39v  1 p 2 9 ]
+"154
+} 0
+"142
+[v _rd1RegCompleteHandler rd1RegCompleteHandler `(E363  1 s 1 rd1RegCompleteHandler ]
+{
+[v rd1RegCompleteHandler@ptr ptr `*.39v  1 p 2 9 ]
+"147
+} 0
+"151 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/drivers/i2c_simple_master.c
+[v _wr2RegCompleteHandler@i2c_simple_master$F3596 wr2RegCompleteHandler `(E363  1 s 1 wr2RegCompleteHandler ]
+{
+[v wr2RegCompleteHandler@i2c_simple_master$F3596@p p `*.39v  1 p 2 9 ]
+"156
+} 0
+"273 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/i2c1_master.c
+[v _I2C1_SetDataCompleteCallback I2C1_SetDataCompleteCallback `(v  1 e 1 0 ]
+{
+[v I2C1_SetDataCompleteCallback@cb cb `*.37(E363  1 p 2 5 ]
+[v I2C1_SetDataCompleteCallback@ptr ptr `*.39v  1 p 2 7 ]
+"276
+} 0
+"298
+[v _I2C1_SetCallback I2C1_SetCallback `(v  1 s 1 I2C1_SetCallback ]
+{
+[v I2C1_SetCallback@idx idx `E12813  1 p 1 wreg ]
+[v I2C1_SetCallback@idx idx `E12813  1 p 1 wreg ]
+[v I2C1_SetCallback@cb cb `*.37(E363  1 p 2 0 ]
+[v I2C1_SetCallback@ptr ptr `*.39v  1 p 2 2 ]
+"300
+[v I2C1_SetCallback@idx idx `E12813  1 p 1 4 ]
+"310
+} 0
+"263
+[v _I2C1_SetBuffer I2C1_SetBuffer `(v  1 e 1 0 ]
+{
+[v I2C1_SetBuffer@buffer buffer `*.39v  1 p 2 0 ]
+[v I2C1_SetBuffer@bufferSize bufferSize `ui  1 p 2 2 ]
+"271
+} 0
+"593
+[v _I2C1_MasterStop I2C1_MasterStop `T(v  1 s 1 I2C1_MasterStop ]
+{
+"596
+} 0
+"573
+[v _I2C1_MasterEnableRestart I2C1_MasterEnableRestart `T(v  1 s 1 I2C1_MasterEnableRestart ]
+{
+"576
+} 0
+"588
+[v _I2C1_MasterStart I2C1_MasterStart `T(v  1 s 1 I2C1_MasterStart ]
+{
+"591
+} 0
+"209
+[v _I2C1_Close I2C1_Close `(E358  1 e 1 0 ]
+{
+"211
+[v I2C1_Close@returnValue returnValue `E358  1 a 1 0 ]
+"222
+} 0
+"635
+[v _I2C1_MasterDisableIrq I2C1_MasterDisableIrq `T(v  1 s 1 I2C1_MasterDisableIrq ]
+{
+"638
+} 0
+"557
+[v _I2C1_MasterClose I2C1_MasterClose `T(v  1 s 1 I2C1_MasterClose ]
+{
+"561
+} 0
+"640
+[v _I2C1_MasterClearIrq I2C1_MasterClearIrq `T(v  1 s 1 I2C1_MasterClearIrq ]
+{
+"643
 } 0
 "52 C:\Users\jjega\OneDrive\Documents\GitHub\spi_host_ble.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]

@@ -1,6 +1,22 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[v F12424 `(v ~T0 @X0 0 tf ]
-[v F12426 `(v ~T0 @X0 0 tf ]
+"488 mcc_generated_files/pin_manager.h
+[; ;mcc_generated_files/pin_manager.h: 488:     struct {
+[s S1719 :1 `uc 1 :7 `uc 1 ]
+[n S1719 . ACC UNDEFINED ]
+"487
+[; ;mcc_generated_files/pin_manager.h: 487: typedef union {
+[u S1718 `S1719 1 `uc 1 ]
+[n S1718 . . INTERRUPTbits ]
+"285 mcc_generated_files/../mcc_generated_files/application/BMA253_accel.h
+[; ;mcc_generated_files/../mcc_generated_files/application/BMA253_accel.h: 285:     struct {
+[s S1736 :7 `uc 1 :1 `uc 1 ]
+[n S1736 . UNDEFINED FLAT ]
+"284
+[; ;mcc_generated_files/../mcc_generated_files/application/BMA253_accel.h: 284: typedef union {
+[u S1735 `S1736 1 `uc 1 ]
+[n S1735 . . AccelerometerInterruptBits ]
+[v F13122 `(v ~T0 @X0 0 tf ]
+[v F13124 `(v ~T0 @X0 0 tf ]
 "860 C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc/pic16lf18456.h
 [; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc/pic16lf18456.h: 860: extern volatile unsigned char LATA __attribute__((address(0x018)));
 [v _LATA `Vuc ~T0 @X0 0 e@24 ]
@@ -167,12 +183,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "415
 [; ;mcc_generated_files/pin_manager.h: 415: void IOCAF7_ISR(void);
 [v _IOCAF7_ISR `(v ~T0 @X0 0 ef ]
-[v F12432 `(v ~T0 @X0 0 tf ]
-[v F12434 `(v ~T0 @X0 0 tf ]
-[v F12436 `(v ~T0 @X0 0 tf ]
-[v F12440 `(v ~T0 @X0 0 tf ]
-[v F12442 `(v ~T0 @X0 0 tf ]
-[v F12444 `(v ~T0 @X0 0 tf ]
+[v F13130 `(v ~T0 @X0 0 tf ]
+[v F13132 `(v ~T0 @X0 0 tf ]
+[v F13134 `(v ~T0 @X0 0 tf ]
+[v F13138 `(v ~T0 @X0 0 tf ]
+[v F13140 `(v ~T0 @X0 0 tf ]
+[v F13142 `(v ~T0 @X0 0 tf ]
 "110 C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc/pic16lf18456.h
 [; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc/pic16lf18456.h: 110: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1766,24 +1782,45 @@ Version 4.0 HI-TECH Software Intermediate Code
 "37278
 [; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc/pic16lf18456.h: 37278: __asm("TOSH equ 01FEFh");
 [; <" TOSH equ 01FEFh ;# ">
-"6 mcc_generated_files/../main.h
-[; ;mcc_generated_files/../main.h: 6: _Bool pushed = 0;
+"495 mcc_generated_files/pin_manager.h
+[; ;mcc_generated_files/pin_manager.h: 495: volatile INTERRUPTbits_t INTERRUPTbits;
+[v _INTERRUPTbits `VS1718 ~T0 @X0 1 e ]
+"291 mcc_generated_files/../mcc_generated_files/application/BMA253_accel.h
+[; ;mcc_generated_files/../mcc_generated_files/application/BMA253_accel.h: 291: volatile AccelerometerInterruptBits_t accelerometerInterruptBits;
+[v _accelerometerInterruptBits `VS1735 ~T0 @X0 1 e ]
+"13 mcc_generated_files/../main.h
+[; ;mcc_generated_files/../main.h: 13: _Bool pushed = 0;
 [v _pushed `a ~T0 @X0 1 e ]
 [i _pushed
 -> -> 0 `i `a
 ]
-"7
-[; ;mcc_generated_files/../main.h: 7: _Bool sendSpiReadRequest = 0;
+"14
+[; ;mcc_generated_files/../main.h: 14: _Bool sendSpiReadRequest = 0;
 [v _sendSpiReadRequest `a ~T0 @X0 1 e ]
 [i _sendSpiReadRequest
 -> -> 0 `i `a
 ]
+"36
+[; ;mcc_generated_files/../main.h: 36: static char statusBuffer[(80)];
+[v _statusBuffer `uc ~T0 @X0 -> 80 `i s ]
+"37
+[; ;mcc_generated_files/../main.h: 37: static char lightBlueSerial[(80)];
+[v _lightBlueSerial `uc ~T0 @X0 -> 80 `i s ]
+"38
+[; ;mcc_generated_files/../main.h: 38: static uint8_t serialIndex;
+[v _serialIndex `uc ~T0 @X0 1 s ]
+"41
+[; ;mcc_generated_files/../main.h: 41: uint8_t flats = 0;
+[v _flats `uc ~T0 @X0 1 e ]
+[i _flats
+-> -> 0 `i `uc
+]
 "55 mcc_generated_files/pin_manager.c
 [; ;mcc_generated_files/pin_manager.c: 55: void (*IOCAF6_InterruptHandler)(void);
-[v _IOCAF6_InterruptHandler `*F12424 ~T0 @X0 1 e ]
+[v _IOCAF6_InterruptHandler `*F13122 ~T0 @X0 1 e ]
 "56
 [; ;mcc_generated_files/pin_manager.c: 56: void (*IOCAF7_InterruptHandler)(void);
-[v _IOCAF7_InterruptHandler `*F12426 ~T0 @X0 1 e ]
+[v _IOCAF7_InterruptHandler `*F13124 ~T0 @X0 1 e ]
 "59
 [; ;mcc_generated_files/pin_manager.c: 59: void PIN_MANAGER_Initialize(void)
 [v _PIN_MANAGER_Initialize `(v ~T0 @X0 1 ef ]
@@ -1923,7 +1960,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _SSP2CLKPPS -> -> 17 `i `uc ]
 "153
 [; ;mcc_generated_files/pin_manager.c: 153: }
-[e :UE 1718 ]
+[e :UE 1737 ]
 }
 "155
 [; ;mcc_generated_files/pin_manager.c: 155: void PIN_MANAGER_IOC(void)
@@ -1935,7 +1972,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "158
 [; ;mcc_generated_files/pin_manager.c: 158:     if(IOCAFbits.IOCAF6 == 1)
-[e $ ! == -> . . _IOCAFbits 0 6 `i -> 1 `i 1720  ]
+[e $ ! == -> . . _IOCAFbits 0 6 `i -> 1 `i 1739  ]
 "159
 [; ;mcc_generated_files/pin_manager.c: 159:     {
 {
@@ -1945,10 +1982,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "161
 [; ;mcc_generated_files/pin_manager.c: 161:     }
 }
-[e :U 1720 ]
+[e :U 1739 ]
 "163
 [; ;mcc_generated_files/pin_manager.c: 163:     if(IOCAFbits.IOCAF7 == 1)
-[e $ ! == -> . . _IOCAFbits 0 7 `i -> 1 `i 1721  ]
+[e $ ! == -> . . _IOCAFbits 0 7 `i -> 1 `i 1740  ]
 "164
 [; ;mcc_generated_files/pin_manager.c: 164:     {
 {
@@ -1958,10 +1995,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "166
 [; ;mcc_generated_files/pin_manager.c: 166:     }
 }
-[e :U 1721 ]
+[e :U 1740 ]
 "167
 [; ;mcc_generated_files/pin_manager.c: 167: }
-[e :UE 1719 ]
+[e :UE 1738 ]
 }
 "172
 [; ;mcc_generated_files/pin_manager.c: 172: void IOCAF6_ISR(void) {
@@ -1971,7 +2008,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "177
 [; ;mcc_generated_files/pin_manager.c: 177:     if(IOCAF6_InterruptHandler)
-[e $ ! != _IOCAF6_InterruptHandler -> -> 0 `i `*F12432 1723  ]
+[e $ ! != _IOCAF6_InterruptHandler -> -> 0 `i `*F13130 1742  ]
 "178
 [; ;mcc_generated_files/pin_manager.c: 178:     {
 {
@@ -1981,27 +2018,27 @@ Version 4.0 HI-TECH Software Intermediate Code
 "180
 [; ;mcc_generated_files/pin_manager.c: 180:     }
 }
-[e :U 1723 ]
+[e :U 1742 ]
 "181
 [; ;mcc_generated_files/pin_manager.c: 181:     IOCAFbits.IOCAF6 = 0;
 [e = . . _IOCAFbits 0 6 -> -> 0 `i `uc ]
 "182
 [; ;mcc_generated_files/pin_manager.c: 182: }
-[e :UE 1722 ]
+[e :UE 1741 ]
 }
 "187
 [; ;mcc_generated_files/pin_manager.c: 187: void IOCAF6_SetInterruptHandler(void (* InterruptHandler)(void)){
-[v _IOCAF6_SetInterruptHandler `(v ~T0 @X0 1 ef1`*F12434 ]
+[v _IOCAF6_SetInterruptHandler `(v ~T0 @X0 1 ef1`*F13132 ]
 {
 [e :U _IOCAF6_SetInterruptHandler ]
-[v _InterruptHandler `*F12436 ~T0 @X0 1 r1 ]
+[v _InterruptHandler `*F13134 ~T0 @X0 1 r1 ]
 [f ]
 "188
 [; ;mcc_generated_files/pin_manager.c: 188:     IOCAF6_InterruptHandler = InterruptHandler;
 [e = _IOCAF6_InterruptHandler _InterruptHandler ]
 "189
 [; ;mcc_generated_files/pin_manager.c: 189: }
-[e :UE 1724 ]
+[e :UE 1743 ]
 }
 "194
 [; ;mcc_generated_files/pin_manager.c: 194: void IOCAF6_DefaultInterruptHandler(void){
@@ -2011,7 +2048,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "197
 [; ;mcc_generated_files/pin_manager.c: 197: }
-[e :UE 1725 ]
+[e :UE 1744 ]
 }
 "202
 [; ;mcc_generated_files/pin_manager.c: 202: void IOCAF7_ISR(void) {
@@ -2021,7 +2058,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "207
 [; ;mcc_generated_files/pin_manager.c: 207:     if(IOCAF7_InterruptHandler)
-[e $ ! != _IOCAF7_InterruptHandler -> -> 0 `i `*F12440 1727  ]
+[e $ ! != _IOCAF7_InterruptHandler -> -> 0 `i `*F13138 1746  ]
 "208
 [; ;mcc_generated_files/pin_manager.c: 208:     {
 {
@@ -2031,27 +2068,27 @@ Version 4.0 HI-TECH Software Intermediate Code
 "210
 [; ;mcc_generated_files/pin_manager.c: 210:     }
 }
-[e :U 1727 ]
+[e :U 1746 ]
 "211
 [; ;mcc_generated_files/pin_manager.c: 211:     IOCAFbits.IOCAF7 = 0;
 [e = . . _IOCAFbits 0 7 -> -> 0 `i `uc ]
 "212
 [; ;mcc_generated_files/pin_manager.c: 212: }
-[e :UE 1726 ]
+[e :UE 1745 ]
 }
 "217
 [; ;mcc_generated_files/pin_manager.c: 217: void IOCAF7_SetInterruptHandler(void (* InterruptHandler)(void)){
-[v _IOCAF7_SetInterruptHandler `(v ~T0 @X0 1 ef1`*F12442 ]
+[v _IOCAF7_SetInterruptHandler `(v ~T0 @X0 1 ef1`*F13140 ]
 {
 [e :U _IOCAF7_SetInterruptHandler ]
-[v _InterruptHandler `*F12444 ~T0 @X0 1 r1 ]
+[v _InterruptHandler `*F13142 ~T0 @X0 1 r1 ]
 [f ]
 "218
 [; ;mcc_generated_files/pin_manager.c: 218:     IOCAF7_InterruptHandler = InterruptHandler;
 [e = _IOCAF7_InterruptHandler _InterruptHandler ]
 "219
 [; ;mcc_generated_files/pin_manager.c: 219: }
-[e :UE 1728 ]
+[e :UE 1747 ]
 }
 "224
 [; ;mcc_generated_files/pin_manager.c: 224: void IOCAF7_DefaultInterruptHandler(void){
@@ -2064,5 +2101,5 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _pushed -> -> 1 `i `a ]
 "228
 [; ;mcc_generated_files/pin_manager.c: 228: }
-[e :UE 1729 ]
+[e :UE 1748 ]
 }

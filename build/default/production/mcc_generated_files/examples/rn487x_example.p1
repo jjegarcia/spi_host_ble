@@ -1,6 +1,6 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"113 mcc_generated_files/examples/../rn487x/rn487x.h
-[; ;mcc_generated_files/examples/../rn487x/rn487x.h: 113: _Bool RN487X_SetAsyncMessageHandler(char* pBuffer, uint8_t len);
+"271 mcc_generated_files/examples/../rn487x/rn487x.h
+[; ;mcc_generated_files/examples/../rn487x/rn487x.h: 271: _Bool RN487X_SetAsyncMessageHandler(char* pBuffer, uint8_t len);
 [v _RN487X_SetAsyncMessageHandler `(a ~T0 @X0 0 ef2`*uc`uc ]
 "419 C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc/pic16lf18456.h
 [; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc/pic16lf18456.h: 419:     struct {
@@ -45,11 +45,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/examples/rn487x_example.c: 108:            uart[UART_CDC].Write(RN487X_Read());
 [c E12450 0 1 .. ]
 [n E12450 . UART_CDC UART_BLE  ]
-"135 mcc_generated_files/examples/../rn487x/rn487x.h
-[; ;mcc_generated_files/examples/../rn487x/rn487x.h: 135: uint8_t RN487X_Read(void);
+"293 mcc_generated_files/examples/../rn487x/rn487x.h
+[; ;mcc_generated_files/examples/../rn487x/rn487x.h: 293: uint8_t RN487X_Read(void);
 [v _RN487X_Read `(uc ~T0 @X0 0 ef ]
-"125
-[; ;mcc_generated_files/examples/../rn487x/rn487x.h: 125: _Bool RN487X_DataReady(void);
+"283
+[; ;mcc_generated_files/examples/../rn487x/rn487x.h: 283: _Bool RN487X_DataReady(void);
 [v _RN487X_DataReady `(a ~T0 @X0 0 ef ]
 [v F12488 `(v ~T0 @X0 0 tf1`uc ]
 [v F12491 `(uc ~T0 @X0 0 tf ]
@@ -1690,7 +1690,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _INTCONbits 0 2 -> -> 1 `i `uc ]
 "77
 [; ;mcc_generated_files/examples/rn487x_example.c: 77:     if (exampleIsInitialized == 1)
-[e $ ! == -> _exampleIsInitialized `i -> 1 `i 1723  ]
+[e $ ! == -> _exampleIsInitialized `i -> 1 `i 1729  ]
 "78
 [; ;mcc_generated_files/examples/rn487x_example.c: 78:     {
 {
@@ -1700,14 +1700,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "80
 [; ;mcc_generated_files/examples/rn487x_example.c: 80:     }
 }
-[e :U 1723 ]
+[e :U 1729 ]
 "81
 [; ;mcc_generated_files/examples/rn487x_example.c: 81:     return (0);
 [e ) -> -> 0 `i `a ]
-[e $UE 1722  ]
+[e $UE 1728  ]
 "82
 [; ;mcc_generated_files/examples/rn487x_example.c: 82: }
-[e :UE 1722 ]
+[e :UE 1728 ]
 }
 "84
 [; ;mcc_generated_files/examples/rn487x_example.c: 84: static void RN487X_Example_Run(void)
@@ -1719,39 +1719,39 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "86
 [; ;mcc_generated_files/examples/rn487x_example.c: 86:     while(1)
-[e :U 1726 ]
+[e :U 1732 ]
 "87
 [; ;mcc_generated_files/examples/rn487x_example.c: 87:     {
 {
 "88
 [; ;mcc_generated_files/examples/rn487x_example.c: 88:         if (1 == RN487X_Example_TransparentUart())
-[e $ ! == -> 1 `i -> ( _RN487X_Example_TransparentUart ..  `i 1728  ]
+[e $ ! == -> 1 `i -> ( _RN487X_Example_TransparentUart ..  `i 1734  ]
 "89
 [; ;mcc_generated_files/examples/rn487x_example.c: 89:         {
 {
 "91
 [; ;mcc_generated_files/examples/rn487x_example.c: 91:         }
 }
-[e $U 1729  ]
+[e $U 1735  ]
 "92
 [; ;mcc_generated_files/examples/rn487x_example.c: 92:         else
-[e :U 1728 ]
+[e :U 1734 ]
 "93
 [; ;mcc_generated_files/examples/rn487x_example.c: 93:         {
 {
 "95
 [; ;mcc_generated_files/examples/rn487x_example.c: 95:         }
 }
-[e :U 1729 ]
+[e :U 1735 ]
 "96
 [; ;mcc_generated_files/examples/rn487x_example.c: 96:     }
 }
-[e :U 1725 ]
-[e $U 1726  ]
-[e :U 1727 ]
+[e :U 1731 ]
+[e $U 1732  ]
+[e :U 1733 ]
 "97
 [; ;mcc_generated_files/examples/rn487x_example.c: 97: }
-[e :UE 1724 ]
+[e :UE 1730 ]
 }
 "99
 [; ;mcc_generated_files/examples/rn487x_example.c: 99: static _Bool RN487X_Example_TransparentUart(void)
@@ -1769,14 +1769,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _isConnected ( _RN487X_IsConnected ..  ]
 "104
 [; ;mcc_generated_files/examples/rn487x_example.c: 104:    if (1 == isConnected)
-[e $ ! == -> 1 `i -> _isConnected `i 1731  ]
+[e $ ! == -> 1 `i -> _isConnected `i 1737  ]
 "105
 [; ;mcc_generated_files/examples/rn487x_example.c: 105:    {
 {
 "106
 [; ;mcc_generated_files/examples/rn487x_example.c: 106:        while (RN487X_DataReady())
-[e $U 1732  ]
-[e :U 1733 ]
+[e $U 1738  ]
+[e :U 1739 ]
 "107
 [; ;mcc_generated_files/examples/rn487x_example.c: 107:        {
 {
@@ -1786,15 +1786,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "109
 [; ;mcc_generated_files/examples/rn487x_example.c: 109:        }
 }
-[e :U 1732 ]
+[e :U 1738 ]
 "106
 [; ;mcc_generated_files/examples/rn487x_example.c: 106:        while (RN487X_DataReady())
-[e $ != -> ( _RN487X_DataReady ..  `i -> 0 `i 1733  ]
-[e :U 1734 ]
+[e $ != -> ( _RN487X_DataReady ..  `i -> 0 `i 1739  ]
+[e :U 1740 ]
 "110
 [; ;mcc_generated_files/examples/rn487x_example.c: 110:        while (uart[UART_CDC].DataReady())
-[e $U 1735  ]
-[e :U 1736 ]
+[e $U 1741  ]
+[e :U 1742 ]
 "111
 [; ;mcc_generated_files/examples/rn487x_example.c: 111:        {
 {
@@ -1804,25 +1804,25 @@ Version 4.0 HI-TECH Software Intermediate Code
 "113
 [; ;mcc_generated_files/examples/rn487x_example.c: 113:        }
 }
-[e :U 1735 ]
+[e :U 1741 ]
 "110
 [; ;mcc_generated_files/examples/rn487x_example.c: 110:        while (uart[UART_CDC].DataReady())
-[e $ != -> ( *U . *U + &U _uart * -> . `E12450 0 `ux -> -> # *U &U _uart `ui `ux 3 ..  `i -> 0 `i 1736  ]
-[e :U 1737 ]
+[e $ != -> ( *U . *U + &U _uart * -> . `E12450 0 `ux -> -> # *U &U _uart `ui `ux 3 ..  `i -> 0 `i 1742  ]
+[e :U 1743 ]
 "114
 [; ;mcc_generated_files/examples/rn487x_example.c: 114:    }
 }
-[e $U 1738  ]
+[e $U 1744  ]
 "115
 [; ;mcc_generated_files/examples/rn487x_example.c: 115:    else
-[e :U 1731 ]
+[e :U 1737 ]
 "116
 [; ;mcc_generated_files/examples/rn487x_example.c: 116:     {
 {
 "117
 [; ;mcc_generated_files/examples/rn487x_example.c: 117:         while(RN487X_DataReady())
-[e $U 1739  ]
-[e :U 1740 ]
+[e $U 1745  ]
+[e :U 1746 ]
 "118
 [; ;mcc_generated_files/examples/rn487x_example.c: 118:         {
 {
@@ -1832,15 +1832,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "120
 [; ;mcc_generated_files/examples/rn487x_example.c: 120:         }
 }
-[e :U 1739 ]
+[e :U 1745 ]
 "117
 [; ;mcc_generated_files/examples/rn487x_example.c: 117:         while(RN487X_DataReady())
-[e $ != -> ( _RN487X_DataReady ..  `i -> 0 `i 1740  ]
-[e :U 1741 ]
+[e $ != -> ( _RN487X_DataReady ..  `i -> 0 `i 1746  ]
+[e :U 1747 ]
 "121
 [; ;mcc_generated_files/examples/rn487x_example.c: 121:         while (uart[UART_CDC].DataReady())
-[e $U 1742  ]
-[e :U 1743 ]
+[e $U 1748  ]
+[e :U 1749 ]
 "122
 [; ;mcc_generated_files/examples/rn487x_example.c: 122:         {
 {
@@ -1850,20 +1850,20 @@ Version 4.0 HI-TECH Software Intermediate Code
 "124
 [; ;mcc_generated_files/examples/rn487x_example.c: 124:         }
 }
-[e :U 1742 ]
+[e :U 1748 ]
 "121
 [; ;mcc_generated_files/examples/rn487x_example.c: 121:         while (uart[UART_CDC].DataReady())
-[e $ != -> ( *U . *U + &U _uart * -> . `E12450 0 `ux -> -> # *U &U _uart `ui `ux 3 ..  `i -> 0 `i 1743  ]
-[e :U 1744 ]
+[e $ != -> ( *U . *U + &U _uart * -> . `E12450 0 `ux -> -> # *U &U _uart `ui `ux 3 ..  `i -> 0 `i 1749  ]
+[e :U 1750 ]
 "125
 [; ;mcc_generated_files/examples/rn487x_example.c: 125:     }
 }
-[e :U 1738 ]
+[e :U 1744 ]
 "127
 [; ;mcc_generated_files/examples/rn487x_example.c: 127:     return isConnected;
 [e ) _isConnected ]
-[e $UE 1730  ]
+[e $UE 1736  ]
 "128
 [; ;mcc_generated_files/examples/rn487x_example.c: 128: }
-[e :UE 1730 ]
+[e :UE 1736 ]
 }

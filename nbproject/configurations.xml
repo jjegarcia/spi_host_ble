@@ -4,11 +4,19 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <logicalFolder name="application" displayName="application" projectFiles="true">
+        <itemPath>mcc_generated_files/application/LIGHTBLUE_service.h</itemPath>
+        <itemPath>mcc_generated_files/application/BMA253_accel.h</itemPath>
+        <itemPath>mcc_generated_files/application/MCP9844_temp_sensor.h</itemPath>
+      </logicalFolder>
       <logicalFolder name="MCC Generated Files"
                      displayName="MCC Generated Files"
                      projectFiles="true">
         <logicalFolder name="drivers" displayName="drivers" projectFiles="true">
           <itemPath>mcc_generated_files/drivers/uart.h</itemPath>
+          <itemPath>mcc_generated_files/drivers/i2c_master.h</itemPath>
+          <itemPath>mcc_generated_files/drivers/i2c_simple_master.h</itemPath>
+          <itemPath>mcc_generated_files/drivers/i2c_types.h</itemPath>
         </logicalFolder>
         <logicalFolder name="examples" displayName="examples" projectFiles="true">
           <itemPath>mcc_generated_files/examples/i2c1_master_example.h</itemPath>
@@ -28,6 +36,7 @@
         <itemPath>mcc_generated_files/delay.h</itemPath>
         <itemPath>mcc_generated_files/eusart2.h</itemPath>
         <itemPath>mcc_generated_files/eusart1.h</itemPath>
+        <itemPath>mcc_generated_files/i2c1_driver.h</itemPath>
       </logicalFolder>
       <itemPath>main.h</itemPath>
     </logicalFolder>
@@ -47,12 +56,20 @@
       <logicalFolder name="MCC Generated Files"
                      displayName="MCC Generated Files"
                      projectFiles="true">
+        <logicalFolder name="f1" displayName="application" projectFiles="true">
+          <itemPath>mcc_generated_files/application/LIGHTBLUE_service.c</itemPath>
+          <itemPath>mcc_generated_files/application/BMA253_accel.c</itemPath>
+          <itemPath>mcc_generated_files/application/MCP9844_temp_sensor.c</itemPath>
+        </logicalFolder>
         <logicalFolder name="docs" displayName="docs" projectFiles="true">
           <itemPath>mcc_generated_files/docs/uart.dox</itemPath>
           <itemPath>mcc_generated_files/docs/delay.dox</itemPath>
         </logicalFolder>
         <logicalFolder name="drivers" displayName="drivers" projectFiles="true">
           <itemPath>mcc_generated_files/drivers/uart.c</itemPath>
+          <itemPath>mcc_generated_files/drivers/i2c_master.c</itemPath>
+          <itemPath>mcc_generated_files/drivers/i2c_simple_master.c</itemPath>
+          <itemPath>mcc_generated_files/drivers/i2c_types.c</itemPath>
         </logicalFolder>
         <logicalFolder name="examples" displayName="examples" projectFiles="true">
           <itemPath>mcc_generated_files/examples/i2c1_master_example.c</itemPath>
@@ -72,6 +89,7 @@
         <itemPath>mcc_generated_files/delay.c</itemPath>
         <itemPath>mcc_generated_files/eusart1.c</itemPath>
         <itemPath>mcc_generated_files/eusart2.c</itemPath>
+        <itemPath>mcc_generated_files/i2c1_driver.c</itemPath>
       </logicalFolder>
       <itemPath>main.c</itemPath>
     </logicalFolder>

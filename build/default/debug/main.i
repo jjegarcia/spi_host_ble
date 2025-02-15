@@ -20619,6 +20619,15 @@ void IOCAF7_SetInterruptHandler(void (* InterruptHandler)(void));
 extern void (*IOCAF7_InterruptHandler)(void);
 # 486 "./mcc_generated_files/pin_manager.h"
 void IOCAF7_DefaultInterruptHandler(void);
+typedef union {
+    struct {
+        unsigned ACC : 1;
+        unsigned UNDEFINED : 7;
+    };
+    uint8_t INTERRUPTbits;
+}INTERRUPTbits_t;
+
+volatile INTERRUPTbits_t INTERRUPTbits;
 # 52 "./mcc_generated_files/mcc.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdbool.h" 1 3
@@ -21015,11 +21024,223 @@ void PMD_Initialize(void);
 
 
 
+
+# 1 "./mcc_generated_files/application/LIGHTBLUE_service.h" 1
+# 36 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+void LIGHTBLUE_Initialize(void);
+# 50 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+void LIGHTBLUE_TemperatureSensor(void);
+# 64 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+void LIGHTBLUE_AccelSensor(void);
+# 75 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+void LIGHTBLUE_PushButton(void);
+# 89 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+void LIGHTBLUE_LedState(void);
+# 100 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+void LIGHTBLUE_SendProtocolVersion(void);
+# 111 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+void LIGHTBLUE_SendSerialData(char* serialData);
+# 126 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+void LIGHTBLUE_ParseIncomingPacket(char receivedByte);
+
+void LIGHTBLUE_AccState(void);
+# 8 "./main.h" 2
+# 1 "./mcc_generated_files/rn487x/rn487x_interface.h" 1
+# 37 "./mcc_generated_files/rn487x/rn487x_interface.h"
+typedef enum
+{
+    TEST_MODE = 0x00,
+    APPLICATION_MODE = 0x01
+}RN487X_SYSTEM_MODES_t;
+
+
+
+
+
+typedef struct
+{
+
+    void (*Write)(uint8_t);
+    uint8_t (*Read)(void);
+    _Bool (*TransmitDone)(void);
+    _Bool (*DataReady)(void);
+
+    void (*IndicateRx)(_Bool);
+
+    void (*ResetModule)(_Bool);
+
+    void (*SetSystemMode)(RN487X_SYSTEM_MODES_t);
+
+    void (*DelayMs)(uint16_t);
+
+    void (*AsyncHandler)(char*);
+}iRN487X_FunctionPtrs_t;
+
+extern const iRN487X_FunctionPtrs_t RN487X;
+# 75 "./mcc_generated_files/rn487x/rn487x_interface.h"
+_Bool RN487X_IsConnected(void);
+# 9 "./main.h" 2
+# 1 "./mcc_generated_files/rn487x/rn487x.h" 1
+# 31 "./mcc_generated_files/rn487x/rn487x.h"
+# 1 "./mcc_generated_files/rn487x/rn487x.h" 1
+# 32 "./mcc_generated_files/rn487x/rn487x.h" 2
+# 53 "./mcc_generated_files/rn487x/rn487x.h"
+typedef union
+{
+    uint8_t gpioBitMap;
+    struct
+    {
+        unsigned p2_2 : 1;
+        unsigned p2_4 : 1;
+        unsigned p3_5 : 1;
+        unsigned p1_2 : 1;
+        unsigned p1_3 : 1;
+        unsigned reserved : 3;
+    };
+}rn487x_gpio_ioBitMap_t;
+
+
+
+
+
+
+typedef union
+{
+    uint8_t gpioStateBitMap;
+    struct
+    {
+        unsigned p2_2_state : 1;
+        unsigned p2_4_state : 1;
+        unsigned p3_5_state : 1;
+        unsigned p1_2_state : 1;
+        unsigned p1_3_state : 1;
+        unsigned reserved : 3;
+    };
+}rn487x_gpio_stateBitMap_t;
+
+
+
+
+
+
+typedef union
+{
+    uint16_t gpioMap;
+    struct
+    {
+        rn487x_gpio_ioBitMap_t ioBitMap;
+        rn487x_gpio_stateBitMap_t ioStateBitMap;
+    };
+}rn487x_gpio_bitmap_t;
+# 111 "./mcc_generated_files/rn487x/rn487x.h"
+_Bool RN487X_Init(void);
+# 124 "./mcc_generated_files/rn487x/rn487x.h"
+void RN487X_SendCmd(const uint8_t *cmd, uint8_t cmdLen);
+# 140 "./mcc_generated_files/rn487x/rn487x.h"
+uint8_t RN487X_GetCmd(const char *getCmd, uint8_t getCmdLen, char *getCmdResp);
+# 156 "./mcc_generated_files/rn487x/rn487x.h"
+_Bool RN487X_ReadMsg(const uint8_t *expectedMsg, uint8_t msgLen);
+# 168 "./mcc_generated_files/rn487x/rn487x.h"
+_Bool RN487X_ReadDefaultResponse(void);
+# 182 "./mcc_generated_files/rn487x/rn487x.h"
+void RN487X_WaitForMsg(const char *expectedMsg, uint8_t msgLen);
+# 194 "./mcc_generated_files/rn487x/rn487x.h"
+_Bool RN487X_EnterCmdMode(void);
+# 206 "./mcc_generated_files/rn487x/rn487x.h"
+_Bool RN487X_EnterDataMode(void);
+# 219 "./mcc_generated_files/rn487x/rn487x.h"
+_Bool RN487X_SetOutputs(rn487x_gpio_bitmap_t bitMap);
+# 232 "./mcc_generated_files/rn487x/rn487x.h"
+rn487x_gpio_stateBitMap_t RN487X_GetInputsValues(rn487x_gpio_ioBitMap_t getGPIOs);
+# 245 "./mcc_generated_files/rn487x/rn487x.h"
+_Bool RN487X_RebootCmd(void);
+# 257 "./mcc_generated_files/rn487x/rn487x.h"
+_Bool RN487X_Disconnect(void);
+# 271 "./mcc_generated_files/rn487x/rn487x.h"
+_Bool RN487X_SetAsyncMessageHandler(char* pBuffer, uint8_t len);
+# 283 "./mcc_generated_files/rn487x/rn487x.h"
+_Bool RN487X_DataReady(void);
+# 293 "./mcc_generated_files/rn487x/rn487x.h"
+uint8_t RN487X_Read(void);
+# 10 "./main.h" 2
+# 1 "./mcc_generated_files/drivers/uart.h" 1
+# 34 "./mcc_generated_files/drivers/uart.h"
+# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stddef.h" 1 3
+# 19 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stddef.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 1 3
+# 138 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
+typedef int ptrdiff_t;
+# 20 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stddef.h" 2 3
+# 35 "./mcc_generated_files/drivers/uart.h" 2
+
+
+
+
+
+
+typedef enum {
+    UART_CDC ,
+    UART_BLE
+} uart_configurations_t;
+
+
+
+
+
+typedef struct { uint8_t (*Read)(void); void (*Write)(uint8_t txdata); _Bool (*TransmitReady)(void); _Bool (*DataReady)(void); void (*SetTxISR)(void (* interruptHandler)(void)); void (*RxDefaultISR)(void); void (*SetRxISR)(void (* interruptHandler)(void)); _Bool (*TransmitDone)(void); void (*TxDefaultISR)(void); void (*Initialize)(void); } uart_functions_t;
+
+extern const uart_functions_t uart[];
+# 11 "./main.h" 2
+# 1 "./mcc_generated_files/application/BMA253_accel.h" 1
+# 223 "./mcc_generated_files/application/BMA253_accel.h"
+typedef struct
+{
+    int16_t x;
+    int16_t y;
+    int16_t z;
+}BMA253_ACCEL_DATA_t;
+# 237 "./mcc_generated_files/application/BMA253_accel.h"
+void BMA253_Initialize(void);
+# 246 "./mcc_generated_files/application/BMA253_accel.h"
+void BMA253_GetAccelDataX(int16_t *xAccelData);
+# 255 "./mcc_generated_files/application/BMA253_accel.h"
+void BMA253_GetAccelDataY(int16_t *yAccelData);
+# 264 "./mcc_generated_files/application/BMA253_accel.h"
+void BMA253_GetAccelDataZ(int16_t *zAccelData);
+# 275 "./mcc_generated_files/application/BMA253_accel.h"
+void BMA253_GetAccelDataXYZ(BMA253_ACCEL_DATA_t *accelData);
+
+
+
+
+
+
+uint8_t BMA253_GetAccelChipId(void);
+
+typedef union {
+    struct {
+        unsigned UNDEFINED : 7;
+        unsigned FLAT : 1;
+    };
+    uint8_t AccelerometerInterruptBits;
+}AccelerometerInterruptBits_t;
+volatile AccelerometerInterruptBits_t accelerometerInterruptBits;
+# 12 "./main.h" 2
+
 _Bool pushed = 0;
 _Bool sendSpiReadRequest = 0;
 
 void send_spi_read(void);
+# 36 "./main.h"
+static char statusBuffer[(80)];
+static char lightBlueSerial[(80)];
+static uint8_t serialIndex;
+
+void service_acceleremoterInterrupt(void);
+uint8_t flats = 0;
 # 46 "main.c" 2
+
+
 
 
 
@@ -21036,21 +21257,59 @@ void main(void) {
 
 
     (INTCONbits.PEIE = 1);
-
-
-
-
-
-
-
+# 81 "main.c"
+    RN487X_Init();
+    LIGHTBLUE_Initialize();
     while (1) {
+        if (RN487X_IsConnected() == 1) {
+            service_acceleremoterInterrupt();
+            if ((PIR0bits.TMR0IF) == 1) {
+                (PIR0bits.TMR0IF = 0);
 
-        if (pushed) {
-            pushed = 0;
-            sendSpiReadRequest = 1;
+                LIGHTBLUE_TemperatureSensor();
+                LIGHTBLUE_AccelSensor();
+                LIGHTBLUE_PushButton();
+                LIGHTBLUE_LedState();
+                LIGHTBLUE_SendProtocolVersion();
+            } else {
+                while (RN487X_DataReady()) {
+                    LIGHTBLUE_ParseIncomingPacket(RN487X_Read());
+                }
+                while (uart[UART_CDC].DataReady()) {
+                    lightBlueSerial[serialIndex] = uart[UART_CDC].Read();
+                    if ((lightBlueSerial[serialIndex] == '\r')
+                            || (lightBlueSerial[serialIndex] == '\n')
+                            || (serialIndex == (sizeof (lightBlueSerial) - 1))) {
+                        lightBlueSerial[serialIndex] = '\0';
+                        LIGHTBLUE_SendSerialData(lightBlueSerial);
+                        serialIndex = 0;
+                    } else {
+                        serialIndex++;
+                    }
+                }
+
+            }
+        } else {
+            while (RN487X_DataReady()) {
+                uart[UART_CDC].Write(RN487X_Read());
+            }
+            while (uart[UART_CDC].DataReady()) {
+                RN487X.Write(uart[UART_CDC].Read());
+            }
         }
-        if (sendSpiReadRequest) {
-            send_spi_read();
+    }
+
+}
+
+void service_acceleremoterInterrupt(void) {
+    if ((INTERRUPTbits.ACC == 1)) {
+        (INTERRUPTbits.ACC = 0);
+        accelerometerInterruptBits.FLAT = 1;
+        flats++;
+        if (flats > 1) {
+            LIGHTBLUE_AccState();
+            flats = 0;
+            accelerometerInterruptBits.FLAT = 0;
         }
     }
 }

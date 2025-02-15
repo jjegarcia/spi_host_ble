@@ -484,8 +484,22 @@ extern void (*IOCAF7_InterruptHandler)(void);
 
 */
 void IOCAF7_DefaultInterruptHandler(void);
+typedef union {
+    struct {
+        unsigned ACC : 1;
+        unsigned UNDEFINED : 7;
+    };
+    uint8_t INTERRUPTbits;
+}INTERRUPTbits_t;
+
+volatile INTERRUPTbits_t INTERRUPTbits;
 
 
+#define ACC_INTERRUPT_SetHigh()         (INTERRUPTbits.ACC = 1) 
+#define ACC_INTERRUPT_SetLow()          (INTERRUPTbits.ACC = 0) 
+#define ACC_INTERRUPT_Toggle()          (INTERRUPTbits.ACC = ~INTERRUPTbits.ACC)
+#define ACC_INTERRUPT_GetValue()        (INTERRUPTbits.ACC)
+#define ACC_Interrupt_is_high()         (INTERRUPTbits.ACC == 1)
 
 #endif // PIN_MANAGER_H
 /**

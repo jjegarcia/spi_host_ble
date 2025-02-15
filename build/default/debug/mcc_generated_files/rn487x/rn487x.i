@@ -120,19 +120,83 @@ typedef uint32_t uint_fast32_t;
 # 31 "mcc_generated_files/rn487x/rn487x.h" 2
 # 1 "mcc_generated_files/rn487x/rn487x.h" 1
 # 32 "mcc_generated_files/rn487x/rn487x.h" 2
-# 58 "mcc_generated_files/rn487x/rn487x.h"
+# 53 "mcc_generated_files/rn487x/rn487x.h"
+typedef union
+{
+    uint8_t gpioBitMap;
+    struct
+    {
+        unsigned p2_2 : 1;
+        unsigned p2_4 : 1;
+        unsigned p3_5 : 1;
+        unsigned p1_2 : 1;
+        unsigned p1_3 : 1;
+        unsigned reserved : 3;
+    };
+}rn487x_gpio_ioBitMap_t;
+
+
+
+
+
+
+typedef union
+{
+    uint8_t gpioStateBitMap;
+    struct
+    {
+        unsigned p2_2_state : 1;
+        unsigned p2_4_state : 1;
+        unsigned p3_5_state : 1;
+        unsigned p1_2_state : 1;
+        unsigned p1_3_state : 1;
+        unsigned reserved : 3;
+    };
+}rn487x_gpio_stateBitMap_t;
+
+
+
+
+
+
+typedef union
+{
+    uint16_t gpioMap;
+    struct
+    {
+        rn487x_gpio_ioBitMap_t ioBitMap;
+        rn487x_gpio_stateBitMap_t ioStateBitMap;
+    };
+}rn487x_gpio_bitmap_t;
+# 111 "mcc_generated_files/rn487x/rn487x.h"
 _Bool RN487X_Init(void);
-# 71 "mcc_generated_files/rn487x/rn487x.h"
+# 124 "mcc_generated_files/rn487x/rn487x.h"
 void RN487X_SendCmd(const uint8_t *cmd, uint8_t cmdLen);
-# 87 "mcc_generated_files/rn487x/rn487x.h"
+# 140 "mcc_generated_files/rn487x/rn487x.h"
 uint8_t RN487X_GetCmd(const char *getCmd, uint8_t getCmdLen, char *getCmdResp);
-# 99 "mcc_generated_files/rn487x/rn487x.h"
+# 156 "mcc_generated_files/rn487x/rn487x.h"
+_Bool RN487X_ReadMsg(const uint8_t *expectedMsg, uint8_t msgLen);
+# 168 "mcc_generated_files/rn487x/rn487x.h"
 _Bool RN487X_ReadDefaultResponse(void);
-# 113 "mcc_generated_files/rn487x/rn487x.h"
+# 182 "mcc_generated_files/rn487x/rn487x.h"
+void RN487X_WaitForMsg(const char *expectedMsg, uint8_t msgLen);
+# 194 "mcc_generated_files/rn487x/rn487x.h"
+_Bool RN487X_EnterCmdMode(void);
+# 206 "mcc_generated_files/rn487x/rn487x.h"
+_Bool RN487X_EnterDataMode(void);
+# 219 "mcc_generated_files/rn487x/rn487x.h"
+_Bool RN487X_SetOutputs(rn487x_gpio_bitmap_t bitMap);
+# 232 "mcc_generated_files/rn487x/rn487x.h"
+rn487x_gpio_stateBitMap_t RN487X_GetInputsValues(rn487x_gpio_ioBitMap_t getGPIOs);
+# 245 "mcc_generated_files/rn487x/rn487x.h"
+_Bool RN487X_RebootCmd(void);
+# 257 "mcc_generated_files/rn487x/rn487x.h"
+_Bool RN487X_Disconnect(void);
+# 271 "mcc_generated_files/rn487x/rn487x.h"
 _Bool RN487X_SetAsyncMessageHandler(char* pBuffer, uint8_t len);
-# 125 "mcc_generated_files/rn487x/rn487x.h"
+# 283 "mcc_generated_files/rn487x/rn487x.h"
 _Bool RN487X_DataReady(void);
-# 135 "mcc_generated_files/rn487x/rn487x.h"
+# 293 "mcc_generated_files/rn487x/rn487x.h"
 uint8_t RN487X_Read(void);
 # 27 "mcc_generated_files/rn487x/rn487x.c" 2
 # 1 "mcc_generated_files/rn487x/rn487x_interface.h" 1
@@ -20684,6 +20748,15 @@ void IOCAF7_SetInterruptHandler(void (* InterruptHandler)(void));
 extern void (*IOCAF7_InterruptHandler)(void);
 # 486 "mcc_generated_files/rn487x/../pin_manager.h"
 void IOCAF7_DefaultInterruptHandler(void);
+typedef union {
+    struct {
+        unsigned ACC : 1;
+        unsigned UNDEFINED : 7;
+    };
+    uint8_t INTERRUPTbits;
+}INTERRUPTbits_t;
+
+volatile INTERRUPTbits_t INTERRUPTbits;
 # 52 "mcc_generated_files/rn487x/../mcc.h" 2
 
 
