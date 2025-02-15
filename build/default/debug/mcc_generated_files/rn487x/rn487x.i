@@ -21225,6 +21225,23 @@ uint8_t RN487X_GetCmd(const char *getCmd, uint8_t getCmdLen, char *getCmdResp)
     return index;
 }
 
+_Bool RN487X_ReadMsg(const uint8_t *expectedMsg, uint8_t msgLen)
+{
+    uint8_t index;
+    uint8_t resp;
+
+    for (index = 0; index < msgLen; index++)
+    {
+        resp = RN487X.Read();
+        if (resp != expectedMsg[index])
+        {
+            return 0;
+        }
+    }
+
+    return 1;
+}
+
 _Bool RN487X_ReadDefaultResponse(void)
 {
     uint8_t resp[3];
@@ -21268,6 +21285,164 @@ _Bool RN487X_ReadDefaultResponse(void)
     RN487X.Read();
 
     return status;
+}
+
+void RN487X_WaitForMsg(const char *expectedMsg, uint8_t msgLen)
+{
+    uint8_t index = 0;
+    uint8_t resp;
+
+    do
+    {
+        resp = RN487X.Read();
+
+        if (resp == expectedMsg[index])
+        {
+            index++;
+        }
+        else
+        {
+            index = 0;
+            if (resp == expectedMsg[index])
+            {
+                index++;
+            }
+        }
+    }
+    while (index < msgLen);
+}
+
+_Bool RN487X_EnterCmdMode(void)
+{
+    const uint8_t cmdPrompt[] = {'C', 'M', 'D', '>', ' '};
+
+    cmdBuf[0] = '$';
+    cmdBuf[1] = '$';
+    cmdBuf[2] = '$';
+
+    RN487X_SendCmd(cmdBuf, 3);
+
+    return RN487X_ReadMsg(cmdPrompt, sizeof (cmdPrompt));
+}
+
+_Bool RN487X_EnterDataMode(void)
+{
+    const uint8_t cmdPrompt[] = {'E', 'N', 'D', '\r', '\n'};
+
+    cmdBuf[0] = '-';
+    cmdBuf[1] = '-';
+    cmdBuf[2] = '-';
+    cmdBuf[3] = '\r';
+    cmdBuf[4] = '\n';
+
+    RN487X_SendCmd(cmdBuf, 5);
+
+    return RN487X_ReadMsg(cmdPrompt, sizeof (cmdPrompt));
+}
+
+_Bool RN487X_SetOutputs(rn487x_gpio_bitmap_t bitMap)
+{
+    char ioHighNibble = '0';
+    char ioLowNibble = '0';
+    char stateHighNibble = '0';
+    char stateLowNibble = '0';
+
+
+    if (bitMap.ioBitMap.p1_3)
+    {
+        ioHighNibble = '1';
+    }
+    else
+    {
+        ioHighNibble = '0';
+    }
+    ioLowNibble = ( (0x0F & bitMap.ioBitMap.gpioBitMap) + '0');
+
+
+    if (bitMap.ioStateBitMap.p1_3_state)
+    {
+        stateHighNibble = '1';
+    }
+    else
+    {
+        stateHighNibble = '0';
+    }
+    stateLowNibble = ( (0x0F & bitMap.ioStateBitMap.gpioStateBitMap) + '0');
+
+    cmdBuf[0] = '|';
+    cmdBuf[1] = 'O';
+    cmdBuf[2] = ',';
+    cmdBuf[3] = ioHighNibble;
+    cmdBuf[4] = ioLowNibble;
+    cmdBuf[5] = ',';
+    cmdBuf[6] = stateHighNibble;
+    cmdBuf[7] = stateLowNibble;
+    cmdBuf[8] = '\r';
+    cmdBuf[9] = '\n';
+
+    RN487X_SendCmd(cmdBuf, 10);
+    return RN487X_ReadDefaultResponse();
+}
+
+rn487x_gpio_stateBitMap_t RN487X_GetInputsValues(rn487x_gpio_ioBitMap_t getGPIOs)
+{
+    char ioHighNibble = '0';
+    char ioLowNibble = '0';
+    uint8_t ioValue[] = {'0', '0'};
+    rn487x_gpio_stateBitMap_t ioBitMapValue;
+    ioBitMapValue.gpioStateBitMap = 0x00;
+
+
+    if (getGPIOs.p1_3)
+    {
+        ioHighNibble = '1';
+    }
+    else
+    {
+        ioHighNibble = '0';
+    }
+    ioLowNibble = ( (0x0F & getGPIOs.gpioBitMap) + '0');
+
+    cmdBuf[0] = '|';
+    cmdBuf[1] = 'I';
+    cmdBuf[2] = ',';
+    cmdBuf[3] = ioHighNibble;
+    cmdBuf[4] = ioLowNibble;
+    cmdBuf[5] = '\r';
+    cmdBuf[6] = '\n';
+
+    RN487X_SendCmd(cmdBuf, 7);
+    RN487X_ReadMsg(ioValue, sizeof (ioValue));
+    ioBitMapValue.gpioStateBitMap = ( (((ioValue[0] - '0') & 0x0F) << 4) | ((ioValue[1] - '0') & 0x0F) );
+    return ioBitMapValue;
+}
+
+_Bool RN487X_RebootCmd(void)
+{
+    const uint8_t reboot[] = {'R', 'e', 'b', 'o', 'o', 't', 'i', 'n', 'g', '\r', '\n'};
+
+    cmdBuf[0] = 'R';
+    cmdBuf[1] = ',';
+    cmdBuf[2] = '1';
+    cmdBuf[4] = '\r';
+    cmdBuf[5] = '\n';
+
+    RN487X_SendCmd(cmdBuf, 5);
+
+    return RN487X_ReadMsg(reboot, sizeof (reboot));
+}
+
+_Bool RN487X_Disconnect(void)
+{
+    cmdBuf[0] = 'K';
+    cmdBuf[1] = ',';
+    cmdBuf[2] = '1';
+    cmdBuf[3] = '\r';
+    cmdBuf[4] = '\n';
+
+    RN487X_SendCmd(cmdBuf, 5);
+
+    return RN487X_ReadDefaultResponse();
 }
 
 _Bool RN487X_SetAsyncMessageHandler(char* pBuffer, uint8_t len)

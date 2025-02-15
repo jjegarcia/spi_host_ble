@@ -27,6 +27,30 @@ Version 4.0 HI-TECH Software Intermediate Code
 "66
 [; ;mcc_generated_files/rn487x/rn487x_interface.h: 66: extern const iRN487X_FunctionPtrs_t RN487X;
 [v _RN487X `CS7 ~T0 @X0 0 e ]
+"57 mcc_generated_files/rn487x/rn487x.h
+[; ;mcc_generated_files/rn487x/rn487x.h: 57:     {
+[s S2 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 ]
+[n S2 . p2_2 p2_4 p3_5 p1_2 p1_3 reserved ]
+"54
+[; ;mcc_generated_files/rn487x/rn487x.h: 54: {
+[u S1 `uc 1 `S2 1 ]
+[n S1 . gpioBitMap . ]
+"76
+[; ;mcc_generated_files/rn487x/rn487x.h: 76:     {
+[s S4 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 ]
+[n S4 . p2_2_state p2_4_state p3_5_state p1_2_state p1_3_state reserved ]
+"73
+[; ;mcc_generated_files/rn487x/rn487x.h: 73: {
+[u S3 `uc 1 `S4 1 ]
+[n S3 . gpioStateBitMap . ]
+"95
+[; ;mcc_generated_files/rn487x/rn487x.h: 95:     {
+[s S6 `S1 1 `S3 1 ]
+[n S6 . ioBitMap ioStateBitMap ]
+"92
+[; ;mcc_generated_files/rn487x/rn487x.h: 92: {
+[u S5 `us 1 `S6 1 ]
+[n S5 . gpioMap . ]
 "52 mcc_generated_files/rn487x/rn487x.c
 [; ;mcc_generated_files/rn487x/rn487x.c: 52: static _Bool RN487X_FilterData(void);
 [v _RN487X_FilterData `(a ~T0 @X0 0 sf ]
@@ -1807,356 +1831,901 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 1742 ]
 }
 "108
-[; ;mcc_generated_files/rn487x/rn487x.c: 108: _Bool RN487X_ReadDefaultResponse(void)
-[v _RN487X_ReadDefaultResponse `(a ~T0 @X0 1 ef ]
+[; ;mcc_generated_files/rn487x/rn487x.c: 108: _Bool RN487X_ReadMsg(const uint8_t *expectedMsg, uint8_t msgLen)
+[v _RN487X_ReadMsg `(a ~T0 @X0 1 ef2`*Cuc`uc ]
 "109
 [; ;mcc_generated_files/rn487x/rn487x.c: 109: {
 {
-[e :U _RN487X_ReadDefaultResponse ]
+[e :U _RN487X_ReadMsg ]
+"108
+[; ;mcc_generated_files/rn487x/rn487x.c: 108: _Bool RN487X_ReadMsg(const uint8_t *expectedMsg, uint8_t msgLen)
+[v _expectedMsg `*Cuc ~T0 @X0 1 r1 ]
+[v _msgLen `uc ~T0 @X0 1 r2 ]
+"109
+[; ;mcc_generated_files/rn487x/rn487x.c: 109: {
 [f ]
 "110
-[; ;mcc_generated_files/rn487x/rn487x.c: 110:     uint8_t resp[3];
-[v _resp `uc ~T0 @X0 -> 3 `i a ]
+[; ;mcc_generated_files/rn487x/rn487x.c: 110:     uint8_t index;
+[v _index `uc ~T0 @X0 1 a ]
 "111
-[; ;mcc_generated_files/rn487x/rn487x.c: 111:     _Bool status = 0;
-[v _status `a ~T0 @X0 1 a ]
-[e = _status -> -> 0 `i `a ]
+[; ;mcc_generated_files/rn487x/rn487x.c: 111:     uint8_t resp;
+[v _resp `uc ~T0 @X0 1 a ]
 "113
-[; ;mcc_generated_files/rn487x/rn487x.c: 113:     resp[0] = RN487X.Read();
-[e = *U + &U _resp * -> -> -> 0 `i `ui `ux -> -> # *U &U _resp `ui `ux ( *U . _RN487X 1 ..  ]
-"114
-[; ;mcc_generated_files/rn487x/rn487x.c: 114:     resp[1] = RN487X.Read();
-[e = *U + &U _resp * -> -> -> 1 `i `ui `ux -> -> # *U &U _resp `ui `ux ( *U . _RN487X 1 ..  ]
-"115
-[; ;mcc_generated_files/rn487x/rn487x.c: 115:     resp[2] = RN487X.Read();
-[e = *U + &U _resp * -> -> -> 2 `i `ui `ux -> -> # *U &U _resp `ui `ux ( *U . _RN487X 1 ..  ]
-"117
-[; ;mcc_generated_files/rn487x/rn487x.c: 117:     switch (resp[0])
-[e $U 1748  ]
-"118
-[; ;mcc_generated_files/rn487x/rn487x.c: 118:     {
+[; ;mcc_generated_files/rn487x/rn487x.c: 113:     for (index = 0; index < msgLen; index++)
 {
-"119
-[; ;mcc_generated_files/rn487x/rn487x.c: 119:         case 'A':
-[e :U 1749 ]
-"120
-[; ;mcc_generated_files/rn487x/rn487x.c: 120:         {
-{
-"121
-[; ;mcc_generated_files/rn487x/rn487x.c: 121:             if ((resp[1] == 'O') && (resp[2] == 'K'))
-[e $ ! && == -> *U + &U _resp * -> -> -> 1 `i `ui `ux -> -> # *U &U _resp `ui `ux `ui -> 79 `ui == -> *U + &U _resp * -> -> -> 2 `i `ui `ux -> -> # *U &U _resp `ui `ux `ui -> 75 `ui 1750  ]
-"122
-[; ;mcc_generated_files/rn487x/rn487x.c: 122:                 status = 1;
-[e = _status -> -> 1 `i `a ]
-[e :U 1750 ]
-"124
-[; ;mcc_generated_files/rn487x/rn487x.c: 124:             break;
-[e $U 1747  ]
-"125
-[; ;mcc_generated_files/rn487x/rn487x.c: 125:         }
-}
-"126
-[; ;mcc_generated_files/rn487x/rn487x.c: 126:         case 'E':
-[e :U 1751 ]
-"127
-[; ;mcc_generated_files/rn487x/rn487x.c: 127:         {
-{
-"128
-[; ;mcc_generated_files/rn487x/rn487x.c: 128:             if ((resp[1] == 'r') && (resp[2] == 'r'))
-[e $ ! && == -> *U + &U _resp * -> -> -> 1 `i `ui `ux -> -> # *U &U _resp `ui `ux `ui -> 114 `ui == -> *U + &U _resp * -> -> -> 2 `i `ui `ux -> -> # *U &U _resp `ui `ux `ui -> 114 `ui 1752  ]
-"129
-[; ;mcc_generated_files/rn487x/rn487x.c: 129:                 status = 0;
-[e = _status -> -> 0 `i `a ]
-[e :U 1752 ]
-"131
-[; ;mcc_generated_files/rn487x/rn487x.c: 131:             break;
-[e $U 1747  ]
-"132
-[; ;mcc_generated_files/rn487x/rn487x.c: 132:         }
-}
-"133
-[; ;mcc_generated_files/rn487x/rn487x.c: 133:         default:
-[e :U 1753 ]
-"134
-[; ;mcc_generated_files/rn487x/rn487x.c: 134:         {
-{
-"135
-[; ;mcc_generated_files/rn487x/rn487x.c: 135:             return status;
-[e ) _status ]
-[e $UE 1746  ]
-"136
-[; ;mcc_generated_files/rn487x/rn487x.c: 136:         }
-}
-"137
-[; ;mcc_generated_files/rn487x/rn487x.c: 137:     }
-}
-[e $U 1747  ]
-[e :U 1748 ]
-[e [\ *U + &U _resp * -> -> -> 0 `i `ui `ux -> -> # *U &U _resp `ui `ux , $ -> -> 65 `ui `i 1749
- , $ -> -> 69 `ui `i 1751
- 1753 ]
+[e = _index -> -> 0 `i `uc ]
+[e $U 1750  ]
 [e :U 1747 ]
-"140
-[; ;mcc_generated_files/rn487x/rn487x.c: 140:     RN487X.Read();
-[e ( *U . _RN487X 1 ..  ]
-"141
-[; ;mcc_generated_files/rn487x/rn487x.c: 141:     RN487X.Read();
-[e ( *U . _RN487X 1 ..  ]
-"144
-[; ;mcc_generated_files/rn487x/rn487x.c: 144:     RN487X.Read();
-[e ( *U . _RN487X 1 ..  ]
-"145
-[; ;mcc_generated_files/rn487x/rn487x.c: 145:     RN487X.Read();
-[e ( *U . _RN487X 1 ..  ]
-"146
-[; ;mcc_generated_files/rn487x/rn487x.c: 146:     RN487X.Read();
-[e ( *U . _RN487X 1 ..  ]
-"147
-[; ;mcc_generated_files/rn487x/rn487x.c: 147:     RN487X.Read();
-[e ( *U . _RN487X 1 ..  ]
-"148
-[; ;mcc_generated_files/rn487x/rn487x.c: 148:     RN487X.Read();
-[e ( *U . _RN487X 1 ..  ]
-"150
-[; ;mcc_generated_files/rn487x/rn487x.c: 150:     return status;
-[e ) _status ]
+"114
+[; ;mcc_generated_files/rn487x/rn487x.c: 114:     {
+{
+"115
+[; ;mcc_generated_files/rn487x/rn487x.c: 115:         resp = RN487X.Read();
+[e = _resp ( *U . _RN487X 1 ..  ]
+"116
+[; ;mcc_generated_files/rn487x/rn487x.c: 116:         if (resp != expectedMsg[index])
+[e $ ! != -> _resp `i -> *U + _expectedMsg * -> _index `ux -> -> # *U _expectedMsg `ui `ux `i 1751  ]
+"117
+[; ;mcc_generated_files/rn487x/rn487x.c: 117:         {
+{
+"118
+[; ;mcc_generated_files/rn487x/rn487x.c: 118:             return 0;
+[e ) -> -> 0 `i `a ]
 [e $UE 1746  ]
-"151
-[; ;mcc_generated_files/rn487x/rn487x.c: 151: }
+"119
+[; ;mcc_generated_files/rn487x/rn487x.c: 119:         }
+}
+[e :U 1751 ]
+"120
+[; ;mcc_generated_files/rn487x/rn487x.c: 120:     }
+}
+[e ++ _index -> -> 1 `i `uc ]
+[e :U 1750 ]
+[e $ < -> _index `i -> _msgLen `i 1747  ]
+[e :U 1748 ]
+}
+"122
+[; ;mcc_generated_files/rn487x/rn487x.c: 122:     return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 1746  ]
+"123
+[; ;mcc_generated_files/rn487x/rn487x.c: 123: }
 [e :UE 1746 ]
 }
+"125
+[; ;mcc_generated_files/rn487x/rn487x.c: 125: _Bool RN487X_ReadDefaultResponse(void)
+[v _RN487X_ReadDefaultResponse `(a ~T0 @X0 1 ef ]
+"126
+[; ;mcc_generated_files/rn487x/rn487x.c: 126: {
+{
+[e :U _RN487X_ReadDefaultResponse ]
+[f ]
+"127
+[; ;mcc_generated_files/rn487x/rn487x.c: 127:     uint8_t resp[3];
+[v _resp `uc ~T0 @X0 -> 3 `i a ]
+"128
+[; ;mcc_generated_files/rn487x/rn487x.c: 128:     _Bool status = 0;
+[v _status `a ~T0 @X0 1 a ]
+[e = _status -> -> 0 `i `a ]
+"130
+[; ;mcc_generated_files/rn487x/rn487x.c: 130:     resp[0] = RN487X.Read();
+[e = *U + &U _resp * -> -> -> 0 `i `ui `ux -> -> # *U &U _resp `ui `ux ( *U . _RN487X 1 ..  ]
+"131
+[; ;mcc_generated_files/rn487x/rn487x.c: 131:     resp[1] = RN487X.Read();
+[e = *U + &U _resp * -> -> -> 1 `i `ui `ux -> -> # *U &U _resp `ui `ux ( *U . _RN487X 1 ..  ]
+"132
+[; ;mcc_generated_files/rn487x/rn487x.c: 132:     resp[2] = RN487X.Read();
+[e = *U + &U _resp * -> -> -> 2 `i `ui `ux -> -> # *U &U _resp `ui `ux ( *U . _RN487X 1 ..  ]
+"134
+[; ;mcc_generated_files/rn487x/rn487x.c: 134:     switch (resp[0])
+[e $U 1754  ]
+"135
+[; ;mcc_generated_files/rn487x/rn487x.c: 135:     {
+{
+"136
+[; ;mcc_generated_files/rn487x/rn487x.c: 136:         case 'A':
+[e :U 1755 ]
+"137
+[; ;mcc_generated_files/rn487x/rn487x.c: 137:         {
+{
+"138
+[; ;mcc_generated_files/rn487x/rn487x.c: 138:             if ((resp[1] == 'O') && (resp[2] == 'K'))
+[e $ ! && == -> *U + &U _resp * -> -> -> 1 `i `ui `ux -> -> # *U &U _resp `ui `ux `ui -> 79 `ui == -> *U + &U _resp * -> -> -> 2 `i `ui `ux -> -> # *U &U _resp `ui `ux `ui -> 75 `ui 1756  ]
+"139
+[; ;mcc_generated_files/rn487x/rn487x.c: 139:                 status = 1;
+[e = _status -> -> 1 `i `a ]
+[e :U 1756 ]
+"141
+[; ;mcc_generated_files/rn487x/rn487x.c: 141:             break;
+[e $U 1753  ]
+"142
+[; ;mcc_generated_files/rn487x/rn487x.c: 142:         }
+}
+"143
+[; ;mcc_generated_files/rn487x/rn487x.c: 143:         case 'E':
+[e :U 1757 ]
+"144
+[; ;mcc_generated_files/rn487x/rn487x.c: 144:         {
+{
+"145
+[; ;mcc_generated_files/rn487x/rn487x.c: 145:             if ((resp[1] == 'r') && (resp[2] == 'r'))
+[e $ ! && == -> *U + &U _resp * -> -> -> 1 `i `ui `ux -> -> # *U &U _resp `ui `ux `ui -> 114 `ui == -> *U + &U _resp * -> -> -> 2 `i `ui `ux -> -> # *U &U _resp `ui `ux `ui -> 114 `ui 1758  ]
+"146
+[; ;mcc_generated_files/rn487x/rn487x.c: 146:                 status = 0;
+[e = _status -> -> 0 `i `a ]
+[e :U 1758 ]
+"148
+[; ;mcc_generated_files/rn487x/rn487x.c: 148:             break;
+[e $U 1753  ]
+"149
+[; ;mcc_generated_files/rn487x/rn487x.c: 149:         }
+}
+"150
+[; ;mcc_generated_files/rn487x/rn487x.c: 150:         default:
+[e :U 1759 ]
+"151
+[; ;mcc_generated_files/rn487x/rn487x.c: 151:         {
+{
+"152
+[; ;mcc_generated_files/rn487x/rn487x.c: 152:             return status;
+[e ) _status ]
+[e $UE 1752  ]
 "153
-[; ;mcc_generated_files/rn487x/rn487x.c: 153: _Bool RN487X_SetAsyncMessageHandler(char* pBuffer, uint8_t len)
-[v _RN487X_SetAsyncMessageHandler `(a ~T0 @X0 1 ef2`*uc`uc ]
+[; ;mcc_generated_files/rn487x/rn487x.c: 153:         }
+}
 "154
-[; ;mcc_generated_files/rn487x/rn487x.c: 154: {
+[; ;mcc_generated_files/rn487x/rn487x.c: 154:     }
+}
+[e $U 1753  ]
+[e :U 1754 ]
+[e [\ *U + &U _resp * -> -> -> 0 `i `ui `ux -> -> # *U &U _resp `ui `ux , $ -> -> 65 `ui `i 1755
+ , $ -> -> 69 `ui `i 1757
+ 1759 ]
+[e :U 1753 ]
+"157
+[; ;mcc_generated_files/rn487x/rn487x.c: 157:     RN487X.Read();
+[e ( *U . _RN487X 1 ..  ]
+"158
+[; ;mcc_generated_files/rn487x/rn487x.c: 158:     RN487X.Read();
+[e ( *U . _RN487X 1 ..  ]
+"161
+[; ;mcc_generated_files/rn487x/rn487x.c: 161:     RN487X.Read();
+[e ( *U . _RN487X 1 ..  ]
+"162
+[; ;mcc_generated_files/rn487x/rn487x.c: 162:     RN487X.Read();
+[e ( *U . _RN487X 1 ..  ]
+"163
+[; ;mcc_generated_files/rn487x/rn487x.c: 163:     RN487X.Read();
+[e ( *U . _RN487X 1 ..  ]
+"164
+[; ;mcc_generated_files/rn487x/rn487x.c: 164:     RN487X.Read();
+[e ( *U . _RN487X 1 ..  ]
+"165
+[; ;mcc_generated_files/rn487x/rn487x.c: 165:     RN487X.Read();
+[e ( *U . _RN487X 1 ..  ]
+"167
+[; ;mcc_generated_files/rn487x/rn487x.c: 167:     return status;
+[e ) _status ]
+[e $UE 1752  ]
+"168
+[; ;mcc_generated_files/rn487x/rn487x.c: 168: }
+[e :UE 1752 ]
+}
+"170
+[; ;mcc_generated_files/rn487x/rn487x.c: 170: void RN487X_WaitForMsg(const char *expectedMsg, uint8_t msgLen)
+[v _RN487X_WaitForMsg `(v ~T0 @X0 1 ef2`*Cuc`uc ]
+"171
+[; ;mcc_generated_files/rn487x/rn487x.c: 171: {
+{
+[e :U _RN487X_WaitForMsg ]
+"170
+[; ;mcc_generated_files/rn487x/rn487x.c: 170: void RN487X_WaitForMsg(const char *expectedMsg, uint8_t msgLen)
+[v _expectedMsg `*Cuc ~T0 @X0 1 r1 ]
+[v _msgLen `uc ~T0 @X0 1 r2 ]
+"171
+[; ;mcc_generated_files/rn487x/rn487x.c: 171: {
+[f ]
+"172
+[; ;mcc_generated_files/rn487x/rn487x.c: 172:     uint8_t index = 0;
+[v _index `uc ~T0 @X0 1 a ]
+[e = _index -> -> 0 `i `uc ]
+"173
+[; ;mcc_generated_files/rn487x/rn487x.c: 173:     uint8_t resp;
+[v _resp `uc ~T0 @X0 1 a ]
+"175
+[; ;mcc_generated_files/rn487x/rn487x.c: 175:     do
+[e :U 1763 ]
+"176
+[; ;mcc_generated_files/rn487x/rn487x.c: 176:     {
+{
+"177
+[; ;mcc_generated_files/rn487x/rn487x.c: 177:         resp = RN487X.Read();
+[e = _resp ( *U . _RN487X 1 ..  ]
+"179
+[; ;mcc_generated_files/rn487x/rn487x.c: 179:         if (resp == expectedMsg[index])
+[e $ ! == -> _resp `i -> *U + _expectedMsg * -> _index `ux -> -> # *U _expectedMsg `ui `ux `i 1764  ]
+"180
+[; ;mcc_generated_files/rn487x/rn487x.c: 180:         {
+{
+"181
+[; ;mcc_generated_files/rn487x/rn487x.c: 181:             index++;
+[e ++ _index -> -> 1 `i `uc ]
+"182
+[; ;mcc_generated_files/rn487x/rn487x.c: 182:         }
+}
+[e $U 1765  ]
+"183
+[; ;mcc_generated_files/rn487x/rn487x.c: 183:         else
+[e :U 1764 ]
+"184
+[; ;mcc_generated_files/rn487x/rn487x.c: 184:         {
+{
+"185
+[; ;mcc_generated_files/rn487x/rn487x.c: 185:             index = 0;
+[e = _index -> -> 0 `i `uc ]
+"186
+[; ;mcc_generated_files/rn487x/rn487x.c: 186:             if (resp == expectedMsg[index])
+[e $ ! == -> _resp `i -> *U + _expectedMsg * -> _index `ux -> -> # *U _expectedMsg `ui `ux `i 1766  ]
+"187
+[; ;mcc_generated_files/rn487x/rn487x.c: 187:             {
+{
+"188
+[; ;mcc_generated_files/rn487x/rn487x.c: 188:                 index++;
+[e ++ _index -> -> 1 `i `uc ]
+"189
+[; ;mcc_generated_files/rn487x/rn487x.c: 189:             }
+}
+[e :U 1766 ]
+"190
+[; ;mcc_generated_files/rn487x/rn487x.c: 190:         }
+}
+[e :U 1765 ]
+"191
+[; ;mcc_generated_files/rn487x/rn487x.c: 191:     }
+}
+[e $ < -> _index `i -> _msgLen `i 1763  ]
+[e :U 1762 ]
+"193
+[; ;mcc_generated_files/rn487x/rn487x.c: 193: }
+[e :UE 1760 ]
+}
+"195
+[; ;mcc_generated_files/rn487x/rn487x.c: 195: _Bool RN487X_EnterCmdMode(void)
+[v _RN487X_EnterCmdMode `(a ~T0 @X0 1 ef ]
+"196
+[; ;mcc_generated_files/rn487x/rn487x.c: 196: {
+{
+[e :U _RN487X_EnterCmdMode ]
+[f ]
+"197
+[; ;mcc_generated_files/rn487x/rn487x.c: 197:     const uint8_t cmdPrompt[] = {'C', 'M', 'D', '>', ' '};
+[v F13136 `Cuc ~T0 @X0 -> 5 `i s cmdPrompt ]
+[i F13136
+:U ..
+-> -> 67 `ui `uc
+-> -> 77 `ui `uc
+-> -> 68 `ui `uc
+-> -> 62 `ui `uc
+-> -> 32 `ui `uc
+..
+]
+"199
+[; ;mcc_generated_files/rn487x/rn487x.c: 199:     cmdBuf[0] = '$';
+[e = *U + &U _cmdBuf * -> -> -> 0 `i `ui `ux -> -> # *U &U _cmdBuf `ui `ux -> -> 36 `ui `uc ]
+"200
+[; ;mcc_generated_files/rn487x/rn487x.c: 200:     cmdBuf[1] = '$';
+[e = *U + &U _cmdBuf * -> -> -> 1 `i `ui `ux -> -> # *U &U _cmdBuf `ui `ux -> -> 36 `ui `uc ]
+"201
+[; ;mcc_generated_files/rn487x/rn487x.c: 201:     cmdBuf[2] = '$';
+[e = *U + &U _cmdBuf * -> -> -> 2 `i `ui `ux -> -> # *U &U _cmdBuf `ui `ux -> -> 36 `ui `uc ]
+"203
+[; ;mcc_generated_files/rn487x/rn487x.c: 203:     RN487X_SendCmd(cmdBuf, 3);
+[e ( _RN487X_SendCmd (2 , -> &U _cmdBuf `*Cuc -> -> 3 `i `uc ]
+"205
+[; ;mcc_generated_files/rn487x/rn487x.c: 205:     return RN487X_ReadMsg(cmdPrompt, sizeof (cmdPrompt));
+[e ) ( _RN487X_ReadMsg (2 , &U F13136 -> -> # F13136 `ui `uc ]
+[e $UE 1767  ]
+"206
+[; ;mcc_generated_files/rn487x/rn487x.c: 206: }
+[e :UE 1767 ]
+}
+"208
+[; ;mcc_generated_files/rn487x/rn487x.c: 208: _Bool RN487X_EnterDataMode(void)
+[v _RN487X_EnterDataMode `(a ~T0 @X0 1 ef ]
+"209
+[; ;mcc_generated_files/rn487x/rn487x.c: 209: {
+{
+[e :U _RN487X_EnterDataMode ]
+[f ]
+"210
+[; ;mcc_generated_files/rn487x/rn487x.c: 210:     const uint8_t cmdPrompt[] = {'E', 'N', 'D', '\r', '\n'};
+[v F13138 `Cuc ~T0 @X0 -> 5 `i s cmdPrompt ]
+[i F13138
+:U ..
+-> -> 69 `ui `uc
+-> -> 78 `ui `uc
+-> -> 68 `ui `uc
+-> -> 13 `ui `uc
+-> -> 10 `ui `uc
+..
+]
+"212
+[; ;mcc_generated_files/rn487x/rn487x.c: 212:     cmdBuf[0] = '-';
+[e = *U + &U _cmdBuf * -> -> -> 0 `i `ui `ux -> -> # *U &U _cmdBuf `ui `ux -> -> 45 `ui `uc ]
+"213
+[; ;mcc_generated_files/rn487x/rn487x.c: 213:     cmdBuf[1] = '-';
+[e = *U + &U _cmdBuf * -> -> -> 1 `i `ui `ux -> -> # *U &U _cmdBuf `ui `ux -> -> 45 `ui `uc ]
+"214
+[; ;mcc_generated_files/rn487x/rn487x.c: 214:     cmdBuf[2] = '-';
+[e = *U + &U _cmdBuf * -> -> -> 2 `i `ui `ux -> -> # *U &U _cmdBuf `ui `ux -> -> 45 `ui `uc ]
+"215
+[; ;mcc_generated_files/rn487x/rn487x.c: 215:     cmdBuf[3] = '\r';
+[e = *U + &U _cmdBuf * -> -> -> 3 `i `ui `ux -> -> # *U &U _cmdBuf `ui `ux -> -> 13 `ui `uc ]
+"216
+[; ;mcc_generated_files/rn487x/rn487x.c: 216:     cmdBuf[4] = '\n';
+[e = *U + &U _cmdBuf * -> -> -> 4 `i `ui `ux -> -> # *U &U _cmdBuf `ui `ux -> -> 10 `ui `uc ]
+"218
+[; ;mcc_generated_files/rn487x/rn487x.c: 218:     RN487X_SendCmd(cmdBuf, 5);
+[e ( _RN487X_SendCmd (2 , -> &U _cmdBuf `*Cuc -> -> 5 `i `uc ]
+"220
+[; ;mcc_generated_files/rn487x/rn487x.c: 220:     return RN487X_ReadMsg(cmdPrompt, sizeof (cmdPrompt));
+[e ) ( _RN487X_ReadMsg (2 , &U F13138 -> -> # F13138 `ui `uc ]
+[e $UE 1768  ]
+"221
+[; ;mcc_generated_files/rn487x/rn487x.c: 221: }
+[e :UE 1768 ]
+}
+"223
+[; ;mcc_generated_files/rn487x/rn487x.c: 223: _Bool RN487X_SetOutputs(rn487x_gpio_bitmap_t bitMap)
+[v _RN487X_SetOutputs `(a ~T0 @X0 1 ef1`S5 ]
+"224
+[; ;mcc_generated_files/rn487x/rn487x.c: 224: {
+{
+[e :U _RN487X_SetOutputs ]
+"223
+[; ;mcc_generated_files/rn487x/rn487x.c: 223: _Bool RN487X_SetOutputs(rn487x_gpio_bitmap_t bitMap)
+[v _bitMap `S5 ~T0 @X0 1 r1 ]
+"224
+[; ;mcc_generated_files/rn487x/rn487x.c: 224: {
+[f ]
+"225
+[; ;mcc_generated_files/rn487x/rn487x.c: 225:     char ioHighNibble = '0';
+[v _ioHighNibble `uc ~T0 @X0 1 a ]
+[e = _ioHighNibble -> -> 48 `ui `uc ]
+"226
+[; ;mcc_generated_files/rn487x/rn487x.c: 226:     char ioLowNibble = '0';
+[v _ioLowNibble `uc ~T0 @X0 1 a ]
+[e = _ioLowNibble -> -> 48 `ui `uc ]
+"227
+[; ;mcc_generated_files/rn487x/rn487x.c: 227:     char stateHighNibble = '0';
+[v _stateHighNibble `uc ~T0 @X0 1 a ]
+[e = _stateHighNibble -> -> 48 `ui `uc ]
+"228
+[; ;mcc_generated_files/rn487x/rn487x.c: 228:     char stateLowNibble = '0';
+[v _stateLowNibble `uc ~T0 @X0 1 a ]
+[e = _stateLowNibble -> -> 48 `ui `uc ]
+"231
+[; ;mcc_generated_files/rn487x/rn487x.c: 231:     if (bitMap.ioBitMap.p1_3)
+[e $ ! != -> . . . . _bitMap 1 0 1 4 `i -> 0 `i 1770  ]
+"232
+[; ;mcc_generated_files/rn487x/rn487x.c: 232:     {
+{
+"233
+[; ;mcc_generated_files/rn487x/rn487x.c: 233:         ioHighNibble = '1';
+[e = _ioHighNibble -> -> 49 `ui `uc ]
+"234
+[; ;mcc_generated_files/rn487x/rn487x.c: 234:     }
+}
+[e $U 1771  ]
+"235
+[; ;mcc_generated_files/rn487x/rn487x.c: 235:     else
+[e :U 1770 ]
+"236
+[; ;mcc_generated_files/rn487x/rn487x.c: 236:     {
+{
+"237
+[; ;mcc_generated_files/rn487x/rn487x.c: 237:         ioHighNibble = '0';
+[e = _ioHighNibble -> -> 48 `ui `uc ]
+"238
+[; ;mcc_generated_files/rn487x/rn487x.c: 238:     }
+}
+[e :U 1771 ]
+"239
+[; ;mcc_generated_files/rn487x/rn487x.c: 239:     ioLowNibble = ( (0x0F & bitMap.ioBitMap.gpioBitMap) + '0');
+[e = _ioLowNibble -> + -> & -> 15 `i -> . . . _bitMap 1 0 0 `i `ui -> 48 `ui `uc ]
+"242
+[; ;mcc_generated_files/rn487x/rn487x.c: 242:     if (bitMap.ioStateBitMap.p1_3_state)
+[e $ ! != -> . . . . _bitMap 1 1 1 4 `i -> 0 `i 1772  ]
+"243
+[; ;mcc_generated_files/rn487x/rn487x.c: 243:     {
+{
+"244
+[; ;mcc_generated_files/rn487x/rn487x.c: 244:         stateHighNibble = '1';
+[e = _stateHighNibble -> -> 49 `ui `uc ]
+"245
+[; ;mcc_generated_files/rn487x/rn487x.c: 245:     }
+}
+[e $U 1773  ]
+"246
+[; ;mcc_generated_files/rn487x/rn487x.c: 246:     else
+[e :U 1772 ]
+"247
+[; ;mcc_generated_files/rn487x/rn487x.c: 247:     {
+{
+"248
+[; ;mcc_generated_files/rn487x/rn487x.c: 248:         stateHighNibble = '0';
+[e = _stateHighNibble -> -> 48 `ui `uc ]
+"249
+[; ;mcc_generated_files/rn487x/rn487x.c: 249:     }
+}
+[e :U 1773 ]
+"250
+[; ;mcc_generated_files/rn487x/rn487x.c: 250:     stateLowNibble = ( (0x0F & bitMap.ioStateBitMap.gpioStateBitMap) + '0');
+[e = _stateLowNibble -> + -> & -> 15 `i -> . . . _bitMap 1 1 0 `i `ui -> 48 `ui `uc ]
+"252
+[; ;mcc_generated_files/rn487x/rn487x.c: 252:     cmdBuf[0] = '|';
+[e = *U + &U _cmdBuf * -> -> -> 0 `i `ui `ux -> -> # *U &U _cmdBuf `ui `ux -> -> 124 `ui `uc ]
+"253
+[; ;mcc_generated_files/rn487x/rn487x.c: 253:     cmdBuf[1] = 'O';
+[e = *U + &U _cmdBuf * -> -> -> 1 `i `ui `ux -> -> # *U &U _cmdBuf `ui `ux -> -> 79 `ui `uc ]
+"254
+[; ;mcc_generated_files/rn487x/rn487x.c: 254:     cmdBuf[2] = ',';
+[e = *U + &U _cmdBuf * -> -> -> 2 `i `ui `ux -> -> # *U &U _cmdBuf `ui `ux -> -> 44 `ui `uc ]
+"255
+[; ;mcc_generated_files/rn487x/rn487x.c: 255:     cmdBuf[3] = ioHighNibble;
+[e = *U + &U _cmdBuf * -> -> -> 3 `i `ui `ux -> -> # *U &U _cmdBuf `ui `ux -> _ioHighNibble `uc ]
+"256
+[; ;mcc_generated_files/rn487x/rn487x.c: 256:     cmdBuf[4] = ioLowNibble;
+[e = *U + &U _cmdBuf * -> -> -> 4 `i `ui `ux -> -> # *U &U _cmdBuf `ui `ux -> _ioLowNibble `uc ]
+"257
+[; ;mcc_generated_files/rn487x/rn487x.c: 257:     cmdBuf[5] = ',';
+[e = *U + &U _cmdBuf * -> -> -> 5 `i `ui `ux -> -> # *U &U _cmdBuf `ui `ux -> -> 44 `ui `uc ]
+"258
+[; ;mcc_generated_files/rn487x/rn487x.c: 258:     cmdBuf[6] = stateHighNibble;
+[e = *U + &U _cmdBuf * -> -> -> 6 `i `ui `ux -> -> # *U &U _cmdBuf `ui `ux -> _stateHighNibble `uc ]
+"259
+[; ;mcc_generated_files/rn487x/rn487x.c: 259:     cmdBuf[7] = stateLowNibble;
+[e = *U + &U _cmdBuf * -> -> -> 7 `i `ui `ux -> -> # *U &U _cmdBuf `ui `ux -> _stateLowNibble `uc ]
+"260
+[; ;mcc_generated_files/rn487x/rn487x.c: 260:     cmdBuf[8] = '\r';
+[e = *U + &U _cmdBuf * -> -> -> 8 `i `ui `ux -> -> # *U &U _cmdBuf `ui `ux -> -> 13 `ui `uc ]
+"261
+[; ;mcc_generated_files/rn487x/rn487x.c: 261:     cmdBuf[9] = '\n';
+[e = *U + &U _cmdBuf * -> -> -> 9 `i `ui `ux -> -> # *U &U _cmdBuf `ui `ux -> -> 10 `ui `uc ]
+"263
+[; ;mcc_generated_files/rn487x/rn487x.c: 263:     RN487X_SendCmd(cmdBuf, 10);
+[e ( _RN487X_SendCmd (2 , -> &U _cmdBuf `*Cuc -> -> 10 `i `uc ]
+"264
+[; ;mcc_generated_files/rn487x/rn487x.c: 264:     return RN487X_ReadDefaultResponse();
+[e ) ( _RN487X_ReadDefaultResponse ..  ]
+[e $UE 1769  ]
+"265
+[; ;mcc_generated_files/rn487x/rn487x.c: 265: }
+[e :UE 1769 ]
+}
+"267
+[; ;mcc_generated_files/rn487x/rn487x.c: 267: rn487x_gpio_stateBitMap_t RN487X_GetInputsValues(rn487x_gpio_ioBitMap_t getGPIOs)
+[v _RN487X_GetInputsValues `(S3 ~T0 @X0 1 ef1`S1 ]
+"268
+[; ;mcc_generated_files/rn487x/rn487x.c: 268: {
+{
+[e :U _RN487X_GetInputsValues ]
+"267
+[; ;mcc_generated_files/rn487x/rn487x.c: 267: rn487x_gpio_stateBitMap_t RN487X_GetInputsValues(rn487x_gpio_ioBitMap_t getGPIOs)
+[v _getGPIOs `S1 ~T0 @X0 1 r1 ]
+"268
+[; ;mcc_generated_files/rn487x/rn487x.c: 268: {
+[f ]
+"269
+[; ;mcc_generated_files/rn487x/rn487x.c: 269:     char ioHighNibble = '0';
+[v _ioHighNibble `uc ~T0 @X0 1 a ]
+[e = _ioHighNibble -> -> 48 `ui `uc ]
+"270
+[; ;mcc_generated_files/rn487x/rn487x.c: 270:     char ioLowNibble = '0';
+[v _ioLowNibble `uc ~T0 @X0 1 a ]
+[e = _ioLowNibble -> -> 48 `ui `uc ]
+[v F13149 `uc ~T0 @X0 -> 2 `i s ]
+[i F13149
+:U ..
+"271
+[; ;mcc_generated_files/rn487x/rn487x.c: 271:     uint8_t ioValue[] = {'0', '0'};
+-> -> 48 `ui `uc
+-> -> 48 `ui `uc
+..
+]
+[v _ioValue `uc ~T0 @X0 -> 2 `i a ]
+[e = _ioValue F13149 ]
+"272
+[; ;mcc_generated_files/rn487x/rn487x.c: 272:     rn487x_gpio_stateBitMap_t ioBitMapValue;
+[v _ioBitMapValue `S3 ~T0 @X0 1 a ]
+"273
+[; ;mcc_generated_files/rn487x/rn487x.c: 273:     ioBitMapValue.gpioStateBitMap = 0x00;
+[e = . _ioBitMapValue 0 -> -> 0 `i `uc ]
+"276
+[; ;mcc_generated_files/rn487x/rn487x.c: 276:     if (getGPIOs.p1_3)
+[e $ ! != -> . . _getGPIOs 1 4 `i -> 0 `i 1775  ]
+"277
+[; ;mcc_generated_files/rn487x/rn487x.c: 277:     {
+{
+"278
+[; ;mcc_generated_files/rn487x/rn487x.c: 278:         ioHighNibble = '1';
+[e = _ioHighNibble -> -> 49 `ui `uc ]
+"279
+[; ;mcc_generated_files/rn487x/rn487x.c: 279:     }
+}
+[e $U 1776  ]
+"280
+[; ;mcc_generated_files/rn487x/rn487x.c: 280:     else
+[e :U 1775 ]
+"281
+[; ;mcc_generated_files/rn487x/rn487x.c: 281:     {
+{
+"282
+[; ;mcc_generated_files/rn487x/rn487x.c: 282:         ioHighNibble = '0';
+[e = _ioHighNibble -> -> 48 `ui `uc ]
+"283
+[; ;mcc_generated_files/rn487x/rn487x.c: 283:     }
+}
+[e :U 1776 ]
+"284
+[; ;mcc_generated_files/rn487x/rn487x.c: 284:     ioLowNibble = ( (0x0F & getGPIOs.gpioBitMap) + '0');
+[e = _ioLowNibble -> + -> & -> 15 `i -> . _getGPIOs 0 `i `ui -> 48 `ui `uc ]
+"286
+[; ;mcc_generated_files/rn487x/rn487x.c: 286:     cmdBuf[0] = '|';
+[e = *U + &U _cmdBuf * -> -> -> 0 `i `ui `ux -> -> # *U &U _cmdBuf `ui `ux -> -> 124 `ui `uc ]
+"287
+[; ;mcc_generated_files/rn487x/rn487x.c: 287:     cmdBuf[1] = 'I';
+[e = *U + &U _cmdBuf * -> -> -> 1 `i `ui `ux -> -> # *U &U _cmdBuf `ui `ux -> -> 73 `ui `uc ]
+"288
+[; ;mcc_generated_files/rn487x/rn487x.c: 288:     cmdBuf[2] = ',';
+[e = *U + &U _cmdBuf * -> -> -> 2 `i `ui `ux -> -> # *U &U _cmdBuf `ui `ux -> -> 44 `ui `uc ]
+"289
+[; ;mcc_generated_files/rn487x/rn487x.c: 289:     cmdBuf[3] = ioHighNibble;
+[e = *U + &U _cmdBuf * -> -> -> 3 `i `ui `ux -> -> # *U &U _cmdBuf `ui `ux -> _ioHighNibble `uc ]
+"290
+[; ;mcc_generated_files/rn487x/rn487x.c: 290:     cmdBuf[4] = ioLowNibble;
+[e = *U + &U _cmdBuf * -> -> -> 4 `i `ui `ux -> -> # *U &U _cmdBuf `ui `ux -> _ioLowNibble `uc ]
+"291
+[; ;mcc_generated_files/rn487x/rn487x.c: 291:     cmdBuf[5] = '\r';
+[e = *U + &U _cmdBuf * -> -> -> 5 `i `ui `ux -> -> # *U &U _cmdBuf `ui `ux -> -> 13 `ui `uc ]
+"292
+[; ;mcc_generated_files/rn487x/rn487x.c: 292:     cmdBuf[6] = '\n';
+[e = *U + &U _cmdBuf * -> -> -> 6 `i `ui `ux -> -> # *U &U _cmdBuf `ui `ux -> -> 10 `ui `uc ]
+"294
+[; ;mcc_generated_files/rn487x/rn487x.c: 294:     RN487X_SendCmd(cmdBuf, 7);
+[e ( _RN487X_SendCmd (2 , -> &U _cmdBuf `*Cuc -> -> 7 `i `uc ]
+"295
+[; ;mcc_generated_files/rn487x/rn487x.c: 295:     RN487X_ReadMsg(ioValue, sizeof (ioValue));
+[e ( _RN487X_ReadMsg (2 , -> &U _ioValue `*Cuc -> -> # _ioValue `ui `uc ]
+"296
+[; ;mcc_generated_files/rn487x/rn487x.c: 296:     ioBitMapValue.gpioStateBitMap = ( (((ioValue[0] - '0') & 0x0F) << 4) | ((ioValue[1] - '0') & 0x0F) );
+[e = . _ioBitMapValue 0 -> | << & - -> *U + &U _ioValue * -> -> -> 0 `i `ui `ux -> -> # *U &U _ioValue `ui `ux `ui -> 48 `ui -> -> 15 `i `ui -> 4 `i & - -> *U + &U _ioValue * -> -> -> 1 `i `ui `ux -> -> # *U &U _ioValue `ui `ux `ui -> 48 `ui -> -> 15 `i `ui `uc ]
+"297
+[; ;mcc_generated_files/rn487x/rn487x.c: 297:     return ioBitMapValue;
+[e ) _ioBitMapValue ]
+[e $UE 1774  ]
+"298
+[; ;mcc_generated_files/rn487x/rn487x.c: 298: }
+[e :UE 1774 ]
+}
+"300
+[; ;mcc_generated_files/rn487x/rn487x.c: 300: _Bool RN487X_RebootCmd(void)
+[v _RN487X_RebootCmd `(a ~T0 @X0 1 ef ]
+"301
+[; ;mcc_generated_files/rn487x/rn487x.c: 301: {
+{
+[e :U _RN487X_RebootCmd ]
+[f ]
+"302
+[; ;mcc_generated_files/rn487x/rn487x.c: 302:     const uint8_t reboot[] = {'R', 'e', 'b', 'o', 'o', 't', 'i', 'n', 'g', '\r', '\n'};
+[v F13153 `Cuc ~T0 @X0 -> 11 `i s reboot ]
+[i F13153
+:U ..
+-> -> 82 `ui `uc
+-> -> 101 `ui `uc
+-> -> 98 `ui `uc
+-> -> 111 `ui `uc
+-> -> 111 `ui `uc
+-> -> 116 `ui `uc
+-> -> 105 `ui `uc
+-> -> 110 `ui `uc
+-> -> 103 `ui `uc
+-> -> 13 `ui `uc
+-> -> 10 `ui `uc
+..
+]
+"304
+[; ;mcc_generated_files/rn487x/rn487x.c: 304:     cmdBuf[0] = 'R';
+[e = *U + &U _cmdBuf * -> -> -> 0 `i `ui `ux -> -> # *U &U _cmdBuf `ui `ux -> -> 82 `ui `uc ]
+"305
+[; ;mcc_generated_files/rn487x/rn487x.c: 305:     cmdBuf[1] = ',';
+[e = *U + &U _cmdBuf * -> -> -> 1 `i `ui `ux -> -> # *U &U _cmdBuf `ui `ux -> -> 44 `ui `uc ]
+"306
+[; ;mcc_generated_files/rn487x/rn487x.c: 306:     cmdBuf[2] = '1';
+[e = *U + &U _cmdBuf * -> -> -> 2 `i `ui `ux -> -> # *U &U _cmdBuf `ui `ux -> -> 49 `ui `uc ]
+"307
+[; ;mcc_generated_files/rn487x/rn487x.c: 307:     cmdBuf[4] = '\r';
+[e = *U + &U _cmdBuf * -> -> -> 4 `i `ui `ux -> -> # *U &U _cmdBuf `ui `ux -> -> 13 `ui `uc ]
+"308
+[; ;mcc_generated_files/rn487x/rn487x.c: 308:     cmdBuf[5] = '\n';
+[e = *U + &U _cmdBuf * -> -> -> 5 `i `ui `ux -> -> # *U &U _cmdBuf `ui `ux -> -> 10 `ui `uc ]
+"310
+[; ;mcc_generated_files/rn487x/rn487x.c: 310:     RN487X_SendCmd(cmdBuf, 5);
+[e ( _RN487X_SendCmd (2 , -> &U _cmdBuf `*Cuc -> -> 5 `i `uc ]
+"312
+[; ;mcc_generated_files/rn487x/rn487x.c: 312:     return RN487X_ReadMsg(reboot, sizeof (reboot));
+[e ) ( _RN487X_ReadMsg (2 , &U F13153 -> -> # F13153 `ui `uc ]
+[e $UE 1777  ]
+"313
+[; ;mcc_generated_files/rn487x/rn487x.c: 313: }
+[e :UE 1777 ]
+}
+"315
+[; ;mcc_generated_files/rn487x/rn487x.c: 315: _Bool RN487X_Disconnect(void)
+[v _RN487X_Disconnect `(a ~T0 @X0 1 ef ]
+"316
+[; ;mcc_generated_files/rn487x/rn487x.c: 316: {
+{
+[e :U _RN487X_Disconnect ]
+[f ]
+"317
+[; ;mcc_generated_files/rn487x/rn487x.c: 317:     cmdBuf[0] = 'K';
+[e = *U + &U _cmdBuf * -> -> -> 0 `i `ui `ux -> -> # *U &U _cmdBuf `ui `ux -> -> 75 `ui `uc ]
+"318
+[; ;mcc_generated_files/rn487x/rn487x.c: 318:     cmdBuf[1] = ',';
+[e = *U + &U _cmdBuf * -> -> -> 1 `i `ui `ux -> -> # *U &U _cmdBuf `ui `ux -> -> 44 `ui `uc ]
+"319
+[; ;mcc_generated_files/rn487x/rn487x.c: 319:     cmdBuf[2] = '1';
+[e = *U + &U _cmdBuf * -> -> -> 2 `i `ui `ux -> -> # *U &U _cmdBuf `ui `ux -> -> 49 `ui `uc ]
+"320
+[; ;mcc_generated_files/rn487x/rn487x.c: 320:     cmdBuf[3] = '\r';
+[e = *U + &U _cmdBuf * -> -> -> 3 `i `ui `ux -> -> # *U &U _cmdBuf `ui `ux -> -> 13 `ui `uc ]
+"321
+[; ;mcc_generated_files/rn487x/rn487x.c: 321:     cmdBuf[4] = '\n';
+[e = *U + &U _cmdBuf * -> -> -> 4 `i `ui `ux -> -> # *U &U _cmdBuf `ui `ux -> -> 10 `ui `uc ]
+"323
+[; ;mcc_generated_files/rn487x/rn487x.c: 323:     RN487X_SendCmd(cmdBuf, 5);
+[e ( _RN487X_SendCmd (2 , -> &U _cmdBuf `*Cuc -> -> 5 `i `uc ]
+"325
+[; ;mcc_generated_files/rn487x/rn487x.c: 325:     return RN487X_ReadDefaultResponse();
+[e ) ( _RN487X_ReadDefaultResponse ..  ]
+[e $UE 1778  ]
+"326
+[; ;mcc_generated_files/rn487x/rn487x.c: 326: }
+[e :UE 1778 ]
+}
+"328
+[; ;mcc_generated_files/rn487x/rn487x.c: 328: _Bool RN487X_SetAsyncMessageHandler(char* pBuffer, uint8_t len)
+[v _RN487X_SetAsyncMessageHandler `(a ~T0 @X0 1 ef2`*uc`uc ]
+"329
+[; ;mcc_generated_files/rn487x/rn487x.c: 329: {
 {
 [e :U _RN487X_SetAsyncMessageHandler ]
-"153
-[; ;mcc_generated_files/rn487x/rn487x.c: 153: _Bool RN487X_SetAsyncMessageHandler(char* pBuffer, uint8_t len)
+"328
+[; ;mcc_generated_files/rn487x/rn487x.c: 328: _Bool RN487X_SetAsyncMessageHandler(char* pBuffer, uint8_t len)
 [v _pBuffer `*uc ~T0 @X0 1 r1 ]
 [v _len `uc ~T0 @X0 1 r2 ]
-"154
-[; ;mcc_generated_files/rn487x/rn487x.c: 154: {
+"329
+[; ;mcc_generated_files/rn487x/rn487x.c: 329: {
 [f ]
-"155
-[; ;mcc_generated_files/rn487x/rn487x.c: 155:     if ((pBuffer != ((void*)0)) && (len > 1))
-[e $ ! && != _pBuffer -> -> -> 0 `i `*v `*uc > -> _len `i -> 1 `i 1755  ]
-"156
-[; ;mcc_generated_files/rn487x/rn487x.c: 156:     {
+"330
+[; ;mcc_generated_files/rn487x/rn487x.c: 330:     if ((pBuffer != ((void*)0)) && (len > 1))
+[e $ ! && != _pBuffer -> -> -> 0 `i `*v `*uc > -> _len `i -> 1 `i 1780  ]
+"331
+[; ;mcc_generated_files/rn487x/rn487x.c: 331:     {
 {
-"157
-[; ;mcc_generated_files/rn487x/rn487x.c: 157:       asyncBuffer = pBuffer;
+"332
+[; ;mcc_generated_files/rn487x/rn487x.c: 332:       asyncBuffer = pBuffer;
 [e = _asyncBuffer _pBuffer ]
-"158
-[; ;mcc_generated_files/rn487x/rn487x.c: 158:       asyncBufferSize = len - 1;
+"333
+[; ;mcc_generated_files/rn487x/rn487x.c: 333:       asyncBufferSize = len - 1;
 [e = _asyncBufferSize -> - -> _len `i -> 1 `i `uc ]
-"159
-[; ;mcc_generated_files/rn487x/rn487x.c: 159:       return 1;
+"334
+[; ;mcc_generated_files/rn487x/rn487x.c: 334:       return 1;
 [e ) -> -> 1 `i `a ]
-[e $UE 1754  ]
-"160
-[; ;mcc_generated_files/rn487x/rn487x.c: 160:     }
+[e $UE 1779  ]
+"335
+[; ;mcc_generated_files/rn487x/rn487x.c: 335:     }
 }
-[e $U 1756  ]
-"161
-[; ;mcc_generated_files/rn487x/rn487x.c: 161:     else
-[e :U 1755 ]
-"162
-[; ;mcc_generated_files/rn487x/rn487x.c: 162:     {
+[e $U 1781  ]
+"336
+[; ;mcc_generated_files/rn487x/rn487x.c: 336:     else
+[e :U 1780 ]
+"337
+[; ;mcc_generated_files/rn487x/rn487x.c: 337:     {
 {
-"163
-[; ;mcc_generated_files/rn487x/rn487x.c: 163:         return 0;
+"338
+[; ;mcc_generated_files/rn487x/rn487x.c: 338:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 1754  ]
-"164
-[; ;mcc_generated_files/rn487x/rn487x.c: 164:     }
+[e $UE 1779  ]
+"339
+[; ;mcc_generated_files/rn487x/rn487x.c: 339:     }
 }
-[e :U 1756 ]
-"165
-[; ;mcc_generated_files/rn487x/rn487x.c: 165: }
-[e :UE 1754 ]
+[e :U 1781 ]
+"340
+[; ;mcc_generated_files/rn487x/rn487x.c: 340: }
+[e :UE 1779 ]
 }
-"167
-[; ;mcc_generated_files/rn487x/rn487x.c: 167: _Bool RN487X_DataReady(void)
+"342
+[; ;mcc_generated_files/rn487x/rn487x.c: 342: _Bool RN487X_DataReady(void)
 [v _RN487X_DataReady `(a ~T0 @X0 1 ef ]
-"168
-[; ;mcc_generated_files/rn487x/rn487x.c: 168: {
+"343
+[; ;mcc_generated_files/rn487x/rn487x.c: 343: {
 {
 [e :U _RN487X_DataReady ]
 [f ]
-"169
-[; ;mcc_generated_files/rn487x/rn487x.c: 169:     if (dataReady)
-[e $ ! != -> _dataReady `i -> 0 `i 1758  ]
-"170
-[; ;mcc_generated_files/rn487x/rn487x.c: 170:     {
+"344
+[; ;mcc_generated_files/rn487x/rn487x.c: 344:     if (dataReady)
+[e $ ! != -> _dataReady `i -> 0 `i 1783  ]
+"345
+[; ;mcc_generated_files/rn487x/rn487x.c: 345:     {
 {
-"171
-[; ;mcc_generated_files/rn487x/rn487x.c: 171:         return 1;
+"346
+[; ;mcc_generated_files/rn487x/rn487x.c: 346:         return 1;
 [e ) -> -> 1 `i `a ]
-[e $UE 1757  ]
-"172
-[; ;mcc_generated_files/rn487x/rn487x.c: 172:     }
+[e $UE 1782  ]
+"347
+[; ;mcc_generated_files/rn487x/rn487x.c: 347:     }
 }
-[e :U 1758 ]
-"174
-[; ;mcc_generated_files/rn487x/rn487x.c: 174:     if (RN487X.DataReady())
-[e $ ! != -> ( *U . _RN487X 3 ..  `i -> 0 `i 1759  ]
-"175
-[; ;mcc_generated_files/rn487x/rn487x.c: 175:     {
+[e :U 1783 ]
+"349
+[; ;mcc_generated_files/rn487x/rn487x.c: 349:     if (RN487X.DataReady())
+[e $ ! != -> ( *U . _RN487X 3 ..  `i -> 0 `i 1784  ]
+"350
+[; ;mcc_generated_files/rn487x/rn487x.c: 350:     {
 {
-"176
-[; ;mcc_generated_files/rn487x/rn487x.c: 176:         return RN487X_FilterData();
+"351
+[; ;mcc_generated_files/rn487x/rn487x.c: 351:         return RN487X_FilterData();
 [e ) ( _RN487X_FilterData ..  ]
-[e $UE 1757  ]
-"177
-[; ;mcc_generated_files/rn487x/rn487x.c: 177:     }
+[e $UE 1782  ]
+"352
+[; ;mcc_generated_files/rn487x/rn487x.c: 352:     }
 }
-[e :U 1759 ]
-"178
-[; ;mcc_generated_files/rn487x/rn487x.c: 178:     return 0;
+[e :U 1784 ]
+"353
+[; ;mcc_generated_files/rn487x/rn487x.c: 353:     return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 1757  ]
-"179
-[; ;mcc_generated_files/rn487x/rn487x.c: 179: }
-[e :UE 1757 ]
+[e $UE 1782  ]
+"354
+[; ;mcc_generated_files/rn487x/rn487x.c: 354: }
+[e :UE 1782 ]
 }
-"181
-[; ;mcc_generated_files/rn487x/rn487x.c: 181: uint8_t RN487X_Read(void)
+"356
+[; ;mcc_generated_files/rn487x/rn487x.c: 356: uint8_t RN487X_Read(void)
 [v _RN487X_Read `(uc ~T0 @X0 1 ef ]
-"182
-[; ;mcc_generated_files/rn487x/rn487x.c: 182: {
+"357
+[; ;mcc_generated_files/rn487x/rn487x.c: 357: {
 {
 [e :U _RN487X_Read ]
 [f ]
-"183
-[; ;mcc_generated_files/rn487x/rn487x.c: 183:     while(RN487X_DataReady() == 0);
-[e $U 1761  ]
-[e :U 1762 ]
-[e :U 1761 ]
-[e $ == -> ( _RN487X_DataReady ..  `i -> 0 `i 1762  ]
-[e :U 1763 ]
-"184
-[; ;mcc_generated_files/rn487x/rn487x.c: 184:     dataReady = 0;
+"358
+[; ;mcc_generated_files/rn487x/rn487x.c: 358:     while(RN487X_DataReady() == 0);
+[e $U 1786  ]
+[e :U 1787 ]
+[e :U 1786 ]
+[e $ == -> ( _RN487X_DataReady ..  `i -> 0 `i 1787  ]
+[e :U 1788 ]
+"359
+[; ;mcc_generated_files/rn487x/rn487x.c: 359:     dataReady = 0;
 [e = _dataReady -> -> 0 `i `a ]
-"185
-[; ;mcc_generated_files/rn487x/rn487x.c: 185:     return peek;
+"360
+[; ;mcc_generated_files/rn487x/rn487x.c: 360:     return peek;
 [e ) _peek ]
-[e $UE 1760  ]
-"186
-[; ;mcc_generated_files/rn487x/rn487x.c: 186: }
-[e :UE 1760 ]
+[e $UE 1785  ]
+"361
+[; ;mcc_generated_files/rn487x/rn487x.c: 361: }
+[e :UE 1785 ]
 }
-"188
-[; ;mcc_generated_files/rn487x/rn487x.c: 188: static _Bool RN487X_FilterData(void)
+"363
+[; ;mcc_generated_files/rn487x/rn487x.c: 363: static _Bool RN487X_FilterData(void)
 [v _RN487X_FilterData `(a ~T0 @X0 1 sf ]
-"189
-[; ;mcc_generated_files/rn487x/rn487x.c: 189: {
+"364
+[; ;mcc_generated_files/rn487x/rn487x.c: 364: {
 {
 [e :U _RN487X_FilterData ]
 [f ]
-"190
-[; ;mcc_generated_files/rn487x/rn487x.c: 190:     static _Bool asyncBuffering = 0;
-[v F13131 `a ~T0 @X0 1 s asyncBuffering ]
-[i F13131
+"365
+[; ;mcc_generated_files/rn487x/rn487x.c: 365:     static _Bool asyncBuffering = 0;
+[v F13165 `a ~T0 @X0 1 s asyncBuffering ]
+[i F13165
 -> -> 0 `i `a
 ]
-"192
-[; ;mcc_generated_files/rn487x/rn487x.c: 192:     uint8_t readChar = RN487X.Read();
+"367
+[; ;mcc_generated_files/rn487x/rn487x.c: 367:     uint8_t readChar = RN487X.Read();
 [v _readChar `uc ~T0 @X0 1 a ]
 [e = _readChar ( *U . _RN487X 1 ..  ]
-"194
-[; ;mcc_generated_files/rn487x/rn487x.c: 194:     if(asyncBuffering == 1)
-[e $ ! == -> F13131 `i -> 1 `i 1765  ]
-"195
-[; ;mcc_generated_files/rn487x/rn487x.c: 195:     {
+"369
+[; ;mcc_generated_files/rn487x/rn487x.c: 369:     if(asyncBuffering == 1)
+[e $ ! == -> F13165 `i -> 1 `i 1790  ]
+"370
+[; ;mcc_generated_files/rn487x/rn487x.c: 370:     {
 {
-"196
-[; ;mcc_generated_files/rn487x/rn487x.c: 196:         if(readChar == ('%'))
-[e $ ! == -> _readChar `ui -> 37 `ui 1766  ]
-"197
-[; ;mcc_generated_files/rn487x/rn487x.c: 197:         {
+"371
+[; ;mcc_generated_files/rn487x/rn487x.c: 371:         if(readChar == ('%'))
+[e $ ! == -> _readChar `ui -> 37 `ui 1791  ]
+"372
+[; ;mcc_generated_files/rn487x/rn487x.c: 372:         {
 {
-"198
-[; ;mcc_generated_files/rn487x/rn487x.c: 198:             asyncBuffering = 0;
-[e = F13131 -> -> 0 `i `a ]
-"199
-[; ;mcc_generated_files/rn487x/rn487x.c: 199:             *pHead = '\0';
+"373
+[; ;mcc_generated_files/rn487x/rn487x.c: 373:             asyncBuffering = 0;
+[e = F13165 -> -> 0 `i `a ]
+"374
+[; ;mcc_generated_files/rn487x/rn487x.c: 374:             *pHead = '\0';
 [e = *U _pHead -> -> 0 `ui `uc ]
-"200
-[; ;mcc_generated_files/rn487x/rn487x.c: 200:             RN487X.AsyncHandler(asyncBuffer);
+"375
+[; ;mcc_generated_files/rn487x/rn487x.c: 375:             RN487X.AsyncHandler(asyncBuffer);
 [e ( *U . _RN487X 8 (1 _asyncBuffer ]
-"201
-[; ;mcc_generated_files/rn487x/rn487x.c: 201:         }
+"376
+[; ;mcc_generated_files/rn487x/rn487x.c: 376:         }
 }
-[e $U 1767  ]
-"202
-[; ;mcc_generated_files/rn487x/rn487x.c: 202:         else if (pHead < asyncBuffer + asyncBufferSize)
-[e :U 1766 ]
-[e $ ! < _pHead + _asyncBuffer * -> -> _asyncBufferSize `i `x -> -> # *U _asyncBuffer `i `x 1768  ]
-"203
-[; ;mcc_generated_files/rn487x/rn487x.c: 203:         {
+[e $U 1792  ]
+"377
+[; ;mcc_generated_files/rn487x/rn487x.c: 377:         else if (pHead < asyncBuffer + asyncBufferSize)
+[e :U 1791 ]
+[e $ ! < _pHead + _asyncBuffer * -> -> _asyncBufferSize `i `x -> -> # *U _asyncBuffer `i `x 1793  ]
+"378
+[; ;mcc_generated_files/rn487x/rn487x.c: 378:         {
 {
-"204
-[; ;mcc_generated_files/rn487x/rn487x.c: 204:             *pHead++ = readChar;
+"379
+[; ;mcc_generated_files/rn487x/rn487x.c: 379:             *pHead++ = readChar;
 [e = *U ++ _pHead * -> -> 1 `i `x -> -> # *U _pHead `i `x -> _readChar `uc ]
-"205
-[; ;mcc_generated_files/rn487x/rn487x.c: 205:         }
+"380
+[; ;mcc_generated_files/rn487x/rn487x.c: 380:         }
 }
-[e :U 1768 ]
-[e :U 1767 ]
-"206
-[; ;mcc_generated_files/rn487x/rn487x.c: 206:     }
+[e :U 1793 ]
+[e :U 1792 ]
+"381
+[; ;mcc_generated_files/rn487x/rn487x.c: 381:     }
 }
-[e $U 1769  ]
-"207
-[; ;mcc_generated_files/rn487x/rn487x.c: 207:     else
-[e :U 1765 ]
-"208
-[; ;mcc_generated_files/rn487x/rn487x.c: 208:     {
+[e $U 1794  ]
+"382
+[; ;mcc_generated_files/rn487x/rn487x.c: 382:     else
+[e :U 1790 ]
+"383
+[; ;mcc_generated_files/rn487x/rn487x.c: 383:     {
 {
-"209
-[; ;mcc_generated_files/rn487x/rn487x.c: 209:         if (readChar == ('%'))
-[e $ ! == -> _readChar `ui -> 37 `ui 1770  ]
-"210
-[; ;mcc_generated_files/rn487x/rn487x.c: 210:         {
+"384
+[; ;mcc_generated_files/rn487x/rn487x.c: 384:         if (readChar == ('%'))
+[e $ ! == -> _readChar `ui -> 37 `ui 1795  ]
+"385
+[; ;mcc_generated_files/rn487x/rn487x.c: 385:         {
 {
-"211
-[; ;mcc_generated_files/rn487x/rn487x.c: 211:             asyncBuffering = 1;
-[e = F13131 -> -> 1 `i `a ]
-"212
-[; ;mcc_generated_files/rn487x/rn487x.c: 212:             pHead = asyncBuffer;
+"386
+[; ;mcc_generated_files/rn487x/rn487x.c: 386:             asyncBuffering = 1;
+[e = F13165 -> -> 1 `i `a ]
+"387
+[; ;mcc_generated_files/rn487x/rn487x.c: 387:             pHead = asyncBuffer;
 [e = _pHead _asyncBuffer ]
-"213
-[; ;mcc_generated_files/rn487x/rn487x.c: 213:         }
+"388
+[; ;mcc_generated_files/rn487x/rn487x.c: 388:         }
 }
-[e $U 1771  ]
-"214
-[; ;mcc_generated_files/rn487x/rn487x.c: 214:         else
-[e :U 1770 ]
-"215
-[; ;mcc_generated_files/rn487x/rn487x.c: 215:         {
+[e $U 1796  ]
+"389
+[; ;mcc_generated_files/rn487x/rn487x.c: 389:         else
+[e :U 1795 ]
+"390
+[; ;mcc_generated_files/rn487x/rn487x.c: 390:         {
 {
-"216
-[; ;mcc_generated_files/rn487x/rn487x.c: 216:             dataReady = 1;
+"391
+[; ;mcc_generated_files/rn487x/rn487x.c: 391:             dataReady = 1;
 [e = _dataReady -> -> 1 `i `a ]
-"217
-[; ;mcc_generated_files/rn487x/rn487x.c: 217:             peek = readChar;
+"392
+[; ;mcc_generated_files/rn487x/rn487x.c: 392:             peek = readChar;
 [e = _peek _readChar ]
-"218
-[; ;mcc_generated_files/rn487x/rn487x.c: 218:         }
+"393
+[; ;mcc_generated_files/rn487x/rn487x.c: 393:         }
 }
-[e :U 1771 ]
-"219
-[; ;mcc_generated_files/rn487x/rn487x.c: 219:     }
+[e :U 1796 ]
+"394
+[; ;mcc_generated_files/rn487x/rn487x.c: 394:     }
 }
-[e :U 1769 ]
-"220
-[; ;mcc_generated_files/rn487x/rn487x.c: 220:     return dataReady;
+[e :U 1794 ]
+"395
+[; ;mcc_generated_files/rn487x/rn487x.c: 395:     return dataReady;
 [e ) _dataReady ]
-[e $UE 1764  ]
-"221
-[; ;mcc_generated_files/rn487x/rn487x.c: 221: }
-[e :UE 1764 ]
+[e $UE 1789  ]
+"396
+[; ;mcc_generated_files/rn487x/rn487x.c: 396: }
+[e :UE 1789 ]
 }
 [a 1C 49 46 49 46 48 0 ]

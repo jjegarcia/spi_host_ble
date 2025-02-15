@@ -534,10 +534,10 @@ static void LIGHTBLUE_SetErrorLedValue(bool value)
 
 static void LIGHTBLUE_UpdateErrorLed(void)
 {
-//    RN487X_EnterCmdMode();
-//    RN487X.DelayMs(CMD_MODE_DELAY_TIME);
-//    RN487X_SetOutputs(bitMap);
-//    RN487X_EnterDataMode();
+    RN487X_EnterCmdMode();
+    RN487X.DelayMs(CMD_MODE_DELAY_TIME);
+    RN487X_SetOutputs(bitMap);
+    RN487X_EnterDataMode();
 }
 
 static void LIGHTBLUE_PerformAction(char id, uint8_t data)
