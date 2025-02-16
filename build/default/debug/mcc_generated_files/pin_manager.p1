@@ -2006,100 +2006,103 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [e :U _IOCAF6_ISR ]
 [f ]
-"177
-[; ;mcc_generated_files/pin_manager.c: 177:     if(IOCAF6_InterruptHandler)
-[e $ ! != _IOCAF6_InterruptHandler -> -> 0 `i `*F13130 1742  ]
+"175
+[; ;mcc_generated_files/pin_manager.c: 175:         (INTERRUPTbits.ACC = 1);
+[e = . . _INTERRUPTbits 0 0 -> -> 1 `i `uc ]
 "178
-[; ;mcc_generated_files/pin_manager.c: 178:     {
-{
+[; ;mcc_generated_files/pin_manager.c: 178:     if(IOCAF6_InterruptHandler)
+[e $ ! != _IOCAF6_InterruptHandler -> -> 0 `i `*F13130 1742  ]
 "179
-[; ;mcc_generated_files/pin_manager.c: 179:         IOCAF6_InterruptHandler();
-[e ( *U _IOCAF6_InterruptHandler ..  ]
+[; ;mcc_generated_files/pin_manager.c: 179:     {
+{
 "180
-[; ;mcc_generated_files/pin_manager.c: 180:     }
+[; ;mcc_generated_files/pin_manager.c: 180:         IOCAF6_InterruptHandler();
+[e ( *U _IOCAF6_InterruptHandler ..  ]
+"181
+[; ;mcc_generated_files/pin_manager.c: 181:     }
 }
 [e :U 1742 ]
-"181
-[; ;mcc_generated_files/pin_manager.c: 181:     IOCAFbits.IOCAF6 = 0;
-[e = . . _IOCAFbits 0 6 -> -> 0 `i `uc ]
 "182
-[; ;mcc_generated_files/pin_manager.c: 182: }
+[; ;mcc_generated_files/pin_manager.c: 182:     IOCAFbits.IOCAF6 = 0;
+[e = . . _IOCAFbits 0 6 -> -> 0 `i `uc ]
+"183
+[; ;mcc_generated_files/pin_manager.c: 183: }
 [e :UE 1741 ]
 }
-"187
-[; ;mcc_generated_files/pin_manager.c: 187: void IOCAF6_SetInterruptHandler(void (* InterruptHandler)(void)){
+"188
+[; ;mcc_generated_files/pin_manager.c: 188: void IOCAF6_SetInterruptHandler(void (* InterruptHandler)(void)){
 [v _IOCAF6_SetInterruptHandler `(v ~T0 @X0 1 ef1`*F13132 ]
 {
 [e :U _IOCAF6_SetInterruptHandler ]
 [v _InterruptHandler `*F13134 ~T0 @X0 1 r1 ]
 [f ]
-"188
-[; ;mcc_generated_files/pin_manager.c: 188:     IOCAF6_InterruptHandler = InterruptHandler;
-[e = _IOCAF6_InterruptHandler _InterruptHandler ]
 "189
-[; ;mcc_generated_files/pin_manager.c: 189: }
+[; ;mcc_generated_files/pin_manager.c: 189:     IOCAF6_InterruptHandler = InterruptHandler;
+[e = _IOCAF6_InterruptHandler _InterruptHandler ]
+"190
+[; ;mcc_generated_files/pin_manager.c: 190: }
 [e :UE 1743 ]
 }
-"194
-[; ;mcc_generated_files/pin_manager.c: 194: void IOCAF6_DefaultInterruptHandler(void){
+"195
+[; ;mcc_generated_files/pin_manager.c: 195: void IOCAF6_DefaultInterruptHandler(void){
 [v _IOCAF6_DefaultInterruptHandler `(v ~T0 @X0 1 ef ]
 {
 [e :U _IOCAF6_DefaultInterruptHandler ]
 [f ]
-"197
-[; ;mcc_generated_files/pin_manager.c: 197: }
+"198
+[; ;mcc_generated_files/pin_manager.c: 198: }
 [e :UE 1744 ]
 }
-"202
-[; ;mcc_generated_files/pin_manager.c: 202: void IOCAF7_ISR(void) {
+"203
+[; ;mcc_generated_files/pin_manager.c: 203: void IOCAF7_ISR(void) {
 [v _IOCAF7_ISR `(v ~T0 @X0 1 ef ]
 {
 [e :U _IOCAF7_ISR ]
 [f ]
-"207
-[; ;mcc_generated_files/pin_manager.c: 207:     if(IOCAF7_InterruptHandler)
-[e $ ! != _IOCAF7_InterruptHandler -> -> 0 `i `*F13138 1746  ]
 "208
-[; ;mcc_generated_files/pin_manager.c: 208:     {
-{
+[; ;mcc_generated_files/pin_manager.c: 208:     if(IOCAF7_InterruptHandler)
+[e $ ! != _IOCAF7_InterruptHandler -> -> 0 `i `*F13138 1746  ]
 "209
-[; ;mcc_generated_files/pin_manager.c: 209:         IOCAF7_InterruptHandler();
-[e ( *U _IOCAF7_InterruptHandler ..  ]
+[; ;mcc_generated_files/pin_manager.c: 209:     {
+{
 "210
-[; ;mcc_generated_files/pin_manager.c: 210:     }
+[; ;mcc_generated_files/pin_manager.c: 210:         IOCAF7_InterruptHandler();
+[e ( *U _IOCAF7_InterruptHandler ..  ]
+"211
+[; ;mcc_generated_files/pin_manager.c: 211:     }
 }
 [e :U 1746 ]
-"211
-[; ;mcc_generated_files/pin_manager.c: 211:     IOCAFbits.IOCAF7 = 0;
-[e = . . _IOCAFbits 0 7 -> -> 0 `i `uc ]
 "212
-[; ;mcc_generated_files/pin_manager.c: 212: }
+[; ;mcc_generated_files/pin_manager.c: 212:     IOCAFbits.IOCAF7 = 0;
+[e = . . _IOCAFbits 0 7 -> -> 0 `i `uc ]
+"213
+[; ;mcc_generated_files/pin_manager.c: 213: }
 [e :UE 1745 ]
 }
-"217
-[; ;mcc_generated_files/pin_manager.c: 217: void IOCAF7_SetInterruptHandler(void (* InterruptHandler)(void)){
+"218
+[; ;mcc_generated_files/pin_manager.c: 218: void IOCAF7_SetInterruptHandler(void (* InterruptHandler)(void)){
 [v _IOCAF7_SetInterruptHandler `(v ~T0 @X0 1 ef1`*F13140 ]
 {
 [e :U _IOCAF7_SetInterruptHandler ]
 [v _InterruptHandler `*F13142 ~T0 @X0 1 r1 ]
 [f ]
-"218
-[; ;mcc_generated_files/pin_manager.c: 218:     IOCAF7_InterruptHandler = InterruptHandler;
-[e = _IOCAF7_InterruptHandler _InterruptHandler ]
 "219
-[; ;mcc_generated_files/pin_manager.c: 219: }
+[; ;mcc_generated_files/pin_manager.c: 219:     IOCAF7_InterruptHandler = InterruptHandler;
+[e = _IOCAF7_InterruptHandler _InterruptHandler ]
+"220
+[; ;mcc_generated_files/pin_manager.c: 220: }
 [e :UE 1747 ]
 }
-"224
-[; ;mcc_generated_files/pin_manager.c: 224: void IOCAF7_DefaultInterruptHandler(void){
+"225
+[; ;mcc_generated_files/pin_manager.c: 225: void IOCAF7_DefaultInterruptHandler(void){
 [v _IOCAF7_DefaultInterruptHandler `(v ~T0 @X0 1 ef ]
 {
 [e :U _IOCAF7_DefaultInterruptHandler ]
 [f ]
-"227
-[; ;mcc_generated_files/pin_manager.c: 227:     pushed = 1;
-[e = _pushed -> -> 1 `i `a ]
 "228
-[; ;mcc_generated_files/pin_manager.c: 228: }
+[; ;mcc_generated_files/pin_manager.c: 228:     pushed = 1;
+[e = _pushed -> -> 1 `i `a ]
+"229
+[; ;mcc_generated_files/pin_manager.c: 229: }
 [e :UE 1748 ]
 }

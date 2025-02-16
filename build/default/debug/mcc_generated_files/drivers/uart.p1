@@ -1,19 +1,19 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[v F12455 `(uc ~T0 @X0 0 tf ]
-[v F12457 `(v ~T0 @X0 0 tf1`uc ]
-[v F12460 `(a ~T0 @X0 0 tf ]
-[v F12462 `(a ~T0 @X0 0 tf ]
-[v F12465 `(v ~T0 @X0 0 tf ]
-[v F12464 `(v ~T0 @X0 0 tf1`*F12465 ]
-[v F12468 `(v ~T0 @X0 0 tf ]
-[v F12471 `(v ~T0 @X0 0 tf ]
-[v F12470 `(v ~T0 @X0 0 tf1`*F12471 ]
-[v F12474 `(a ~T0 @X0 0 tf ]
-[v F12476 `(v ~T0 @X0 0 tf ]
-[v F12478 `(v ~T0 @X0 0 tf ]
-"50 mcc_generated_files/drivers/uart.h
-[; ;mcc_generated_files/drivers/uart.h: 50: typedef struct { uint8_t (*Read)(void); void (*Write)(uint8_t txdata); _Bool (*TransmitReady)(void); _Bool (*DataReady)(void); void (*SetTxISR)(void (* interruptHandler)(void)); void (*RxDefaultISR)(void); void (*SetRxISR)(void (* interruptHandler)(void)); _Bool (*TransmitDone)(void); void (*TxDefaultISR)(void); void (*Initialize)(void); } uart_functions_t;
-[s S1720 `*F12455 1 `*F12457 1 `*F12460 1 `*F12462 1 `*F12464 1 `*F12468 1 `*F12470 1 `*F12474 1 `*F12476 1 `*F12478 1 ]
+[v F12454 `(uc ~T0 @X0 0 tf ]
+[v F12456 `(v ~T0 @X0 0 tf1`uc ]
+[v F12459 `(a ~T0 @X0 0 tf ]
+[v F12461 `(a ~T0 @X0 0 tf ]
+[v F12464 `(v ~T0 @X0 0 tf ]
+[v F12463 `(v ~T0 @X0 0 tf1`*F12464 ]
+[v F12467 `(v ~T0 @X0 0 tf ]
+[v F12470 `(v ~T0 @X0 0 tf ]
+[v F12469 `(v ~T0 @X0 0 tf1`*F12470 ]
+[v F12473 `(a ~T0 @X0 0 tf ]
+[v F12475 `(v ~T0 @X0 0 tf ]
+[v F12477 `(v ~T0 @X0 0 tf ]
+"49 mcc_generated_files/drivers/uart.h
+[; ;mcc_generated_files/drivers/uart.h: 49: typedef struct { uint8_t (*Read)(void); void (*Write)(uint8_t txdata); _Bool (*TransmitReady)(void); _Bool (*DataReady)(void); void (*SetTxISR)(void (* interruptHandler)(void)); void (*RxDefaultISR)(void); void (*SetRxISR)(void (* interruptHandler)(void)); _Bool (*TransmitDone)(void); void (*TxDefaultISR)(void); void (*Initialize)(void); } uart_functions_t;
+[s S1720 `*F12454 1 `*F12456 1 `*F12459 1 `*F12461 1 `*F12463 1 `*F12467 1 `*F12469 1 `*F12473 1 `*F12475 1 `*F12477 1 ]
 [n S1720 . Read Write TransmitReady DataReady SetTxISR RxDefaultISR SetRxISR TransmitDone TxDefaultISR Initialize ]
 "328 mcc_generated_files/drivers/../eusart1.h
 [; ;mcc_generated_files/drivers/../eusart1.h: 328: uint8_t EUSART1_Read(void);
@@ -1642,21 +1642,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; <" TOSH equ 01FEFh ;# ">
 "35 mcc_generated_files/drivers/uart.c
 [; ;mcc_generated_files/drivers/uart.c: 35: const uart_functions_t uart[] = {
-[v _uart `CS1720 ~T0 @X0 -> 2 `i e ]
+[v _uart `CS1720 ~T0 @X0 -> -> 1 `i `ux e ]
 [i _uart
 :U ..
-:U ..
-&U _EUSART1_Read
-&U _EUSART1_Write
-&U _EUSART1_is_tx_ready
-&U _EUSART1_is_rx_ready
-&U _EUSART1_SetTxInterruptHandler
-&U _EUSART1_Receive_ISR
-&U _EUSART1_SetRxInterruptHandler
-&U _EUSART1_is_tx_done
-&U _EUSART1_Transmit_ISR
-&U _EUSART1_Initialize
-..
 :U ..
 &U _EUSART1_Read
 &U _EUSART1_Write

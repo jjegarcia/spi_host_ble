@@ -39,7 +39,6 @@
 *   \enum uart_configurations_t uart.h
 */
 typedef enum { 
-    UART_CDC /**<UART Name */,
     UART_BLE /**<UART Name */
 } uart_configurations_t;
 

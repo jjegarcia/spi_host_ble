@@ -3094,7 +3094,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="DT1%Bidirectional"/>
-         <value>RB3</value>
+         <value>RB5</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="DT1%isActiveBidirectional"/>
@@ -3142,7 +3142,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="RA7"/>
-         <value>input</value>
+         <value>disabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="RB0"/>
@@ -3213,11 +3213,11 @@
          <value>disabled</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="RX1DTPPS%aux0"/>
-         <value>11</value>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="RX1DTPPS%aux2"/>
+         <value>13</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="RX2DTPPS%aux2"/>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="RX2DTPPS%aux1"/>
          <value>21</value>
       </entry>
       <entry>
@@ -3269,7 +3269,7 @@
          <value>disabled</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="T0CKIPPS%aux1"/>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="T0CKIPPS%aux0"/>
          <value>%DESELECT%</value>
       </entry>
       <entry>
@@ -5694,7 +5694,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="Pin Module" registerAlias="ANSELB"/>
-         <value>225</value>
+         <value>201</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="Pin Module" registerAlias="ANSELC"/>
@@ -5954,7 +5954,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="Pin Module" registerAlias="RX1DTPPS"/>
-         <value>11</value>
+         <value>13</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="Pin Module" registerAlias="RX2DTPPS"/>
@@ -6142,7 +6142,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="ANSELB" settingAlias="ANSB3"/>
-         <value>digital</value>
+         <value>analog</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="ANSELB" settingAlias="ANSB4"/>
@@ -6150,7 +6150,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="ANSELB" settingAlias="ANSB5"/>
-         <value>analog</value>
+         <value>digital</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="ANSELB" settingAlias="ANSB6"/>
@@ -6938,7 +6938,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="RX1DTPPS" settingAlias="RX1DTPPS"/>
-         <value>11</value>
+         <value>13</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="RX2DTPPS" settingAlias="RX2DTPPS"/>
@@ -7402,7 +7402,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="RN4870 | RN4871 BLE Module" name="comboSelectExample"/>
-         <value>exampleTransparentSerial</value>
+         <value>exampleBasicDataExchange</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="RN4870 | RN4871 BLE Module" name="libraryDelayFoundationServiceStatus"/>
@@ -8298,7 +8298,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="UART" name="pubSubUARTConfigurations"/>
-         <value>9565.776584198906</value>
+         <value>9287.861405651416</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="UART" name="usecaseComboSettings"/>
@@ -8306,7 +8306,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="UART" name="validate"/>
-         <value>0.5070581893855962</value>
+         <value>0.8170161132079747</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="UART" name="uartConfigurationList%0%interruptState"/>
@@ -8314,7 +8314,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="UART" name="uartConfigurationList%0%name"/>
-         <value>UART_CDC</value>
+         <value>UART_BLE</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="UART" name="uartConfigurationList%0%selectedModule"/>
@@ -8322,22 +8322,6 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="UART" name="uartConfigurationList%0%speed"/>
-         <value>9600</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="UART" name="uartConfigurationList%1%interruptState"/>
-         <value>enabled</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="UART" name="uartConfigurationList%1%name"/>
-         <value>UART_BLE</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="UART" name="uartConfigurationList%1%selectedModule"/>
-         <value>EUSART1-PIC10 / PIC12 / PIC16 / PIC18 MCUs</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="UART" name="uartConfigurationList%1%speed"/>
          <value>9600</value>
       </entry>
       <entry>
@@ -8404,11 +8388,11 @@
       </entry>
       <entry>
          <file>mcc_generated_files\drivers\uart.c</file>
-         <hash>9cb7127229d2ad92fcc089bc1fbd23fbd4eadfef27e344ca3eed96ecf9f4bf69</hash>
+         <hash>41c983026819f2d89e74e26da6f9ff22e3708095bfa1cac82538fb4be484bee1</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\drivers\uart.h</file>
-         <hash>f5e752950582cf4481f51cc98a7491b878ff0d513fdcca1684a09dcdec2d29c8</hash>
+         <hash>6e0c7930d200277dfda0cbc8f5947351cfe8233b0c6bc383db71668ba6a11ebe</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\eusart1.c</file>
@@ -8436,7 +8420,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files\examples\rn487x_example.c</file>
-         <hash>03ff1f51c85f5df2609f8b4036b004364587e283db90568665b146d46c20237e</hash>
+         <hash>e738a0f98037853ffa8214176009f7cefd07ca1ffe6d2bae2525c101c3d92e0d</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\examples\rn487x_example.h</file>
@@ -8468,11 +8452,11 @@
       </entry>
       <entry>
          <file>mcc_generated_files\pin_manager.c</file>
-         <hash>79c2a3f09f39334b7c0555a5a615bfac0653d0565de4fedb0168cd834c551995</hash>
+         <hash>b1e1bb424a5799a577fe2b7de14be5f6c82dedf6df045906a1734000142aa3d8</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\pin_manager.h</file>
-         <hash>49c6af5940f8f5a454bfebb6b311c547121b96a85ab389cb7bdbcfbb78cbeb13</hash>
+         <hash>da0a80916667a8a491add4785050e5af3924989d1d5db7b196c4a001ea56ccdc</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\rn487x\rn487x.c</file>
@@ -8484,7 +8468,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files\rn487x\rn487x_interface.c</file>
-         <hash>f5d3b9e2ecac3fbb3e54a1c2c9baeebd43d56c9a34e1d2af84c363bc4358fab4</hash>
+         <hash>0632c5f9b5df7461c3ca8f14649f8e759d6c6d2c5d9d5a5867dd1b8779b262dd</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\rn487x\rn487x_interface.h</file>

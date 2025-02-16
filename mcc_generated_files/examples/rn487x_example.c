@@ -27,6 +27,7 @@
 */
 
 #include <stdbool.h>
+#include <stdint.h>
 #include "rn487x_example.h"
 #include "../drivers/uart.h"
 #include "../rn487x/rn487x_interface.h"
@@ -42,17 +43,25 @@
 static char statusBuffer[MAX_BUFFER_SIZE];    
 
 /**
+ * \def DEMO_PERIODIC_TRANSMIT_COUNT
+ * This macro provide a definition for a periodic data transmission demostration
+ */
+#define DEMO_PERIODIC_TRANSMIT_COUNT           (10000)
+/**
+ * \def DEMO_PERIODIC_CHARACTER
+ * This macro provide a character sent at a periodic rate for demostration
+ */
+#define DEMO_PERIODIC_CHARACTER                 ('.')
+/**
  * \ingroup RN487X_Example
- * \brief Example Implmentation of Transparent UART
- *        This can be connected to a Smart BLE 'Terminal' 
- *        application for simple data exchange demostration.
+ * \brief Example Implmentation for simple Data Exchange Demostration
  *
- * For more details, refer Chapter 4.2 in RN487X user guide.
+ * This demostration uses the Lightblue BLE application developed by 'Punch Through' 
  * \return Connected Status
  * \retval true - Connected.
  * \retval false - Not Connected
  */  
-static bool RN487X_Example_TransparentUart(void);
+static bool RN487X_Example_BasicDataExchange(void);
 /**
  * \ingroup RN487X_Example_Run
  * \brief This 'Runs' the example applications While(1) loop
@@ -85,7 +94,7 @@ static void RN487X_Example_Run(void)
 {
     while(1)
     {
-        if (true == RN487X_Example_TransparentUart())
+        if (true == RN487X_Example_BasicDataExchange())    
         {
             // Connected
         }
@@ -96,31 +105,37 @@ static void RN487X_Example_Run(void)
     }
 }
 
-static bool RN487X_Example_TransparentUart(void)
+static bool RN487X_Example_BasicDataExchange(void)
 {
+   static uint16_t periodicCounter = 0;
    bool isConnected;
+   volatile uint8_t readData;
+   readData = 0;
    isConnected = RN487X_IsConnected();
 
    if (true == isConnected)
    {
        while (RN487X_DataReady())
        {
-           uart[UART_CDC].Write(RN487X_Read());
+           readData = RN487X_Read();
+           // Use the readData as desired
        }
-       while (uart[UART_CDC].DataReady())
+       if (periodicCounter == DEMO_PERIODIC_TRANSMIT_COUNT)
        {
-           RN487X.Write(uart[UART_CDC].Read());
+           RN487X.Write('.');
+           periodicCounter = 0;
+       }
+       else
+       {
+           periodicCounter++;
        }
    }
    else
     {
         while(RN487X_DataReady())
         {
-            uart[UART_CDC].Write(RN487X_Read());
-        }
-        while (uart[UART_CDC].DataReady())
-        {
-            RN487X.Write(uart[UART_CDC].Read());
+            // Clear data; Allow ASYNC processor decode
+            readData = RN487X_Read();
         }
     }
 

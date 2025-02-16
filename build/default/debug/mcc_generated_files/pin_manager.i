@@ -21364,6 +21364,7 @@ void PIN_MANAGER_IOC(void)
 void IOCAF6_ISR(void) {
 
 
+        (INTERRUPTbits.ACC = 1);
 
 
     if(IOCAF6_InterruptHandler)

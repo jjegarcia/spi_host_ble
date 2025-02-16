@@ -169,18 +169,6 @@
 #define RB2_SetAnalogMode()         do { ANSELBbits.ANSB2 = 1; } while(0)
 #define RB2_SetDigitalMode()        do { ANSELBbits.ANSB2 = 0; } while(0)
 
-// get/set RB3 procedures
-#define RB3_SetHigh()            do { LATBbits.LATB3 = 1; } while(0)
-#define RB3_SetLow()             do { LATBbits.LATB3 = 0; } while(0)
-#define RB3_Toggle()             do { LATBbits.LATB3 = ~LATBbits.LATB3; } while(0)
-#define RB3_GetValue()              PORTBbits.RB3
-#define RB3_SetDigitalInput()    do { TRISBbits.TRISB3 = 1; } while(0)
-#define RB3_SetDigitalOutput()   do { TRISBbits.TRISB3 = 0; } while(0)
-#define RB3_SetPullup()             do { WPUBbits.WPUB3 = 1; } while(0)
-#define RB3_ResetPullup()           do { WPUBbits.WPUB3 = 0; } while(0)
-#define RB3_SetAnalogMode()         do { ANSELBbits.ANSB3 = 1; } while(0)
-#define RB3_SetDigitalMode()        do { ANSELBbits.ANSB3 = 0; } while(0)
-
 // get/set RB4 procedures
 #define RB4_SetHigh()            do { LATBbits.LATB4 = 1; } while(0)
 #define RB4_SetLow()             do { LATBbits.LATB4 = 0; } while(0)
@@ -192,6 +180,18 @@
 #define RB4_ResetPullup()           do { WPUBbits.WPUB4 = 0; } while(0)
 #define RB4_SetAnalogMode()         do { ANSELBbits.ANSB4 = 1; } while(0)
 #define RB4_SetDigitalMode()        do { ANSELBbits.ANSB4 = 0; } while(0)
+
+// get/set RB5 procedures
+#define RB5_SetHigh()            do { LATBbits.LATB5 = 1; } while(0)
+#define RB5_SetLow()             do { LATBbits.LATB5 = 0; } while(0)
+#define RB5_Toggle()             do { LATBbits.LATB5 = ~LATBbits.LATB5; } while(0)
+#define RB5_GetValue()              PORTBbits.RB5
+#define RB5_SetDigitalInput()    do { TRISBbits.TRISB5 = 1; } while(0)
+#define RB5_SetDigitalOutput()   do { TRISBbits.TRISB5 = 0; } while(0)
+#define RB5_SetPullup()             do { WPUBbits.WPUB5 = 1; } while(0)
+#define RB5_ResetPullup()           do { WPUBbits.WPUB5 = 0; } while(0)
+#define RB5_SetAnalogMode()         do { ANSELBbits.ANSB5 = 1; } while(0)
+#define RB5_SetDigitalMode()        do { ANSELBbits.ANSB5 = 0; } while(0)
 
 // get/set SPI_SS_EXT_DEVICE aliases
 #define SPI_SS_EXT_DEVICE_TRIS                 TRISCbits.TRISC0
