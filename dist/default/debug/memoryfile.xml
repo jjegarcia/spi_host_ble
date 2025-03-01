@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/default/debug\spi_host_ble.X.debug.hex">
+  <executable name="dist/default/debug\spi_host_ble.debug.hex">
     <memory name="program">
       <units>words</units>
       <length>16384</length>
-      <used>1131</used>
-      <free>15253</free>
+      <used>1135</used>
+      <free>15249</free>
     </memory>
     <memory name="data">
       <units>bytes</units>

@@ -146,9 +146,9 @@ void PIN_MANAGER_Initialize(void)
     RC4PPS = 0x25;   //RC4->EUSART2:TX2;    
     RB4PPS = 0x0F;   //RB4->EUSART1:TX1;    
     RC2PPS = 0x16;   //RC2->MSSP2:SDO2;    
-//    RX2DTPPS = 0x15;   //RC5->EUSART2:RX2;    
+    RX2PPS = 0x15;
     SSP1DATPPS = 0x0A;   //RB2->MSSP1:SDA1;    
-//    RX1DTPPS = 0x0B;   //RB3->EUSART1:RX1;    
+    RX1PPS = 0x0B;   //RB3->EUSART1:RX1;    
     SSP2CLKPPS = 0x11;   //RC1->MSSP2:SCK2;    
 }
 

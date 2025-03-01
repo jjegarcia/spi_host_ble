@@ -155,9 +155,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "35040
 [; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc/pic16lf18456.h: 35040: extern volatile unsigned char RC2PPS __attribute__((address(0x1F22)));
 [v _RC2PPS `Vuc ~T0 @X0 0 e@7970 ]
+"33892
+[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc/pic16lf18456.h: 33892: extern volatile unsigned char RX2PPS __attribute__((address(0x1ECD)));
+[v _RX2PPS `Vuc ~T0 @X0 0 e@7885 ]
 "33528
 [; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc/pic16lf18456.h: 33528: extern volatile unsigned char SSP1DATPPS __attribute__((address(0x1EC6)));
 [v _SSP1DATPPS `Vuc ~T0 @X0 0 e@7878 ]
+"33788
+[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc/pic16lf18456.h: 33788: extern volatile unsigned char RX1PPS __attribute__((address(0x1ECB)));
+[v _RX1PPS `Vuc ~T0 @X0 0 e@7883 ]
 "33632
 [; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc/pic16lf18456.h: 33632: extern volatile unsigned char SSP2CLKPPS __attribute__((address(0x1EC8)));
 [v _SSP2CLKPPS `Vuc ~T0 @X0 0 e@7880 ]
@@ -1915,9 +1921,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "148
 [; ;mcc_generated_files/pin_manager.c: 148:     RC2PPS = 0x16;
 [e = _RC2PPS -> -> 22 `i `uc ]
+"149
+[; ;mcc_generated_files/pin_manager.c: 149:     RX2PPS = 0x15;
+[e = _RX2PPS -> -> 21 `i `uc ]
 "150
 [; ;mcc_generated_files/pin_manager.c: 150:     SSP1DATPPS = 0x0A;
 [e = _SSP1DATPPS -> -> 10 `i `uc ]
+"151
+[; ;mcc_generated_files/pin_manager.c: 151:     RX1PPS = 0x0B;
+[e = _RX1PPS -> -> 11 `i `uc ]
 "152
 [; ;mcc_generated_files/pin_manager.c: 152:     SSP2CLKPPS = 0x11;
 [e = _SSP2CLKPPS -> -> 17 `i `uc ]
