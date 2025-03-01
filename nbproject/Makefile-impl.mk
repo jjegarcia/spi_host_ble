@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=spi_host_ble.X
+PROJECTNAME=spi_host_ble
 
 # Active Configuration
 DEFAULTCONF=default

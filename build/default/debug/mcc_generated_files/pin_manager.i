@@ -20727,9 +20727,9 @@ void PIN_MANAGER_Initialize(void)
     RC4PPS = 0x25;
     RB4PPS = 0x0F;
     RC2PPS = 0x16;
-
+    RX2PPS = 0x15;
     SSP1DATPPS = 0x0A;
-
+    RX1PPS = 0x0B;
     SSP2CLKPPS = 0x11;
 }
 
